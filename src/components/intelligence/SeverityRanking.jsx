@@ -60,7 +60,7 @@ export default function SeverityRanking({ districts, onSelectDistrict }) {
                     <p className="font-bold text-slate-900 group-hover:text-primary-600 dark:text-white">
                       {d.name}
                     </p>
-                    <Badge className={sev.color}>{sev.label}</Badge>
+                    <Badge className={sev.color} toneDot={sev.dot}>{sev.label}</Badge>
                   </div>
                   <p className="mt-0.5 text-xs text-slate-500">
                     {formatIndianNumber(d.reliefCamps)} relief camps ·{' '}

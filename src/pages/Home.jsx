@@ -121,19 +121,9 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary-100 via-transparent to-transparent dark:from-primary-900/30" />
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-sky-50 via-transparent to-transparent dark:from-slate-900" />
-
+      <section className="relative overflow-hidden border-b border-border dark:border-border-dark">
         <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 sm:py-16 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:py-20">
           <div>
-            <motion.p
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-primary-600 dark:text-primary-400"
-            >
-              FloodAssist Assam
-            </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -174,8 +164,7 @@ export default function Home() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="relative"
           >
-            <div className="absolute -inset-4 rounded-[2rem] bg-primary-200/30 blur-2xl dark:bg-primary-800/20" />
-            <figure className="relative overflow-hidden rounded-[2rem] border border-border shadow-xl dark:border-border-dark">
+            <figure className="relative overflow-hidden rounded-xl border border-border dark:border-border-dark">
               <img
                 src={floodHero}
                 alt="Residents wading through a flooded street in Assam past a submerged car"

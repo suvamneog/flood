@@ -20,13 +20,13 @@ export default function EmergencySOS() {
         whileTap={{ scale: 0.95 }}
         animate={{
           boxShadow: [
-            '0 10px 25px -5px rgba(239,68,68,0.4)',
-            '0 10px 35px -5px rgba(239,68,68,0.55)',
-            '0 10px 25px -5px rgba(239,68,68,0.4)',
+            '0 10px 25px -5px rgba(215,48,31,0.4)',
+            '0 10px 35px -5px rgba(215,48,31,0.55)',
+            '0 10px 25px -5px rgba(215,48,31,0.4)',
           ],
         }}
         transition={{ boxShadow: { duration: 2, repeat: Infinity } }}
-        aria-label="Emergency SOS"
+        aria-label="Emergency SOS — open helpline list"
       >
         <Phone className="h-5 w-5" />
         <span className="text-sm tracking-wide">SOS</span>

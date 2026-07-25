@@ -10,9 +10,9 @@ export default function Card({
   return (
     <motion.div
       onClick={onClick}
-      whileHover={hover ? { y: -3 } : undefined}
-      transition={{ type: 'spring', stiffness: 400, damping: 28 }}
-      className={`rounded-2xl border border-border bg-white shadow-sm shadow-slate-200/60 dark:border-border-dark dark:bg-surface-dark-muted dark:shadow-none ${
+      className={`rounded-2xl border border-border bg-white dark:border-border-dark dark:bg-surface-dark-muted ${
+        hover ? 'transition-colors duration-150 hover:border-primary-300 dark:hover:border-primary-700' : ''
+      } ${
         padding ? 'p-5 sm:p-6' : ''
       } ${onClick ? 'cursor-pointer' : ''} ${className}`}
     >

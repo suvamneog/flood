@@ -130,7 +130,7 @@ export default function DistrictSearch({
                             {d.populationAffected.toLocaleString('en-IN')}
                           </span>
                         )}
-                        <Badge className={sev.color}>{sev.label}</Badge>
+                        <Badge className={sev.color} toneDot={sev.dot}>{sev.label}</Badge>
                       </span>
                     </button>
                   </li>

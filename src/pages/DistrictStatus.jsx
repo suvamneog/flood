@@ -88,7 +88,7 @@ export default function DistrictStatus() {
                         {d.name}
                       </h3>
                     </div>
-                    <Badge className={sev.color}>{sev.label}</Badge>
+                    <Badge className={sev.color} toneDot={sev.dot}>{sev.label}</Badge>
                   </div>
 
                   <div className="space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
