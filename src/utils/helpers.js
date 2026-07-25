@@ -84,7 +84,20 @@ export const formatRelative = (iso) => {
 export const googleMapsUrl = (lat, lng, label = '') =>
   `https://www.google.com/maps/search/?api=1&query=${lat},${lng}${label ? `&query_place_id=${encodeURIComponent(label)}` : ''}`
 
-export const telLink = (number) => `tel:${String(number).replace(/\s/g, '')}`
+/** Safe tel: link — digits and leading + only (blocks javascript:/data: abuse). */
+export const telLink = (number) => {
+  const raw = String(number || '').trim()
+  if (!raw || /^(javascript|data|vbscript):/i.test(raw) || /[a-z]/i.test(raw)) {
+    return '#'
+  }
+  const cleaned = raw.replace(/[^\d+]/g, '')
+  const normalized = cleaned.startsWith('+')
+    ? `+${cleaned.slice(1).replace(/\D/g, '')}`
+    : cleaned.replace(/\D/g, '')
+  // Emergency short codes (100/101/108) and longer lines
+  if (!/^\+?\d{2,15}$/.test(normalized)) return '#'
+  return `tel:${normalized}`
+}
 
 export const NAV_LINKS = [
   { to: '/', label: 'Home' },
