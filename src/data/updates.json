@@ -1,16 +1,16 @@
 [
   {
-    "id": "asdma-2026-07-24",
-    "title": "ASDMA Daily Flood Report — 24 Jul 2026",
-    "date": "2026-07-24T08:00:00Z",
+    "id": "asdma-2026-07-25",
+    "title": "ASDMA Daily Flood Report — 25 Jul 2026",
+    "date": "2026-07-25T08:00:00Z",
     "source": "ASDMA / SDRF",
-    "summary": "12 districts affected. 704,295 people affected across 823 villages. 96 relief camps with 115,205 inmates. Rivers above danger level: Dikhou (Sivasagar), Disang (Nanglamuraghat), Dhansiri (S) (Numaligarh), Kushiyara, SRIBHUMI (FFS). Source: https://sdrf.assam.gov.in/dfr/"
+    "summary": "10 districts affected. 134,647 people affected across 269 villages. 14 relief camps with 3,069 inmates. Rivers above danger level: Dikhou (Sivasagar), Dhansiri (S). Source: https://sdrf.assam.gov.in/dfr/"
   },
   {
-    "id": "cwc-danger-2026-07-24",
+    "id": "cwc-danger-2026-07-25",
     "title": "CWC: rivers flowing above danger level",
-    "date": "2026-07-24T08:00:00Z",
+    "date": "2026-07-25T08:00:00Z",
     "source": "CWC via ASDMA",
-    "summary": "Dikhou (Sivasagar), Disang (Nanglamuraghat), Dhansiri (S) (Numaligarh), Kushiyara, SRIBHUMI (FFS)"
+    "summary": "Dikhou (Sivasagar), Dhansiri (S)"
   }
 ]

@@ -1,45 +1,15 @@
 [
   {
-    "id": "asdma-biswanath",
-    "district": "Biswanath",
-    "districtId": "biswanath",
-    "location": "Biswanath district",
-    "status": "waterlogging",
-    "description": "ASDMA report 24 Jul 2026: 0 people affected, 2 villages, 0 relief camps.",
-    "lastUpdated": "2026-07-24T08:00:00Z",
-    "coordinates": {
-      "lat": 26.7333,
-      "lng": 93.15
-    },
-    "coordinatesNote": "Approximate district headquarters location",
-    "source": "ASDMA Daily Flood Report"
-  },
-  {
     "id": "asdma-charaideo",
     "district": "Charaideo",
     "districtId": "charaideo",
     "location": "Charaideo district",
-    "status": "flooded",
-    "description": "ASDMA report 24 Jul 2026: 188,404 people affected, 148 villages, 23 relief camps. Revenue circles — Mahmora: 67,128 people, 7390 ha crop; Sapekhati: 0 people, 1397 ha crop; Sonari: 121,276 people, 8212 ha crop.",
-    "lastUpdated": "2026-07-24T08:00:00Z",
+    "status": "waterlogging",
+    "description": "ASDMA report 25 Jul 2026: 0 people affected, 0 villages, 0 relief camps.",
+    "lastUpdated": "2026-07-25T08:00:00Z",
     "coordinates": {
       "lat": 27.0333,
       "lng": 95.0
-    },
-    "coordinatesNote": "Approximate district headquarters location",
-    "source": "ASDMA Daily Flood Report"
-  },
-  {
-    "id": "asdma-dhemaji",
-    "district": "Dhemaji",
-    "districtId": "dhemaji",
-    "location": "Dhemaji district",
-    "status": "waterlogging",
-    "description": "ASDMA report 24 Jul 2026: 3,321 people affected, 7 villages, 0 relief camps. Revenue circles — Dhemaji: 0 people, 10 ha crop; Sissiborgaon: 3,321 people.",
-    "lastUpdated": "2026-07-24T08:00:00Z",
-    "coordinates": {
-      "lat": 27.4855,
-      "lng": 94.556
     },
     "coordinatesNote": "Approximate district headquarters location",
     "source": "ASDMA Daily Flood Report"
@@ -50,8 +20,8 @@
     "districtId": "dibrugarh",
     "location": "Dibrugarh district",
     "status": "waterlogging",
-    "description": "ASDMA report 24 Jul 2026: 661 people affected, 0 villages, 1 relief camps. Revenue circles — Moran: 351 people, 108.107 ha crop; Dibrugarh West: 310 people, 611.5 ha crop.",
-    "lastUpdated": "2026-07-24T08:00:00Z",
+    "description": "ASDMA report 25 Jul 2026: 0 people affected, 0 villages, 0 relief camps.",
+    "lastUpdated": "2026-07-25T08:00:00Z",
     "coordinates": {
       "lat": 27.4728,
       "lng": 94.912
@@ -64,9 +34,9 @@
     "district": "Golaghat",
     "districtId": "golaghat",
     "location": "Golaghat district",
-    "status": "flooded",
-    "description": "ASDMA report 24 Jul 2026: 32,399 people affected, 129 villages, 11 relief camps. Revenue circles — Golaghat: 17,386 people, 1348.53 ha crop; Khumtai: 5,503 people, 786.55 ha crop; Bokakhat: 2,619 people, 511.14 ha crop; Morongi: 281 people, 92 ha crop; Dergaon: 6,610 people, 536.75 ha crop.",
-    "lastUpdated": "2026-07-24T08:00:00Z",
+    "status": "waterlogging",
+    "description": "ASDMA report 25 Jul 2026: 0 people affected, 0 villages, 0 relief camps.",
+    "lastUpdated": "2026-07-25T08:00:00Z",
     "coordinates": {
       "lat": 26.5234,
       "lng": 93.9623
@@ -80,8 +50,8 @@
     "districtId": "hojai",
     "location": "Hojai district",
     "status": "waterlogging",
-    "description": "ASDMA report 24 Jul 2026: 1,463 people affected, 22 villages, 0 relief camps. Revenue circles — Doboka: 1,213 people, 134 ha crop; Hojai: 250 people, 4.3 ha crop.",
-    "lastUpdated": "2026-07-24T08:00:00Z",
+    "description": "ASDMA report 25 Jul 2026: 0 people affected, 19 villages, 0 relief camps. Revenue circles — Doboka: 0 people, 116 ha crop.",
+    "lastUpdated": "2026-07-25T08:00:00Z",
     "coordinates": {
       "lat": 26.0,
       "lng": 92.8667
@@ -95,11 +65,26 @@
     "districtId": "jorhat",
     "location": "Jorhat district",
     "status": "flooded",
-    "description": "ASDMA report 24 Jul 2026: 126,793 people affected, 186 villages, 15 relief camps. Revenue circles — Teok: 77,350 people, 3022.91 ha crop; Jorhat East: 893 people, 778.9 ha crop; Jorhat West: 24,519 people, 2047.62 ha crop; Titabor: 24,031 people, 721.01 ha crop.",
-    "lastUpdated": "2026-07-24T08:00:00Z",
+    "description": "ASDMA report 25 Jul 2026: 131,948 people affected, 185 villages, 14 relief camps. Revenue circles — Teok: 79,395 people, 2227.91 ha crop; Jorhat East: 893 people, 778.9 ha crop; Jorhat West: 32,629 people, 1942.9 ha crop; Titabor: 19,031 people, 636.4 ha crop.",
+    "lastUpdated": "2026-07-25T08:00:00Z",
     "coordinates": {
       "lat": 26.7509,
       "lng": 94.2037
+    },
+    "coordinatesNote": "Approximate district headquarters location",
+    "source": "ASDMA Daily Flood Report"
+  },
+  {
+    "id": "asdma-kamrup",
+    "district": "Kamrup",
+    "districtId": "kamrup",
+    "location": "Kamrup district",
+    "status": "waterlogging",
+    "description": "ASDMA report 25 Jul 2026: 0 people affected, 8 villages, 0 relief camps.",
+    "lastUpdated": "2026-07-25T08:00:00Z",
+    "coordinates": {
+      "lat": 26.3161,
+      "lng": 91.5986
     },
     "coordinatesNote": "Approximate district headquarters location",
     "source": "ASDMA Daily Flood Report"
@@ -110,26 +95,11 @@
     "districtId": "kamrup-metro",
     "location": "Kamrup Metro district",
     "status": "waterlogging",
-    "description": "ASDMA report 24 Jul 2026: 0 people affected, 0 villages, 0 relief camps. Revenue circles — Azara: 0 people, 6 ha crop; Sonapur: 0 people, 21.64 ha crop; Chandrapur: 0 people, 8.9 ha crop; Phuloni: 853 people.",
-    "lastUpdated": "2026-07-24T08:00:00Z",
+    "description": "ASDMA report 25 Jul 2026: 0 people affected, 0 villages, 0 relief camps.",
+    "lastUpdated": "2026-07-25T08:00:00Z",
     "coordinates": {
       "lat": 26.1445,
       "lng": 91.7362
-    },
-    "coordinatesNote": "Approximate district headquarters location",
-    "source": "ASDMA Daily Flood Report"
-  },
-  {
-    "id": "asdma-karbi-anglong",
-    "district": "Karbi Anglong",
-    "districtId": "karbi-anglong",
-    "location": "Karbi Anglong district",
-    "status": "waterlogging",
-    "description": "ASDMA report 24 Jul 2026: 0 people affected, 0 villages, 0 relief camps.",
-    "lastUpdated": "2026-07-24T08:00:00Z",
-    "coordinates": {
-      "lat": 26.0,
-      "lng": 93.45
     },
     "coordinatesNote": "Approximate district headquarters location",
     "source": "ASDMA Daily Flood Report"
@@ -140,8 +110,8 @@
     "districtId": "nagaon",
     "location": "Nagaon district",
     "status": "waterlogging",
-    "description": "ASDMA report 24 Jul 2026: 2,699 people affected, 52 villages, 0 relief camps. Revenue circles — Samaguri: 2,699 people, 480.5 ha crop; Nagaon: 0 people, 319 ha crop; Kampur: 0 people, 2028 ha crop.",
-    "lastUpdated": "2026-07-24T08:00:00Z",
+    "description": "ASDMA report 25 Jul 2026: 2,699 people affected, 51 villages, 0 relief camps. Revenue circles — Samaguri: 2,699 people, 525.5 ha crop; Kampur: 0 people, 2028 ha crop; Nagaon: 0 people, 474 ha crop; Sivsagar: 195,846 people, 50 ha crop; Amguri: 17,567 people, 87.25 ha crop; Demow: 36,727 people, 2145.2 ha crop; Sonari RC part: 22,752 people.",
+    "lastUpdated": "2026-07-25T08:00:00Z",
     "coordinates": {
       "lat": 26.3509,
       "lng": 92.6925
@@ -154,9 +124,9 @@
     "district": "Sivasagar",
     "districtId": "sivasagar",
     "location": "Sivasagar district",
-    "status": "flooded",
-    "description": "ASDMA report 24 Jul 2026: 348,555 people affected, 257 villages, 46 relief camps. Revenue circles — Nazira: 40,004 people, 7260 ha crop; Amguri: 24,303 people, 8705.23 ha crop; Demow: 60,160 people, 2145.2 ha crop; Sivsagar: 201,336 people, 7895.89 ha crop; Sonari RC part: 22,752 people, 19.2 ha crop.",
-    "lastUpdated": "2026-07-24T08:00:00Z",
+    "status": "waterlogging",
+    "description": "ASDMA report 25 Jul 2026: 0 people affected, 0 villages, 0 relief camps.",
+    "lastUpdated": "2026-07-25T08:00:00Z",
     "coordinates": {
       "lat": 26.9844,
       "lng": 94.6378
@@ -170,8 +140,8 @@
     "districtId": "sonitpur",
     "location": "Sonitpur district",
     "status": "waterlogging",
-    "description": "ASDMA report 24 Jul 2026: 0 people affected, 1 villages, 0 relief camps. Revenue circles — Dhekiajuli: 0 people, 0.4 ha crop.",
-    "lastUpdated": "2026-07-24T08:00:00Z",
+    "description": "ASDMA report 25 Jul 2026: 0 people affected, 1 villages, 0 relief camps. Revenue circles — Dhekiajuli: 0 people, 9.3 ha crop.",
+    "lastUpdated": "2026-07-25T08:00:00Z",
     "coordinates": {
       "lat": 26.634,
       "lng": 92.79
