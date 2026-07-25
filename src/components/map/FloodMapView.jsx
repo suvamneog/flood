@@ -26,6 +26,15 @@ const ZOOM = 7
 const slug = (name = '') =>
   name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 
+/** Escape scraped strings before injecting into Leaflet HTML tooltips. */
+const escapeHtml = (value = '') =>
+  String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+
 /** GeoJSON district name → our district id aliases */
 const GEO_ALIASES = {
   'kamrup-metropolitan': 'kamrup-metro',
@@ -86,9 +95,9 @@ export default function FloodMapView({
     const pop = d?.populationAffected || 0
 
     layer.bindTooltip(
-      `<div style="font-weight:700">${name}</div>
-       <div style="font-size:11px">${sev.label}${
-         pop > 0 ? ` · ${pop.toLocaleString('en-IN')} affected` : ''
+      `<div style="font-weight:700">${escapeHtml(name)}</div>
+       <div style="font-size:11px">${escapeHtml(sev.label)}${
+         pop > 0 ? ` · ${escapeHtml(pop.toLocaleString('en-IN'))} affected` : ''
        }</div>`,
       { sticky: true, direction: 'top', opacity: 0.95 }
     )

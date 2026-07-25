@@ -1,7 +1,8 @@
 name: Update ASDMA flood data
 
 # Runs twice daily (IST morning + afternoon) and on manual dispatch.
-# Scrapes the latest official Daily Flood Report PDF and commits JSON updates.
+# Scrapes the latest official Daily Flood Report PDF and opens a PR with
+# JSON updates — never pushes to main directly.
 
 on:
   schedule:
@@ -13,6 +14,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   scrape:
@@ -20,10 +22,10 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@e797f83a4d51cbee7fca481a67912a0c1a951286 # v6.0.0
         with:
           python-version: '3.11'
           cache: pip
@@ -35,14 +37,36 @@ jobs:
       - name: Scrape latest ASDMA daily PDF
         run: python3 scripts/scrape_asdma_pdf.py --lookback 5
 
-      - name: Commit updated data if changed
+      - name: Validate scraped JSON
         run: |
-          if git diff --quiet -- src/data; then
-            echo "No data changes."
-            exit 0
-          fi
-          git config user.name "floodassist-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data
-          git commit -m "chore: refresh ASDMA flood data $(date -u +%Y-%m-%d)"
-          git push
+          python3 - <<'EOF'
+          import json, sys
+          from pathlib import Path
+
+          data = Path('src/data')
+          districts = json.loads((data / 'districts.json').read_text())
+          stats = json.loads((data / 'stats.json').read_text())
+
+          assert isinstance(districts, list) and districts, 'districts.json empty'
+          assert stats.get('reportDate'), 'stats.json missing reportDate'
+          assert stats.get('peopleAffected', -1) >= 0, 'negative peopleAffected'
+          for d in districts:
+              assert d.get('id') and d.get('name'), f'bad district row: {d}'
+          print(f"OK: {len(districts)} districts, report {stats['reportDate']}")
+          EOF
+
+      - name: Open pull request with data updates
+        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
+        with:
+          add-paths: src/data
+          branch: data/asdma-refresh
+          delete-branch: true
+          commit-message: 'chore: refresh ASDMA flood data'
+          title: 'Data: refresh ASDMA flood report'
+          body: |
+            Automated ASDMA Daily Flood Report refresh.
+
+            - Source: https://sdrf.assam.gov.in/dfr/
+            - Only `src/data/*.json` is touched.
+            - Review the diff (figures, districts, rivers) before merging.
+          labels: data-refresh
