@@ -6,29 +6,30 @@
 @theme {
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
 
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
+  /* River teal — brand color drawn from the Brahmaputra, not Tailwind blue */
+  --color-primary-50: #eef7f8;
+  --color-primary-100: #d6ecee;
+  --color-primary-200: #afd8dd;
+  --color-primary-300: #7cbac4;
+  --color-primary-400: #4a97a5;
+  --color-primary-500: #2e7886;
+  --color-primary-600: #16606e;
+  --color-primary-700: #114d59;
+  --color-primary-800: #103e48;
+  --color-primary-900: #0e3138;
 
-  --color-emergency: #ef4444;
-  --color-emergency-dark: #dc2626;
-  --color-success: #22c55e;
-  --color-success-dark: #16a34a;
-  --color-warning: #f97316;
-  --color-warning-dark: #ea580c;
+  --color-emergency: #d7301f;
+  --color-emergency-dark: #b02418;
+  --color-success: #2b9155;
+  --color-success-dark: #1f6f40;
+  --color-warning: #d97b1c;
+  --color-warning-dark: #b25f11;
 
   --color-surface: #ffffff;
-  --color-surface-muted: #f8fafc;
+  --color-surface-muted: #f5f7f6;
   --color-surface-dark: #0f172a;
   --color-surface-dark-muted: #1e293b;
-  --color-border: #e2e8f0;
+  --color-border: #dbe3e0;
   --color-border-dark: #334155;
 }
 

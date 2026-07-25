@@ -38,7 +38,7 @@ export default function Emergency() {
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       <PageHeader
         title="Emergency Contacts"
-        subtitle="One-tap calling for police, ambulance, fire, SDRF and disaster helplines."
+        subtitle="Official Assam disaster and emergency helplines. Tap any card to call."
       />
 
       {loading || !contacts ? (
@@ -52,6 +52,7 @@ export default function Emergency() {
               <motion.a
                 key={c.id}
                 href={telLink(c.number)}
+                aria-label={`Call ${c.name} at ${c.number}`}
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}

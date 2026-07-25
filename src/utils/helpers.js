@@ -1,25 +1,26 @@
 export const SEVERITY = {
   severe: {
     label: 'Severe',
-    color: 'bg-emergency/10 text-emergency border-emergency/20',
+    // Darker text + stronger fill for WCAG-friendly contrast under glare/stress
+    color: 'bg-red-100 text-red-950 border-red-300 dark:bg-red-950 dark:text-red-100 dark:border-red-700',
     dot: 'bg-emergency',
     map: '#ef4444',
   },
   moderate: {
     label: 'Moderate',
-    color: 'bg-warning/10 text-warning-dark border-warning/20',
+    color: 'bg-orange-100 text-orange-950 border-orange-300 dark:bg-orange-950 dark:text-orange-100 dark:border-orange-700',
     dot: 'bg-warning',
     map: '#f97316',
   },
   waterlogging: {
     label: 'Waterlogging',
-    color: 'bg-amber-500/10 text-amber-700 border-amber-500/20 dark:text-amber-400',
+    color: 'bg-amber-100 text-amber-950 border-amber-300 dark:bg-amber-950 dark:text-amber-100 dark:border-amber-700',
     dot: 'bg-amber-500',
     map: '#f59e0b',
   },
   normal: {
     label: 'Normal',
-    color: 'bg-success/10 text-success-dark border-success/20',
+    color: 'bg-emerald-100 text-emerald-950 border-emerald-300 dark:bg-emerald-950 dark:text-emerald-100 dark:border-emerald-700',
     dot: 'bg-success',
     map: '#22c55e',
   },
@@ -28,26 +29,26 @@ export const SEVERITY = {
 export const FLOOD_STATUS = {
   flooded: {
     label: 'Flooded',
-    color: 'bg-emergency/10 text-emergency border-emergency/20',
+    color: 'bg-red-100 text-red-950 border-red-300 dark:bg-red-950 dark:text-red-100 dark:border-red-700',
     map: '#ef4444',
   },
   waterlogging: {
     label: 'Waterlogging',
-    color: 'bg-warning/10 text-warning-dark border-warning/20',
-    map: '#f97316',
+    color: 'bg-amber-100 text-amber-950 border-amber-300 dark:bg-amber-950 dark:text-amber-100 dark:border-amber-700',
+    map: '#f59e0b',
   },
   safe: {
     label: 'Safe',
-    color: 'bg-success/10 text-success-dark border-success/20',
+    color: 'bg-emerald-100 text-emerald-950 border-emerald-300 dark:bg-emerald-950 dark:text-emerald-100 dark:border-emerald-700',
     map: '#22c55e',
   },
 }
 
 export const ALERT_LEVEL = {
-  red: 'bg-emergency/10 text-emergency border-emergency/20',
-  orange: 'bg-warning/10 text-warning-dark border-warning/20',
-  warning: 'bg-amber-500/10 text-amber-700 border-amber-500/20 dark:text-amber-400',
-  green: 'bg-success/10 text-success-dark border-success/20',
+  red: 'bg-red-100 text-red-950 border-red-300 dark:bg-red-950 dark:text-red-100 dark:border-red-700',
+  orange: 'bg-orange-100 text-orange-950 border-orange-300 dark:bg-orange-950 dark:text-orange-100 dark:border-orange-700',
+  warning: 'bg-amber-100 text-amber-950 border-amber-300 dark:bg-amber-950 dark:text-amber-100 dark:border-amber-700',
+  green: 'bg-emerald-100 text-emerald-950 border-emerald-300 dark:bg-emerald-950 dark:text-emerald-100 dark:border-emerald-700',
 }
 
 export const formatDate = (iso) => {

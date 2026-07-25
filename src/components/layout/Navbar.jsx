@@ -21,10 +21,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 z-50 bg-white transition-shadow duration-300 dark:bg-surface-dark ${
         scrolled
-          ? 'border-b border-border/80 bg-white/80 shadow-sm backdrop-blur-xl dark:border-border-dark dark:bg-surface-dark/80'
-          : 'border-b border-transparent bg-white/60 backdrop-blur-md dark:bg-surface-dark/60'
+          ? 'border-b border-border shadow-sm dark:border-border-dark'
+          : 'border-b border-border/60 dark:border-border-dark/60'
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">

@@ -107,7 +107,7 @@ export default function DistrictDrawer({ district, open, onClose }) {
                   {district.name}
                 </h2>
                 {sev && (
-                  <Badge className={`mt-2 ${sev.color}`}>{sev.label}</Badge>
+                  <Badge className={`mt-2 ${sev.color}`} toneDot={sev.dot}>{sev.label}</Badge>
                 )}
               </div>
               <div className="flex items-center gap-1">

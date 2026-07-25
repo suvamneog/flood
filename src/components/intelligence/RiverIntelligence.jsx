@@ -43,7 +43,7 @@ export default function RiverIntelligence({ weather, historyReports }) {
             className="rounded-2xl border border-border bg-white p-5 shadow-sm dark:border-border-dark dark:bg-surface-dark-muted"
           >
             <div className="mb-3 flex items-start justify-between gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-50 text-sky-600 dark:bg-sky-950/50 dark:text-sky-400">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-50 text-primary-600 dark:bg-primary-900/40 dark:text-primary-300">
                 <Waves className="h-5 w-5" />
               </div>
               <Badge className={BADGE[r.badge] || BADGE.warning}>{r.status}</Badge>

@@ -19,15 +19,12 @@ export default function AiDailySummary({ stats, districts, weather, meta }) {
     <motion.section
       initial={{ opacity: 0, y: 14 }}
       animate={{ opacity: 1, y: 0 }}
-      className="relative overflow-hidden rounded-3xl border border-primary-200/80 bg-gradient-to-br from-primary-600 via-primary-700 to-sky-800 p-6 text-white shadow-xl shadow-primary-600/20 sm:p-8"
+      className="relative overflow-hidden rounded-2xl bg-primary-800 p-6 text-white sm:p-8"
     >
-      <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/10 blur-2xl" />
-      <div className="pointer-events-none absolute -bottom-16 left-10 h-48 w-48 rounded-full bg-sky-300/20 blur-3xl" />
-
-      <div className="relative">
+      <div className="relative border-l-2 border-primary-300/60 pl-5 sm:pl-6">
         <div className="mb-4 flex flex-wrap items-center gap-2">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-bold uppercase tracking-wider backdrop-blur">
-            <FileText className="h-3.5 w-3.5" />
+          <span className="inline-flex items-center gap-1.5 text-sm font-bold text-white">
+            <FileText className="h-4 w-4 text-primary-300" />
             {summary.title}
           </span>
           <span className="text-xs font-medium text-primary-100">
