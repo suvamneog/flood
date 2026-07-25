@@ -31,8 +31,9 @@ import datetime as dt
 import json
 import re
 import sys
+import time
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any, Callable, Iterable
 
 import requests
 
@@ -119,12 +120,46 @@ def coords_for(name: str) -> dict[str, float]:
 # ---------------------------------------------------------------------------
 # Download the newest available PDF from the SDRF DFR portal
 # ---------------------------------------------------------------------------
+def request_with_retries(
+    do_request: Callable[[], requests.Response],
+    *,
+    label: str,
+    attempts: int = 5,
+    base_delay: float = 8.0,
+) -> requests.Response:
+    """Retry transient network failures against the ASDMA portal."""
+    last_exc: Exception | None = None
+    for attempt in range(1, attempts + 1):
+        try:
+            return do_request()
+        except (
+            requests.exceptions.ConnectTimeout,
+            requests.exceptions.ReadTimeout,
+            requests.exceptions.ConnectionError,
+        ) as exc:
+            last_exc = exc
+            if attempt >= attempts:
+                break
+            delay = base_delay * attempt
+            print(
+                f"  ⟳ {label} timed out (attempt {attempt}/{attempts}); "
+                f"retrying in {delay:.0f}s…",
+                flush=True,
+            )
+            time.sleep(delay)
+    assert last_exc is not None
+    raise last_exc
+
+
 def fetch_pdf(target_date: dt.date, lookback: int) -> tuple[bytes, dt.date, str]:
     session = requests.Session()
     session.headers.update({"User-Agent": UA})
 
     print(f"→ Fetching DFR form (CSRF, session cookie)…", flush=True)
-    page = session.get(DFR_URL, timeout=25)
+    page = request_with_retries(
+        lambda: session.get(DFR_URL, timeout=60),
+        label="DFR form GET",
+    )
     page.raise_for_status()
     token_match = re.search(r'name="_token" value="([^"]+)"', page.text)
     if not token_match:
@@ -136,12 +171,15 @@ def fetch_pdf(target_date: dt.date, lookback: int) -> tuple[bytes, dt.date, str]
         candidate = target_date - dt.timedelta(days=i)
         date_str = candidate.isoformat()
         print(f"→ Trying date {date_str} …", end=" ", flush=True)
-        resp = session.post(
-            DFR_POST,
-            data={"_token": token, "type": "flood", "date": date_str},
-            headers={"Referer": DFR_URL},
-            timeout=45,
-            allow_redirects=True,
+        resp = request_with_retries(
+            lambda ds=date_str, tok=token: session.post(
+                DFR_POST,
+                data={"_token": tok, "type": "flood", "date": ds},
+                headers={"Referer": DFR_URL},
+                timeout=90,
+                allow_redirects=True,
+            ),
+            label=f"DFR POST {date_str}",
         )
         ct = resp.headers.get("Content-Type", "")
         if resp.status_code == 200 and "pdf" in ct.lower() and len(resp.content) > 1024:
@@ -151,7 +189,10 @@ def fetch_pdf(target_date: dt.date, lookback: int) -> tuple[bytes, dt.date, str]
         print(f"× {resp.status_code}")
         # 419 usually means session expired — refresh token
         if resp.status_code == 419:
-            page = session.get(DFR_URL, timeout=25)
+            page = request_with_retries(
+                lambda: session.get(DFR_URL, timeout=60),
+                label="DFR form refresh",
+            )
             token_match = re.search(r'name="_token" value="([^"]+)"', page.text)
             if token_match:
                 token = token_match.group(1)
