@@ -41,7 +41,7 @@ export default function AiDailySummary({ stats, districts, weather, meta }) {
           ))}
         </div>
         <p className="mt-4 text-[11px] text-primary-100/80">
-          Generated from official ASDMA figures — not an AI model.
+          Generated from official ASDMA figures
         </p>
       </div>
     </motion.section>
