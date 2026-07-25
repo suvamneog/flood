@@ -97,7 +97,7 @@ export default function DistrictSearch({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.15 }}
-            className="absolute z-[600] mt-2 max-h-80 w-full overflow-y-auto rounded-2xl border border-border bg-white p-1.5 shadow-xl dark:border-border-dark dark:bg-slate-900"
+            className="absolute z-30 mt-2 max-h-80 w-full overflow-y-auto rounded-2xl border border-border bg-white p-1.5 shadow-xl dark:border-border-dark dark:bg-slate-900"
           >
             {results.length === 0 ? (
               <li className="px-3 py-3 text-sm text-slate-500">
