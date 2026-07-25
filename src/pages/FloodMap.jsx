@@ -1,56 +1,62 @@
-import { useState, useEffect } from 'react'
+import { useMemo, useState, useCallback } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import PageHeader from '../components/ui/PageHeader'
 import FloodMapView from '../components/map/FloodMapView'
 import MapFilters from '../components/map/MapFilters'
 import DataFreshnessBanner from '../components/DataSourceBanner'
 import DistrictSearch from '../components/ui/DistrictSearch'
 import DistrictDrawer from '../components/ui/DistrictDrawer'
+import ReportDateFilter from '../components/ui/ReportDateFilter'
+import EmptyState from '../components/ui/EmptyState'
 import ErrorState from '../components/ui/ErrorState'
 import { Skeleton } from '../components/ui/Skeleton'
 import { FLOOD_STATUS, formatRelative } from '../utils/helpers'
 import Badge from '../components/ui/Badge'
-import { getFloodReports } from '../services/floodService'
-import { getDistricts } from '../services/districtService'
-import { getMeta } from '../services/metaService'
 import { useFetch } from '../hooks/useFetch'
+import { getDashboardForDate, getReportDates } from '../services/historyService'
+import { formatReportDate } from '../utils/intelligence'
 
 export default function FloodMapPage() {
+  const [searchParams, setSearchParams] = useSearchParams()
+  const selectedDate = searchParams.get('date') || null
   const [district, setDistrict] = useState('all')
   const [status, setStatus] = useState('all')
-  const [reports, setReports] = useState([])
-  const [districts, setDistricts] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
   const [selectedDistrict, setSelectedDistrict] = useState(null)
-  const { data: meta } = useFetch(getMeta, [])
 
-  useEffect(() => {
-    getDistricts()
-      .then(setDistricts)
-      .catch(() => setDistricts([]))
-  }, [])
+  const { data: dateInfo } = useFetch(getReportDates, [])
+  const { data: dashboard, loading, error } = useFetch(
+    () => getDashboardForDate(selectedDate),
+    [selectedDate]
+  )
 
-  useEffect(() => {
-    let cancelled = false
-    setLoading(true)
-    setError(null)
-    getFloodReports({ district, status })
-      .then((rows) => {
-        if (!cancelled) setReports(rows)
-      })
-      .catch(() => {
-        if (!cancelled) {
-          setError(true)
-          setReports([])
-        }
-      })
-      .finally(() => {
-        if (!cancelled) setLoading(false)
-      })
-    return () => {
-      cancelled = true
+  const districts = dashboard?.districts || []
+  const meta = dashboard?.meta
+  const viewingHistorical = Boolean(selectedDate && dashboard && !dashboard.isLive)
+
+  const reports = useMemo(() => {
+    let rows = [...(dashboard?.floodReports || [])]
+    if (district !== 'all') {
+      rows = rows.filter(
+        (r) =>
+          r.districtId === district ||
+          r.district.toLowerCase() === district.toLowerCase()
+      )
     }
-  }, [district, status])
+    if (status !== 'all') {
+      rows = rows.filter((r) => r.status === status)
+    }
+    return rows
+  }, [dashboard, district, status])
+
+  const setDate = useCallback(
+    (date) => {
+      setSearchParams(date ? { date } : {}, { replace: true })
+      setDistrict('all')
+      setStatus('all')
+      setSelectedDistrict(null)
+    },
+    [setSearchParams]
+  )
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
@@ -58,9 +64,33 @@ export default function FloodMapPage() {
         title="Live Flood Map"
         subtitle="Districts are shaded by severity — tap any district or pin for details."
       >
+        <div className="mb-4">
+          <ReportDateFilter
+            dates={dateInfo?.dates || []}
+            liveDate={dateInfo?.liveDate}
+            value={selectedDate}
+            onChange={setDate}
+          />
+        </div>
+
         {meta && (
           <div className="mb-4">
             <DataFreshnessBanner meta={meta} compact />
+          </div>
+        )}
+
+        {viewingHistorical && (
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-primary-200 bg-primary-50 px-4 py-3 text-sm dark:border-primary-800 dark:bg-primary-950/40">
+            <span className="font-medium text-primary-800 dark:text-primary-200">
+              Viewing archived report · {formatReportDate(selectedDate)}
+            </span>
+            <button
+              type="button"
+              onClick={() => setDate(null)}
+              className="font-bold text-primary-700 hover:underline dark:text-primary-300"
+            >
+              Return to latest
+            </button>
           </div>
         )}
 
@@ -102,6 +132,20 @@ export default function FloodMapPage() {
         />
       ) : loading ? (
         <Skeleton className="h-[420px] w-full rounded-2xl sm:h-[520px] lg:h-[560px]" />
+      ) : !dashboard ? (
+        <EmptyState
+          title="Report not found"
+          description="That date is not in the archive. Pick another report date or return to the latest."
+          action={
+            <button
+              type="button"
+              onClick={() => setDate(null)}
+              className="rounded-xl bg-primary-600 px-4 py-2 text-sm font-bold text-white"
+            >
+              Return to latest
+            </button>
+          }
+        />
       ) : (
         <FloodMapView
           reports={reports}
@@ -116,7 +160,7 @@ export default function FloodMapPage() {
         </h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {reports.map((r) => {
-            const s = FLOOD_STATUS[r.status]
+            const s = FLOOD_STATUS[r.status] || FLOOD_STATUS.safe
             return (
               <div
                 key={r.id}

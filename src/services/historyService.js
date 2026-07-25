@@ -3,6 +3,9 @@ import districts from '../data/districts.json'
 import stats from '../data/stats.json'
 import weather from '../data/weather.json'
 import meta from '../data/meta.json'
+import floodReports from '../data/floodReports.json'
+import reliefCamps from '../data/reliefCamps.json'
+import { formatReportDate } from '../utils/intelligence'
 
 export const getHistory = async () => ({
   reports: [...(history.reports || [])].sort((a, b) =>
@@ -11,10 +14,22 @@ export const getHistory = async () => ({
   updatedAt: history.updatedAt,
 })
 
+export const getLiveReportDate = () =>
+  meta.reportDate || stats.reportDate || stats.period || null
+
+/** Sorted newest-first list of report dates available in the archive. */
+export const getReportDates = async () => {
+  const { reports } = await getHistory()
+  const liveDate = getLiveReportDate()
+  const dates = reports.map((r) => r.date)
+  if (liveDate && !dates.includes(liveDate)) dates.unshift(liveDate)
+  return { dates, liveDate }
+}
+
 /** Previous report relative to a given date (default: latest live report). */
 export const getPreviousReport = async (relativeToDate) => {
   const { reports } = await getHistory()
-  const anchor = relativeToDate || meta.reportDate || stats.reportDate || stats.period
+  const anchor = relativeToDate || getLiveReportDate()
   const older = reports.filter((r) => r.date < anchor)
   return older[0] || null
 }
@@ -24,13 +39,65 @@ export const getReportByDate = async (date) => {
   return reports.find((r) => r.date === date) || null
 }
 
+const STATUS_FROM_SEVERITY = {
+  severe: 'flooded',
+  moderate: 'flooded',
+  waterlogging: 'waterlogging',
+  normal: 'safe',
+}
+
+/** Build map pin rows from a district list (used for historical dates). */
+export function floodReportsFromDistricts(districtRows = [], reportDate) {
+  const label = formatReportDate(reportDate)
+  return districtRows
+    .filter(
+      (d) =>
+        d.severity !== 'normal' ||
+        (d.populationAffected || 0) > 0 ||
+        (d.reliefCamps || 0) > 0 ||
+        (d.affectedVillages || 0) > 0
+    )
+    .map((d) => ({
+      id: `asdma-${d.id}`,
+      district: d.name,
+      districtId: d.id,
+      location: `${d.name} district`,
+      status: STATUS_FROM_SEVERITY[d.severity] || 'safe',
+      description: `ASDMA report ${label}: ${(d.populationAffected || 0).toLocaleString('en-IN')} people affected, ${d.affectedVillages || 0} villages, ${d.reliefCamps || 0} relief camps.`,
+      lastUpdated: d.lastUpdated || `${reportDate}T08:00:00Z`,
+      coordinates: d.coordinates,
+      coordinatesNote: d.coordinatesNote,
+      source: 'ASDMA Daily Flood Report',
+    }))
+}
+
+/** Build district camp aggregates from a district list (historical dates). */
+export function campsFromDistricts(districtRows = [], reportDate) {
+  const label = formatReportDate(reportDate)
+  return districtRows
+    .filter((d) => (d.reliefCamps || 0) > 0)
+    .map((d) => ({
+      id: `asdma-camp-${d.id}`,
+      name: `${d.name} — district relief camps (total)`,
+      district: d.name,
+      districtId: d.id,
+      campCount: d.reliefCamps,
+      campInmates: d.campInmates || 0,
+      summary: `${d.reliefCamps} relief camp(s) reported open in ${d.name} district with ${(d.campInmates || 0).toLocaleString('en-IN')} inmates (ASDMA ${label}). Individual camp addresses are published by the District Administration — call District Control Room (1077).`,
+      phone: '1077',
+      coordinates: d.coordinates,
+      coordinatesNote: d.coordinatesNote,
+      source: 'ASDMA Daily Flood Report',
+    }))
+}
+
 /**
  * Dashboard payload for a selected date.
  * Live (latest meta.reportDate) uses current JSON files;
  * historical dates use history snapshots.
  */
 export const getDashboardForDate = async (date) => {
-  const liveDate = meta.reportDate || stats.reportDate || stats.period
+  const liveDate = getLiveReportDate()
 
   if (!date || date === liveDate) {
     return {
@@ -40,23 +107,28 @@ export const getDashboardForDate = async (date) => {
       stats: { ...stats },
       weather: [...weather],
       meta: { ...meta },
+      floodReports: [...floodReports],
+      reliefCamps: [...reliefCamps],
     }
   }
 
   const snap = (history.reports || []).find((r) => r.date === date)
   if (!snap) return null
 
+  const districtRows = snap.districts || []
+  const snapStats = snap.stats || {}
+
   return {
     isLive: false,
     date: snap.date,
-    districts: snap.districts || [],
+    districts: districtRows,
     stats: {
-      ...snap.stats,
-      peopleAffected: snap.stats.peopleAffected,
-      floodedDistricts: snap.stats.floodedDistricts,
-      reliefCamps: snap.stats.reliefCamps,
-      campInmates: snap.stats.campInmates,
-      activeAlerts: snap.stats.riverWarnings ?? snap.stats.activeAlerts,
+      ...snapStats,
+      peopleAffected: snapStats.peopleAffected || 0,
+      floodedDistricts: snapStats.floodedDistricts || 0,
+      reliefCamps: snapStats.reliefCamps || 0,
+      campInmates: snapStats.campInmates || 0,
+      activeAlerts: snapStats.riverWarnings ?? snapStats.activeAlerts ?? 0,
       lastUpdated: `${snap.date}T08:00:00Z`,
       reportDate: snap.date,
       period: snap.date,
@@ -100,5 +172,7 @@ export const getDashboardForDate = async (date) => {
       floodDataOrigin: 'asdma-daily-pdf-history',
       period: snap.date,
     },
+    floodReports: floodReportsFromDistricts(districtRows, snap.date),
+    reliefCamps: campsFromDistricts(districtRows, snap.date),
   }
 }

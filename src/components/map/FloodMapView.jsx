@@ -153,34 +153,40 @@ export default function FloodMapView({
             />
           )}
 
-          {reports.map((r) => {
-            const status = FLOOD_STATUS[r.status] || FLOOD_STATUS.safe
-            return (
-              <Marker
-                key={r.id}
-                position={[r.coordinates.lat, r.coordinates.lng]}
-                icon={icons[r.status] || icons.safe}
-              >
-                <Popup>
-                  <div className="min-w-[200px] space-y-2">
-                    <div className="flex items-start justify-between gap-2">
-                      <div>
-                        <p className="font-bold text-slate-900">{r.location}</p>
-                        <p className="text-xs text-slate-500">{r.district}</p>
-                      </div>
-                      <Badge className={status.color}>{status.label}</Badge>
-                    </div>
-                    <p className="text-xs leading-relaxed text-slate-600">
-                      {r.description}
-                    </p>
-                    <p className="text-[10px] text-slate-400">
-                      Pin ≈ district HQ · Updated {formatDateTime(r.lastUpdated)}
-                    </p>
-                  </div>
-                </Popup>
-              </Marker>
+          {reports
+            .filter(
+              (r) =>
+                Number.isFinite(r?.coordinates?.lat) &&
+                Number.isFinite(r?.coordinates?.lng)
             )
-          })}
+            .map((r) => {
+              const status = FLOOD_STATUS[r.status] || FLOOD_STATUS.safe
+              return (
+                <Marker
+                  key={r.id}
+                  position={[r.coordinates.lat, r.coordinates.lng]}
+                  icon={icons[r.status] || icons.safe}
+                >
+                  <Popup>
+                    <div className="min-w-[200px] space-y-2">
+                      <div className="flex items-start justify-between gap-2">
+                        <div>
+                          <p className="font-bold text-slate-900">{r.location}</p>
+                          <p className="text-xs text-slate-500">{r.district}</p>
+                        </div>
+                        <Badge className={status.color}>{status.label}</Badge>
+                      </div>
+                      <p className="text-xs leading-relaxed text-slate-600">
+                        {r.description}
+                      </p>
+                      <p className="text-[10px] text-slate-400">
+                        Pin ≈ district HQ · Updated {formatDateTime(r.lastUpdated)}
+                      </p>
+                    </div>
+                  </Popup>
+                </Marker>
+              )
+            })}
         </MapContainer>
 
         {/* Severity legend */}

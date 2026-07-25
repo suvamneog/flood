@@ -1,51 +1,65 @@
-import { useState, useEffect } from 'react'
+import { useMemo, useState, useCallback } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { Search, MapPinned, Phone, Users, Tent } from 'lucide-react'
 import { motion } from 'framer-motion'
 import PageHeader from '../components/ui/PageHeader'
 import Card from '../components/ui/Card'
 import Button from '../components/ui/Button'
+import ReportDateFilter from '../components/ui/ReportDateFilter'
+import DataFreshnessBanner from '../components/DataSourceBanner'
 import EmptyState from '../components/ui/EmptyState'
 import ErrorState from '../components/ui/ErrorState'
 import { ListSkeleton } from '../components/ui/Skeleton'
-import { getReliefCamps } from '../services/campService'
-import { getDistricts } from '../services/districtService'
+import { useFetch } from '../hooks/useFetch'
+import { getDashboardForDate, getReportDates } from '../services/historyService'
 import { googleMapsUrl, telLink } from '../utils/helpers'
+import { formatReportDate } from '../utils/intelligence'
 
 export default function ReliefCamps() {
+  const [searchParams, setSearchParams] = useSearchParams()
+  const selectedDate = searchParams.get('date') || null
   const [query, setQuery] = useState('')
   const [district, setDistrict] = useState('all')
-  const [camps, setCamps] = useState([])
-  const [districts, setDistricts] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
 
-  useEffect(() => {
-    getDistricts()
-      .then(setDistricts)
-      .catch(() => setDistricts([]))
-  }, [])
+  const { data: dateInfo } = useFetch(getReportDates, [])
+  const { data: dashboard, loading, error } = useFetch(
+    () => getDashboardForDate(selectedDate),
+    [selectedDate]
+  )
 
-  useEffect(() => {
-    let cancelled = false
-    setLoading(true)
-    setError(null)
-    getReliefCamps({ district, query })
-      .then((rows) => {
-        if (!cancelled) setCamps(rows)
-      })
-      .catch(() => {
-        if (!cancelled) {
-          setError(true)
-          setCamps([])
-        }
-      })
-      .finally(() => {
-        if (!cancelled) setLoading(false)
-      })
-    return () => {
-      cancelled = true
+  const districts = dashboard?.districts || []
+  const meta = dashboard?.meta
+  const viewingHistorical = Boolean(selectedDate && dashboard && !dashboard.isLive)
+
+  const camps = useMemo(() => {
+    let rows = [...(dashboard?.reliefCamps || [])]
+    if (district !== 'all') {
+      rows = rows.filter(
+        (c) =>
+          c.districtId === district ||
+          c.district.toLowerCase() === district.toLowerCase()
+      )
     }
-  }, [district, query])
+    if (query) {
+      const q = query.toLowerCase()
+      rows = rows.filter(
+        (c) =>
+          c.name.toLowerCase().includes(q) ||
+          (c.summary || '').toLowerCase().includes(q) ||
+          c.district.toLowerCase().includes(q)
+      )
+    }
+    return rows
+  }, [dashboard, district, query])
+
+  const setDate = useCallback(
+    (date) => {
+      setSearchParams(date ? { date } : {}, { replace: true })
+      setDistrict('all')
+      setQuery('')
+    },
+    [setSearchParams]
+  )
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
@@ -53,6 +67,36 @@ export default function ReliefCamps() {
         title="Relief Camps"
         subtitle="District-level camp totals from the official ASDMA daily report. Call 1077 for exact camp addresses."
       >
+        <div className="mb-4">
+          <ReportDateFilter
+            dates={dateInfo?.dates || []}
+            liveDate={dateInfo?.liveDate}
+            value={selectedDate}
+            onChange={setDate}
+          />
+        </div>
+
+        {meta && (
+          <div className="mb-4">
+            <DataFreshnessBanner meta={meta} compact />
+          </div>
+        )}
+
+        {viewingHistorical && (
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-primary-200 bg-primary-50 px-4 py-3 text-sm dark:border-primary-800 dark:bg-primary-950/40">
+            <span className="font-medium text-primary-800 dark:text-primary-200">
+              Viewing archived report · {formatReportDate(selectedDate)}
+            </span>
+            <button
+              type="button"
+              onClick={() => setDate(null)}
+              className="font-bold text-primary-700 hover:underline dark:text-primary-300"
+            >
+              Return to latest
+            </button>
+          </div>
+        )}
+
         <div className="flex flex-col gap-3 sm:flex-row">
           <div className="relative flex-1">
             <Search className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
@@ -83,17 +127,42 @@ export default function ReliefCamps() {
         <ErrorState
           title="Could not load relief camps"
           description="Please try again in a moment."
-          onRetry={() => {
-            setDistrict('all')
-            setQuery('')
-          }}
+          onRetry={() => window.location.reload()}
         />
       ) : loading ? (
         <ListSkeleton count={4} />
+      ) : !dashboard ? (
+        <EmptyState
+          title="Report not found"
+          description="That date is not in the archive. Pick another report date or return to the latest."
+          action={
+            <button
+              type="button"
+              onClick={() => setDate(null)}
+              className="rounded-xl bg-primary-600 px-4 py-2 text-sm font-bold text-white"
+            >
+              Return to latest
+            </button>
+          }
+        />
       ) : camps.length === 0 ? (
         <EmptyState
           title="No relief camps listed"
-          description="No district camp totals match your search, or none were reported in the latest ASDMA PDF."
+          description="No district camp totals match your search, or none were reported in this ASDMA PDF."
+          action={
+            query || district !== 'all' ? (
+              <button
+                type="button"
+                onClick={() => {
+                  setDistrict('all')
+                  setQuery('')
+                }}
+                className="rounded-xl bg-primary-600 px-4 py-2 text-sm font-bold text-white"
+              >
+                Clear filters
+              </button>
+            ) : null
+          }
         />
       ) : (
         <div className="grid gap-4 sm:grid-cols-2">
