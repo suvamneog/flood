@@ -3,7 +3,7 @@ import { useSearchParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, Phone, History } from 'lucide-react'
 import Button from '../components/ui/Button'
-import FloodIllustration from '../components/home/FloodIllustration'
+import floodHero from '../assets/flood-hero.jpeg'
 import StatsCards from '../components/home/StatsCards'
 import DataFreshnessBanner from '../components/DataSourceBanner'
 import AiDailySummary from '../components/intelligence/AiDailySummary'
@@ -175,7 +175,19 @@ export default function Home() {
             className="relative"
           >
             <div className="absolute -inset-4 rounded-[2rem] bg-primary-200/30 blur-2xl dark:bg-primary-800/20" />
-            <FloodIllustration className="relative w-full drop-shadow-xl" />
+            <figure className="relative overflow-hidden rounded-[2rem] border border-border shadow-xl dark:border-border-dark">
+              <img
+                src={floodHero}
+                alt="Residents wading through a flooded street in Assam past a submerged car"
+                width={735}
+                height={488}
+                loading="eager"
+                className="w-full object-cover"
+              />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900/70 to-transparent px-4 py-3 text-xs font-medium text-white/90">
+                Flooding in Assam during the monsoon season
+              </figcaption>
+            </figure>
           </motion.div>
         </div>
       </section>
