@@ -75,7 +75,7 @@ export default function DistrictDrawer({ district, open, onClose }) {
   return createPortal(
     <AnimatePresence>
       {open && district && (
-        <div className="fixed inset-0 z-[90] flex justify-end">
+        <div className="fixed inset-0 z-[1100] flex justify-end">
           <motion.button
             type="button"
             aria-label="Close drawer"
