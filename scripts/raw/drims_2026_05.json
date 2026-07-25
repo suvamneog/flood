@@ -1,0 +1,2708 @@
+{
+  "cwcDetails": {
+    "riversAtWarningLevel": "Disang (Nanglamuraghat), Brahmaputra (Dibrugarh)",
+    "riversAtDangerLevel": "",
+    "riversAtFloodLevel": ""
+  },
+  "affectedDistricts": {
+    "total": 3,
+    "districts": "Goalpara, Cachar, Lakhimpur",
+    "districtCodes": "13, 03, 24"
+  },
+  "affectedRevenueCircles": {
+    "total": 7,
+    "districts": [
+      {
+        "district": "Cachar",
+        "districtCode": "03",
+        "total": 3,
+        "details": "Silchar, Katigorah, Udharbond"
+      },
+      {
+        "district": "Goalpara",
+        "districtCode": "13",
+        "total": 1,
+        "details": "Rongjuli"
+      },
+      {
+        "district": "Lakhimpur",
+        "districtCode": "24",
+        "total": 3,
+        "details": "Narayanpur, Bihpuria, Nowboicha"
+      }
+    ]
+  },
+  "affectedVillages": [
+    {
+      "total": 3,
+      "district": "Goalpara",
+      "districtCode": "13",
+      "details": "(Rongjuli | 3)"
+    },
+    {
+      "total": 17,
+      "district": "Cachar",
+      "districtCode": "03",
+      "details": "(Silchar | 4), (Katigorah | 9), (Udharbond | 4)"
+    },
+    {
+      "total": 3,
+      "district": "Lakhimpur",
+      "districtCode": "24",
+      "details": "(Narayanpur | 1), (Bihpuria | 1), (Nowboicha | 1)"
+    }
+  ],
+  "affectedPopulation": [
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalCropArea": 0,
+      "district": "Bongaigaon",
+      "districtCode": "08",
+      "details": "(Srijangram | Population Affected: 0 | Crop Area Submerged: 0), (Bongaigaon | Population Affected: 0 | Crop Area Submerged: 0), (Manikpur | Population Affected: 0 | Crop Area Submerged: 0)"
+    },
+    {
+      "total": 6293,
+      "totalMale": 1996,
+      "totalFemale": 2041,
+      "totalChildren": 2256,
+      "totalCropArea": 0,
+      "district": "Cachar",
+      "districtCode": "03",
+      "details": "(Silchar | Population Affected: 3038 | Crop Area Submerged: 0), (Katigorah | Population Affected: 2705 | Crop Area Submerged: 0), (Udharbond | Population Affected: 550 | Crop Area Submerged: 0), (Sonai | Population Affected: 0 | Crop Area Submerged: 0), (Lakhipur | Population Affected: 0 | Crop Area Submerged: 0)"
+    },
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalCropArea": 89.5,
+      "district": "Goalpara",
+      "districtCode": "13",
+      "details": "(Rongjuli | Population Affected: 0 | Crop Area Submerged: 89.5)"
+    },
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalCropArea": 0,
+      "district": "Hailakandi",
+      "districtCode": "15",
+      "details": "(Katlicherra | Population Affected: 0 | Crop Area Submerged: 0)"
+    },
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalCropArea": 0,
+      "district": "Kamrup",
+      "districtCode": "19",
+      "details": "(Hajo | Population Affected: 0 | Crop Area Submerged: 0), (Kamalpur | Population Affected: 0 | Crop Area Submerged: 0)"
+    },
+    {
+      "total": 35,
+      "totalMale": 10,
+      "totalFemale": 12,
+      "totalChildren": 13,
+      "totalCropArea": 4.42,
+      "district": "Lakhimpur",
+      "districtCode": "24",
+      "details": "(Narayanpur | Population Affected: 0 | Crop Area Submerged: 4.42), (Bihpuria | Population Affected: 35 | Crop Area Submerged: 0), (Nowboicha | Population Affected: 0 | Crop Area Submerged: 0)"
+    },
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalCropArea": 0,
+      "district": "South Salmara",
+      "districtCode": "31",
+      "details": "(Mankachar | Population Affected: 0 | Crop Area Submerged: 0)"
+    },
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalCropArea": 0,
+      "district": "Sribhumi",
+      "districtCode": "22",
+      "details": "(Sribhumi Sadar | Population Affected: 0 | Crop Area Submerged: 0), (Patherkandi | Population Affected: 0 | Crop Area Submerged: 0)"
+    }
+  ],
+  "reliefCampsAndCenters": [
+    {
+      "total": 0,
+      "district": "Bongaigaon",
+      "reliefCamps": "(Srijangram | 0), (Bongaigaon | 0), (Manikpur | 0)",
+      "reliefCenters": "(Srijangram | 0), (Bongaigaon | 0), (Manikpur | 0)",
+      "totalReliefCamp": 0,
+      "totalReliefCenter": 0
+    },
+    {
+      "total": 2,
+      "district": "Cachar",
+      "reliefCamps": "(Silchar | 0), (Katigorah | 1), (Udharbond | 0), (Sonai | 0), (Lakhipur | 0)",
+      "reliefCenters": "(Silchar | 0), (Katigorah | 0), (Udharbond | 1), (Sonai | 0), (Lakhipur | 0)",
+      "totalReliefCamp": 1,
+      "totalReliefCenter": 1
+    },
+    {
+      "total": 0,
+      "district": "Goalpara",
+      "reliefCamps": "(Rongjuli | 0)",
+      "reliefCenters": "(Rongjuli | 0)",
+      "totalReliefCamp": 0,
+      "totalReliefCenter": 0
+    },
+    {
+      "total": 0,
+      "district": "Hailakandi",
+      "reliefCamps": "(Katlicherra | 0)",
+      "reliefCenters": "(Katlicherra | 0)",
+      "totalReliefCamp": 0,
+      "totalReliefCenter": 0
+    },
+    {
+      "total": 0,
+      "district": "Kamrup",
+      "reliefCamps": "(Hajo | 0), (Kamalpur | 0)",
+      "reliefCenters": "(Hajo | 0), (Kamalpur | 0)",
+      "totalReliefCamp": 0,
+      "totalReliefCenter": 0
+    },
+    {
+      "total": 0,
+      "district": "Lakhimpur",
+      "reliefCamps": "(Narayanpur | 0), (Bihpuria | 0), (Nowboicha | 0)",
+      "reliefCenters": "(Narayanpur | 0), (Bihpuria | 0), (Nowboicha | 0)",
+      "totalReliefCamp": 0,
+      "totalReliefCenter": 0
+    },
+    {
+      "total": 0,
+      "district": "South Salmara",
+      "reliefCamps": "(Mankachar | 0)",
+      "reliefCenters": "(Mankachar | 0)",
+      "totalReliefCamp": 0,
+      "totalReliefCenter": 0
+    },
+    {
+      "total": 0,
+      "district": "Sribhumi",
+      "reliefCamps": "(Sribhumi Sadar | 0), (Patherkandi | 0)",
+      "reliefCenters": "(Sribhumi Sadar | 0), (Patherkandi | 0)",
+      "totalReliefCamp": 0,
+      "totalReliefCenter": 0
+    }
+  ],
+  "campInmates": [
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalPregnant": 0,
+      "totalDisabled": 0,
+      "district": "Bongaigaon",
+      "details": "(Srijangram | 0), (Bongaigaon | 0), (Manikpur | 0)"
+    },
+    {
+      "total": 40,
+      "totalMale": 2,
+      "totalFemale": 19,
+      "totalChildren": 19,
+      "totalPregnant": 0,
+      "totalDisabled": 0,
+      "district": "Cachar",
+      "details": "(Silchar | 0), (Katigorah | 40), (Udharbond | 0), (Sonai | 0), (Lakhipur | 0)"
+    },
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalPregnant": 0,
+      "totalDisabled": 0,
+      "district": "Goalpara",
+      "details": "(Rongjuli | 0)"
+    },
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalPregnant": 0,
+      "totalDisabled": 0,
+      "district": "Hailakandi",
+      "details": "(Katlicherra | 0)"
+    },
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalPregnant": 0,
+      "totalDisabled": 0,
+      "district": "Kamrup",
+      "details": "(Hajo | 0), (Kamalpur | 0)"
+    },
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalPregnant": 0,
+      "totalDisabled": 0,
+      "district": "Lakhimpur",
+      "details": "(Narayanpur | 0), (Bihpuria | 0), (Nowboicha | 0)"
+    },
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalPregnant": 0,
+      "totalDisabled": 0,
+      "district": "South Salmara",
+      "details": "(Mankachar | 0)"
+    },
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalPregnant": 0,
+      "totalDisabled": 0,
+      "district": "Sribhumi",
+      "details": "(Sribhumi Sadar | 0), (Patherkandi | 0)"
+    }
+  ],
+  "nonCampInmates": [
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalBigAnimal": 0,
+      "totalSmallAnimal": 0,
+      "totalPoultryAnimal": 0,
+      "district": "Bongaigaon",
+      "details": "(Srijangram | 0), (Bongaigaon | 0), (Manikpur | 0)"
+    },
+    {
+      "total": 322,
+      "totalMale": 117,
+      "totalFemale": 125,
+      "totalChildren": 80,
+      "totalBigAnimal": 0,
+      "totalSmallAnimal": 0,
+      "totalPoultryAnimal": 0,
+      "district": "Cachar",
+      "details": "(Silchar | 0), (Katigorah | 0), (Udharbond | 322), (Sonai | 0), (Lakhipur | 0)"
+    },
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalBigAnimal": 0,
+      "totalSmallAnimal": 0,
+      "totalPoultryAnimal": 0,
+      "district": "Goalpara",
+      "details": "(Rongjuli | 0)"
+    },
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalBigAnimal": 0,
+      "totalSmallAnimal": 0,
+      "totalPoultryAnimal": 0,
+      "district": "Hailakandi",
+      "details": "(Katlicherra | 0)"
+    },
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalBigAnimal": 0,
+      "totalSmallAnimal": 0,
+      "totalPoultryAnimal": 0,
+      "district": "Kamrup",
+      "details": "(Hajo | 0), (Kamalpur | 0)"
+    },
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalBigAnimal": 0,
+      "totalSmallAnimal": 0,
+      "totalPoultryAnimal": 0,
+      "district": "Lakhimpur",
+      "details": "(Narayanpur | 0), (Bihpuria | 0), (Nowboicha | 0)"
+    },
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalBigAnimal": 0,
+      "totalSmallAnimal": 0,
+      "totalPoultryAnimal": 0,
+      "district": "South Salmara",
+      "details": "(Mankachar | 0)"
+    },
+    {
+      "total": 0,
+      "totalMale": 0,
+      "totalFemale": 0,
+      "totalChildren": 0,
+      "totalBigAnimal": 0,
+      "totalSmallAnimal": 0,
+      "totalPoultryAnimal": 0,
+      "district": "Sribhumi",
+      "details": "(Sribhumi Sadar | 0), (Patherkandi | 0)"
+    }
+  ],
+  "hllDetails": {
+    "confirmed": [
+      {
+        "district": "Goalpara",
+        "floodDeath": 0,
+        "generalDrowning": 0,
+        "total": 0,
+        "totalMale": 0,
+        "totalFemale": 0,
+        "totalChildrenMale": 0,
+        "totalChildrenFemale": 0,
+        "totalOthers": 0,
+        "details": "(Rongjuli | 0)"
+      },
+      {
+        "district": "South Salmara",
+        "floodDeath": 0,
+        "generalDrowning": 0,
+        "total": 0,
+        "totalMale": 0,
+        "totalFemale": 0,
+        "totalChildrenMale": 0,
+        "totalChildrenFemale": 0,
+        "totalOthers": 0,
+        "details": "(Mankachar | 0)"
+      },
+      {
+        "district": "Cachar",
+        "floodDeath": 0,
+        "generalDrowning": 0,
+        "total": 0,
+        "totalMale": 0,
+        "totalFemale": 0,
+        "totalChildrenMale": 0,
+        "totalChildrenFemale": 0,
+        "totalOthers": 0,
+        "details": "(Silchar | 0), (Katigorah | 0), (Udharbond | 0), (Sonai | 0), (Lakhipur | 0)"
+      },
+      {
+        "district": "Sribhumi",
+        "floodDeath": 0,
+        "generalDrowning": 0,
+        "total": 0,
+        "totalMale": 0,
+        "totalFemale": 0,
+        "totalChildrenMale": 0,
+        "totalChildrenFemale": 0,
+        "totalOthers": 0,
+        "details": "(Sribhumi Sadar | 0), (Patherkandi | 0)"
+      },
+      {
+        "district": "Kamrup",
+        "floodDeath": 0,
+        "generalDrowning": 0,
+        "total": 0,
+        "totalMale": 0,
+        "totalFemale": 0,
+        "totalChildrenMale": 0,
+        "totalChildrenFemale": 0,
+        "totalOthers": 0,
+        "details": "(Hajo | 0), (Kamalpur | 0)"
+      },
+      {
+        "district": "Lakhimpur",
+        "floodDeath": 0,
+        "generalDrowning": 0,
+        "total": 0,
+        "totalMale": 0,
+        "totalFemale": 0,
+        "totalChildrenMale": 0,
+        "totalChildrenFemale": 0,
+        "totalOthers": 0,
+        "details": "(Narayanpur | 0), (Bihpuria | 0), (Nowboicha | 0)"
+      },
+      {
+        "district": "Bongaigaon",
+        "floodDeath": 0,
+        "generalDrowning": 0,
+        "total": 0,
+        "totalMale": 0,
+        "totalFemale": 0,
+        "totalChildrenMale": 0,
+        "totalChildrenFemale": 0,
+        "totalOthers": 0,
+        "details": "(Srijangram | 0), (Bongaigaon | 0), (Manikpur | 0)"
+      },
+      {
+        "district": "Hailakandi",
+        "floodDeath": 0,
+        "generalDrowning": 0,
+        "total": 0,
+        "totalMale": 0,
+        "totalFemale": 0,
+        "totalChildrenMale": 0,
+        "totalChildrenFemale": 0,
+        "totalOthers": 0,
+        "details": "(Katlicherra | 0)"
+      }
+    ],
+    "missing": [
+      {
+        "district": "Goalpara",
+        "total": 0,
+        "totalMale": 0,
+        "totalFemale": 0,
+        "totalChildrenMale": 0,
+        "totalChildrenFemale": 0,
+        "totalOthers": 0,
+        "details": "(Rongjuli | 0)"
+      },
+      {
+        "district": "South Salmara",
+        "total": 0,
+        "totalMale": 0,
+        "totalFemale": 0,
+        "totalChildrenMale": 0,
+        "totalChildrenFemale": 0,
+        "totalOthers": 0,
+        "details": "(Mankachar | 0)"
+      },
+      {
+        "district": "Cachar",
+        "total": 0,
+        "totalMale": 0,
+        "totalFemale": 0,
+        "totalChildrenMale": 0,
+        "totalChildrenFemale": 0,
+        "totalOthers": 0,
+        "details": "(Silchar | 0), (Katigorah | 0), (Udharbond | 0), (Sonai | 0), (Lakhipur | 0)"
+      },
+      {
+        "district": "Sribhumi",
+        "total": 0,
+        "totalMale": 0,
+        "totalFemale": 0,
+        "totalChildrenMale": 0,
+        "totalChildrenFemale": 0,
+        "totalOthers": 0,
+        "details": "(Sribhumi Sadar | 0), (Patherkandi | 0)"
+      },
+      {
+        "district": "Kamrup",
+        "total": 0,
+        "totalMale": 0,
+        "totalFemale": 0,
+        "totalChildrenMale": 0,
+        "totalChildrenFemale": 0,
+        "totalOthers": 0,
+        "details": "(Hajo | 0), (Kamalpur | 0)"
+      },
+      {
+        "district": "Lakhimpur",
+        "total": 0,
+        "totalMale": 0,
+        "totalFemale": 0,
+        "totalChildrenMale": 0,
+        "totalChildrenFemale": 0,
+        "totalOthers": 0,
+        "details": "(Narayanpur | 0), (Bihpuria | 0), (Nowboicha | 0)"
+      },
+      {
+        "district": "Bongaigaon",
+        "total": 0,
+        "totalMale": 0,
+        "totalFemale": 0,
+        "totalChildrenMale": 0,
+        "totalChildrenFemale": 0,
+        "totalOthers": 0,
+        "details": "(Srijangram | 0), (Bongaigaon | 0), (Manikpur | 0)"
+      },
+      {
+        "district": "Hailakandi",
+        "total": 0,
+        "totalMale": 0,
+        "totalFemale": 0,
+        "totalChildrenMale": 0,
+        "totalChildrenFemale": 0,
+        "totalOthers": 0,
+        "details": "(Katlicherra | 0)"
+      }
+    ]
+  },
+  "livestocksDetails": {
+    "affected": [
+      {
+        "district": "Bongaigaon",
+        "noLaBig": 0,
+        "noLaSmall": 0,
+        "noLaPoultry": 0,
+        "total": 0
+      },
+      {
+        "district": "Cachar",
+        "noLaBig": 0,
+        "noLaSmall": 0,
+        "noLaPoultry": 0,
+        "total": 0
+      },
+      {
+        "district": "Goalpara",
+        "noLaBig": 0,
+        "noLaSmall": 0,
+        "noLaPoultry": 0,
+        "total": 0
+      },
+      {
+        "district": "Hailakandi",
+        "noLaBig": 0,
+        "noLaSmall": 0,
+        "noLaPoultry": 0,
+        "total": 0
+      },
+      {
+        "district": "Kamrup",
+        "noLaBig": 0,
+        "noLaSmall": 0,
+        "noLaPoultry": 0,
+        "total": 0
+      },
+      {
+        "district": "Lakhimpur",
+        "noLaBig": 0,
+        "noLaSmall": 0,
+        "noLaPoultry": 0,
+        "total": 0
+      },
+      {
+        "district": "South Salmara",
+        "noLaBig": 0,
+        "noLaSmall": 0,
+        "noLaPoultry": 0,
+        "total": 0
+      },
+      {
+        "district": "Sribhumi",
+        "noLaBig": 0,
+        "noLaSmall": 0,
+        "noLaPoultry": 0,
+        "total": 0
+      }
+    ],
+    "washedAway": [
+      {
+        "district": "Bongaigaon",
+        "noLwaBig": 0,
+        "noLwaSmall": 0,
+        "noLwaPoultry": 0,
+        "total": 0
+      },
+      {
+        "district": "Cachar",
+        "noLwaBig": 0,
+        "noLwaSmall": 0,
+        "noLwaPoultry": 0,
+        "total": 0
+      },
+      {
+        "district": "Goalpara",
+        "noLwaBig": 0,
+        "noLwaSmall": 0,
+        "noLwaPoultry": 0,
+        "total": 0
+      },
+      {
+        "district": "Hailakandi",
+        "noLwaBig": 0,
+        "noLwaSmall": 0,
+        "noLwaPoultry": 0,
+        "total": 0
+      },
+      {
+        "district": "Kamrup",
+        "noLwaBig": 0,
+        "noLwaSmall": 0,
+        "noLwaPoultry": 0,
+        "total": 0
+      },
+      {
+        "district": "Lakhimpur",
+        "noLwaBig": 1,
+        "noLwaSmall": 0,
+        "noLwaPoultry": 0,
+        "total": 1
+      },
+      {
+        "district": "South Salmara",
+        "noLwaBig": 0,
+        "noLwaSmall": 0,
+        "noLwaPoultry": 0,
+        "total": 0
+      },
+      {
+        "district": "Sribhumi",
+        "noLwaBig": 0,
+        "noLwaSmall": 0,
+        "noLwaPoultry": 0,
+        "total": 0
+      }
+    ]
+  },
+  "houseDamagedDetails": {
+    "damage": [
+      {
+        "district": "Goalpara",
+        "noHdFullyKuccha": 0,
+        "noHdFullyPukka": 0,
+        "noHdPartiallyPukka": 0,
+        "noHdPartiallyKuccha": 0,
+        "totalFully": 0,
+        "totalPartially": 0
+      },
+      {
+        "district": "South Salmara",
+        "noHdFullyKuccha": 0,
+        "noHdFullyPukka": 0,
+        "noHdPartiallyPukka": 0,
+        "noHdPartiallyKuccha": 0,
+        "totalFully": 0,
+        "totalPartially": 0
+      },
+      {
+        "district": "Cachar",
+        "noHdFullyKuccha": 0,
+        "noHdFullyPukka": 0,
+        "noHdPartiallyPukka": 0,
+        "noHdPartiallyKuccha": 76,
+        "totalFully": 0,
+        "totalPartially": 76
+      },
+      {
+        "district": "Sribhumi",
+        "noHdFullyKuccha": 0,
+        "noHdFullyPukka": 0,
+        "noHdPartiallyPukka": 0,
+        "noHdPartiallyKuccha": 0,
+        "totalFully": 0,
+        "totalPartially": 0
+      },
+      {
+        "district": "Kamrup",
+        "noHdFullyKuccha": 0,
+        "noHdFullyPukka": 0,
+        "noHdPartiallyPukka": 0,
+        "noHdPartiallyKuccha": 0,
+        "totalFully": 0,
+        "totalPartially": 0
+      },
+      {
+        "district": "Lakhimpur",
+        "noHdFullyKuccha": 0,
+        "noHdFullyPukka": 0,
+        "noHdPartiallyPukka": 0,
+        "noHdPartiallyKuccha": 0,
+        "totalFully": 0,
+        "totalPartially": 0
+      },
+      {
+        "district": "Bongaigaon",
+        "noHdFullyKuccha": 0,
+        "noHdFullyPukka": 0,
+        "noHdPartiallyPukka": 0,
+        "noHdPartiallyKuccha": 0,
+        "totalFully": 0,
+        "totalPartially": 0
+      },
+      {
+        "district": "Hailakandi",
+        "noHdFullyKuccha": 0,
+        "noHdFullyPukka": 0,
+        "noHdPartiallyPukka": 0,
+        "noHdPartiallyKuccha": 0,
+        "totalFully": 0,
+        "totalPartially": 0
+      }
+    ],
+    "otherDamage": [
+      {
+        "district": "Goalpara",
+        "noHdOthersHuts": 0,
+        "noHdOthersCattleSheds": 0,
+        "totalOthers": 0
+      },
+      {
+        "district": "South Salmara",
+        "noHdOthersHuts": 0,
+        "noHdOthersCattleSheds": 0,
+        "totalOthers": 0
+      },
+      {
+        "district": "Cachar",
+        "noHdOthersHuts": 0,
+        "noHdOthersCattleSheds": 0,
+        "totalOthers": 0
+      },
+      {
+        "district": "Sribhumi",
+        "noHdOthersHuts": 0,
+        "noHdOthersCattleSheds": 0,
+        "totalOthers": 0
+      },
+      {
+        "district": "Kamrup",
+        "noHdOthersHuts": 0,
+        "noHdOthersCattleSheds": 0,
+        "totalOthers": 0
+      },
+      {
+        "district": "Lakhimpur",
+        "noHdOthersHuts": 0,
+        "noHdOthersCattleSheds": 0,
+        "totalOthers": 0
+      },
+      {
+        "district": "Bongaigaon",
+        "noHdOthersHuts": 0,
+        "noHdOthersCattleSheds": 0,
+        "totalOthers": 0
+      },
+      {
+        "district": "Hailakandi",
+        "noHdOthersHuts": 0,
+        "noHdOthersCattleSheds": 0,
+        "totalOthers": 0
+      }
+    ]
+  },
+  "rescueOperationDetails": [
+    {
+      "district": "Bongaigaon",
+      "agencies": "",
+      "otherAgencies": "",
+      "totalMedicalTeamsDeployed": 0,
+      "totalBoatsDeployed": 0,
+      "totalPersonEvacuated": 0,
+      "totalAnimalEvacuated": 0,
+      "totalHelicoptersDeployed": 0,
+      "totalHelicoptersEvacuatedPerson": 0
+    },
+    {
+      "district": "Cachar",
+      "agencies": "",
+      "otherAgencies": "",
+      "totalMedicalTeamsDeployed": 0,
+      "totalBoatsDeployed": 0,
+      "totalPersonEvacuated": 0,
+      "totalAnimalEvacuated": 0,
+      "totalHelicoptersDeployed": 0,
+      "totalHelicoptersEvacuatedPerson": 0
+    },
+    {
+      "district": "Goalpara",
+      "agencies": "",
+      "otherAgencies": "",
+      "totalMedicalTeamsDeployed": 0,
+      "totalBoatsDeployed": 0,
+      "totalPersonEvacuated": 0,
+      "totalAnimalEvacuated": 0,
+      "totalHelicoptersDeployed": 0,
+      "totalHelicoptersEvacuatedPerson": 0
+    },
+    {
+      "district": "Hailakandi",
+      "agencies": "",
+      "otherAgencies": "",
+      "totalMedicalTeamsDeployed": 0,
+      "totalBoatsDeployed": 0,
+      "totalPersonEvacuated": 0,
+      "totalAnimalEvacuated": 0,
+      "totalHelicoptersDeployed": 0,
+      "totalHelicoptersEvacuatedPerson": 0
+    },
+    {
+      "district": "Kamrup",
+      "agencies": "",
+      "otherAgencies": "",
+      "totalMedicalTeamsDeployed": 0,
+      "totalBoatsDeployed": 0,
+      "totalPersonEvacuated": 0,
+      "totalAnimalEvacuated": 0,
+      "totalHelicoptersDeployed": 0,
+      "totalHelicoptersEvacuatedPerson": 0
+    },
+    {
+      "district": "Lakhimpur",
+      "agencies": "",
+      "otherAgencies": "",
+      "totalMedicalTeamsDeployed": 0,
+      "totalBoatsDeployed": 0,
+      "totalPersonEvacuated": 0,
+      "totalAnimalEvacuated": 0,
+      "totalHelicoptersDeployed": 0,
+      "totalHelicoptersEvacuatedPerson": 0
+    },
+    {
+      "district": "South Salmara",
+      "agencies": "",
+      "otherAgencies": "",
+      "totalMedicalTeamsDeployed": 0,
+      "totalBoatsDeployed": 0,
+      "totalPersonEvacuated": 0,
+      "totalAnimalEvacuated": 0,
+      "totalHelicoptersDeployed": 0,
+      "totalHelicoptersEvacuatedPerson": 0
+    },
+    {
+      "district": "Sribhumi",
+      "agencies": "",
+      "otherAgencies": "",
+      "totalMedicalTeamsDeployed": 0,
+      "totalBoatsDeployed": 0,
+      "totalPersonEvacuated": 0,
+      "totalAnimalEvacuated": 0,
+      "totalHelicoptersDeployed": 0,
+      "totalHelicoptersEvacuatedPerson": 0
+    }
+  ],
+  "reliefDistributionDetails": {
+    "reliefData": [
+      {
+        "district": "Bongaigaon",
+        "rice": 0,
+        "dal": 0,
+        "salt": 0,
+        "mOil": 0,
+        "cattleFeedGreenFooder": 0,
+        "cattleFeedWheatBran": 0,
+        "cattleFeedRiceBran": 0
+      },
+      {
+        "district": "Cachar",
+        "rice": 4.026,
+        "dal": 0.88,
+        "salt": 0.154,
+        "mOil": 15.4,
+        "cattleFeedGreenFooder": 0,
+        "cattleFeedWheatBran": 0,
+        "cattleFeedRiceBran": 0
+      },
+      {
+        "district": "Goalpara",
+        "rice": 0,
+        "dal": 0,
+        "salt": 0,
+        "mOil": 0,
+        "cattleFeedGreenFooder": 0,
+        "cattleFeedWheatBran": 0,
+        "cattleFeedRiceBran": 0
+      },
+      {
+        "district": "Hailakandi",
+        "rice": 0,
+        "dal": 0,
+        "salt": 0,
+        "mOil": 0,
+        "cattleFeedGreenFooder": 0,
+        "cattleFeedWheatBran": 0,
+        "cattleFeedRiceBran": 0
+      },
+      {
+        "district": "Kamrup",
+        "rice": 0,
+        "dal": 0,
+        "salt": 0,
+        "mOil": 0,
+        "cattleFeedGreenFooder": 0,
+        "cattleFeedWheatBran": 0,
+        "cattleFeedRiceBran": 0
+      },
+      {
+        "district": "Lakhimpur",
+        "rice": 0,
+        "dal": 0,
+        "salt": 0,
+        "mOil": 0,
+        "cattleFeedGreenFooder": 0,
+        "cattleFeedWheatBran": 0,
+        "cattleFeedRiceBran": 0
+      },
+      {
+        "district": "South Salmara",
+        "rice": 0,
+        "dal": 0,
+        "salt": 0,
+        "mOil": 0,
+        "cattleFeedGreenFooder": 0,
+        "cattleFeedWheatBran": 0,
+        "cattleFeedRiceBran": 0
+      },
+      {
+        "district": "Sribhumi",
+        "rice": 0,
+        "dal": 0,
+        "salt": 0,
+        "mOil": 0,
+        "cattleFeedGreenFooder": 0,
+        "cattleFeedWheatBran": 0,
+        "cattleFeedRiceBran": 0
+      }
+    ],
+    "otherReliefData": [
+      {
+        "district": "Bongaigaon",
+        "babyFoodLiquid": "",
+        "babyFoodSolid": "",
+        "otherItems": ""
+      },
+      {
+        "district": "Cachar",
+        "babyFoodLiquid": "0-Kg",
+        "babyFoodSolid": "0-Kg",
+        "otherItems": "Biscuits-72-Pck."
+      },
+      {
+        "district": "Goalpara",
+        "babyFoodLiquid": "",
+        "babyFoodSolid": "",
+        "otherItems": ""
+      },
+      {
+        "district": "Hailakandi",
+        "babyFoodLiquid": "",
+        "babyFoodSolid": "",
+        "otherItems": ""
+      },
+      {
+        "district": "Kamrup",
+        "babyFoodLiquid": "",
+        "babyFoodSolid": "",
+        "otherItems": ""
+      },
+      {
+        "district": "Lakhimpur",
+        "babyFoodLiquid": "",
+        "babyFoodSolid": "",
+        "otherItems": ""
+      },
+      {
+        "district": "South Salmara",
+        "babyFoodLiquid": "",
+        "babyFoodSolid": "",
+        "otherItems": ""
+      },
+      {
+        "district": "Sribhumi",
+        "babyFoodLiquid": "",
+        "babyFoodSolid": "",
+        "otherItems": ""
+      }
+    ]
+  },
+  "infDamageDetails": {
+    "embBreached": [
+      {
+        "district": "Bongaigaon",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Srijangram | 0)",
+            "details": []
+          },
+          {
+            "block": "(Bongaigaon | 0)",
+            "details": []
+          },
+          {
+            "block": "(Manikpur | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Cachar",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Silchar | 0)",
+            "details": []
+          },
+          {
+            "block": "(Katigorah | 0)",
+            "details": []
+          },
+          {
+            "block": "(Udharbond | 0)",
+            "details": []
+          },
+          {
+            "block": "(Sonai | 0)",
+            "details": []
+          },
+          {
+            "block": "(Lakhipur | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Goalpara",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Rongjuli | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Hailakandi",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Katlicherra | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Kamrup",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Hajo | 0)",
+            "details": []
+          },
+          {
+            "block": "(Kamalpur | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Lakhimpur",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Narayanpur | 0)",
+            "details": []
+          },
+          {
+            "block": "(Bihpuria | 0)",
+            "details": []
+          },
+          {
+            "block": "(Nowboicha | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "South Salmara",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Mankachar | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Sribhumi",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Sribhumi Sadar | 0)",
+            "details": []
+          },
+          {
+            "block": "(Patherkandi | 0)",
+            "details": []
+          }
+        ]
+      }
+    ],
+    "embAffected": [
+      {
+        "district": "Bongaigaon",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Srijangram | 0)",
+            "details": []
+          },
+          {
+            "block": "(Bongaigaon | 0)",
+            "details": []
+          },
+          {
+            "block": "(Manikpur | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Cachar",
+        "total": 5,
+        "details": [
+          {
+            "block": "(Silchar | 3)",
+            "details": [
+              {
+                "id": 57040,
+                "type": "embAffected",
+                "name": "Dyke along R B of River Barak from Madhuramukh to Massimpur Subedarbasti",
+                "departmentName": "Water Resource Deptt.",
+                "villageName": "Dudpatil Part – IV",
+                "location": "Dudhpatil ",
+                "latitude": 24.87854,
+                "longitude": 92.769608,
+                "remarks": "As reported by EE WRD Silchar Division on dated 16.05.2026",
+                "createdAt": "2026-05-16T14:07:38.246Z",
+                "updatedAt": "2026-05-16T14:07:38.246Z"
+              },
+              {
+                "id": 57041,
+                "type": "embAffected",
+                "name": "No Dyke Barak River Massimpur Pt- I",
+                "departmentName": "Water Resource Deptt.",
+                "villageName": "Masimpur Part – I",
+                "location": "Masimpur Pt I",
+                "latitude": 24.86812,
+                "longitude": 92.751754,
+                "remarks": "As reported by EE WRD Silchar Division on dated 16.05.2026",
+                "createdAt": "2026-05-16T14:07:38.249Z",
+                "updatedAt": "2026-05-16T14:07:38.249Z"
+              },
+              {
+                "id": 57042,
+                "type": "embAffected",
+                "name": "Dyke along R/B of River Barak from Madhuramukh to Massimpur (Near Jagannath Mandir (Rajargaon) Near Dudhpatil ",
+                "departmentName": "Water Resource Deptt.",
+                "villageName": "Dudpatil Part – IV",
+                "location": "Dudhpatil ",
+                "latitude": 24.848331,
+                "longitude": 92.783451,
+                "remarks": "As reported by EE WRD Silchar Division on dated 16.05.2026",
+                "createdAt": "2026-05-16T14:07:38.251Z",
+                "updatedAt": "2026-05-16T14:07:38.251Z"
+              }
+            ]
+          },
+          {
+            "block": "(Katigorah | 2)",
+            "details": [
+              {
+                "id": 57036,
+                "type": "embAffected",
+                "name": "Dyke along R/B of River Harang from Railway line PWD Road",
+                "departmentName": "Water Resource Deptt.",
+                "villageName": "Gorervitor Part – I",
+                "location": "Gorervitor ",
+                "latitude": 24.954438,
+                "longitude": 92.66821,
+                "remarks": "As reported by EE Engineer Cachar WRD Divsion on dated 16.05.2026.",
+                "createdAt": "2026-05-16T13:50:03.502Z",
+                "updatedAt": "2026-05-16T13:50:03.502Z"
+              },
+              {
+                "id": 57035,
+                "type": "embAffected",
+                "name": "Barak River -North Buribail ",
+                "departmentName": "Water Resource Deptt.",
+                "villageName": "Buribail Part – I",
+                "location": "Buribail ",
+                "latitude": 24.872856,
+                "longitude": 92.72599,
+                "remarks": "As reported by EE Engineer Cachar WRD Divsion on dated 16.05.2026.",
+                "createdAt": "2026-05-16T13:50:03.500Z",
+                "updatedAt": "2026-05-16T13:50:03.500Z"
+              }
+            ]
+          },
+          {
+            "block": "(Udharbond | 0)",
+            "details": []
+          },
+          {
+            "block": "(Sonai | 0)",
+            "details": []
+          },
+          {
+            "block": "(Lakhipur | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Goalpara",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Rongjuli | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Hailakandi",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Katlicherra | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Kamrup",
+        "total": 2,
+        "details": [
+          {
+            "block": "(Hajo | 1)",
+            "details": [
+              {
+                "id": 57053,
+                "type": "embAffected",
+                "name": "Puthimari Embankment",
+                "departmentName": "PWD (Roads)",
+                "villageName": "1 No. Bagta",
+                "location": "Bagta, Hatdola",
+                "latitude": 26.26934,
+                "longitude": 91.554697,
+                "remarks": "As per report received from PWD (Roads) Rangia Kamalpur Sub-Division on 18/05/2026 multiple raincut was seen at Puthimari Embankment at Bagta and Hatdola from Chainage 54600 meter under Hajo Revenue Circle.",
+                "createdAt": "2026-05-19T09:14:30.327Z",
+                "updatedAt": "2026-05-19T09:14:30.327Z"
+              }
+            ]
+          },
+          {
+            "block": "(Kamalpur | 1)",
+            "details": [
+              {
+                "id": 57055,
+                "type": "embAffected",
+                "name": "R/B Embankment of Puthimari River",
+                "departmentName": "Water Resource Deptt.",
+                "villageName": "Hahara",
+                "location": "Lessakona , Hahara",
+                "latitude": 0,
+                "longitude": 0,
+                "remarks": "As per report received from AEE, Water Resource Deptt., Rangia-Kamalpur WR Sub-District multiple raincut and sloughening of earthwork occurred  at side slope , crest  in both side slopes ( RS AND CS)",
+                "createdAt": "2026-05-19T09:20:39.093Z",
+                "updatedAt": "2026-05-19T09:20:39.093Z"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "district": "Lakhimpur",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Narayanpur | 0)",
+            "details": []
+          },
+          {
+            "block": "(Bihpuria | 0)",
+            "details": []
+          },
+          {
+            "block": "(Nowboicha | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "South Salmara",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Mankachar | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Sribhumi",
+        "total": 2,
+        "details": [
+          {
+            "block": "(Sribhumi Sadar | 2)",
+            "details": [
+              {
+                "id": 57047,
+                "type": "embAffected",
+                "name": "Assistant Executive Engineer, Sribhumi  North Water Resources Sub Division , Sribhumi ",
+                "departmentName": "Water Resource Deptt.",
+                "villageName": "Banamali Kitte Karimganj Charbazar",
+                "location": "Charbazar Railway Sluice Gate",
+                "latitude": 24.874128,
+                "longitude": 92.370471,
+                "remarks": "As report submitted by Assistant Executive Engineer, Sribhumi  North Water Resources Sub Division , Sribhumi on date 15-05-2026 due to heavy rainfall Excessive sloughing due to seepage ",
+                "createdAt": "2026-05-17T09:01:23.288Z",
+                "updatedAt": "2026-05-17T09:01:23.288Z"
+              },
+              {
+                "id": 57048,
+                "type": "embAffected",
+                "name": "Assistant Executive Engineer, Sribhumi  North Water Resources Sub Division , Sribhumi ",
+                "departmentName": "Water Resource Deptt.",
+                "villageName": "Banamali Kitte Karimganj Charbazar",
+                "location": "Charakuri BSF Camp Sluice Gate",
+                "latitude": 24.871089,
+                "longitude": 92.37538,
+                "remarks": "As report submitted by Assistant Executive Engineer, Sribhumi  North Water Resources Sub Division , Sribhumi on date 15-05-2026 due to heavy rainfall Excessive sloughing due to seepage ",
+                "createdAt": "2026-05-17T09:01:23.291Z",
+                "updatedAt": "2026-05-17T09:01:23.291Z"
+              }
+            ]
+          },
+          {
+            "block": "(Patherkandi | 0)",
+            "details": []
+          }
+        ]
+      }
+    ],
+    "roadAffected": [
+      {
+        "district": "Bongaigaon",
+        "total": 17,
+        "details": [
+          {
+            "block": "(Srijangram | 13)",
+            "details": [
+              {
+                "id": 57093,
+                "type": "road",
+                "name": "SH2 Ch-26.50 to 31.00 km  (Dharmapur to Lengtisingha)",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Lengtisinga",
+                "location": "Lengtisinga",
+                "latitude": 26.324008,
+                "longitude": 90.705258,
+                "remarks": "Partially Side Shoulder and Hard Crust are damaged at Several Stretches. As per report received from PWRD dated- 22.05.2026",
+                "createdAt": "2026-05-22T07:48:44.649Z",
+                "updatedAt": "2026-05-22T07:48:44.649Z"
+              },
+              {
+                "id": 57094,
+                "type": "road",
+                "name": "Approaches of RCC Br. No-3/1 on Piradhara to Latibari Road",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Lotibari Pt-I",
+                "location": "Piradhara,\nLatibari-I,\nLatibari-II",
+                "latitude": 26.291505,
+                "longitude": 90.687932,
+                "remarks": "Both approaches of the RCC Br. No-3/1 is damaged. As per report received from PWRD dated- 22.05.2026",
+                "createdAt": "2026-05-22T07:48:44.650Z",
+                "updatedAt": "2026-05-22T07:48:44.650Z"
+              },
+              {
+                "id": 57086,
+                "type": "road",
+                "name": "SH2 Ch-31.00 to 35.00 km  (Lengtisingha to Bartari) ",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Lengtisinga",
+                "location": "Lengtisingha,Santoshpur,Bartari",
+                "latitude": 26.30971,
+                "longitude": 90.730535,
+                "remarks": "Partially Side Shoulder and Hard Crust are damaged at Several Stretches. As per report received from PWRD dated- 22.05.2026",
+                "createdAt": "2026-05-22T07:48:44.611Z",
+                "updatedAt": "2026-05-22T07:48:44.611Z"
+              },
+              {
+                "id": 57095,
+                "type": "road",
+                "name": "Latibari Pagla Bazar to Barjana Road",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Lotibari Pt-I",
+                "location": "Latibari Pagla Bazar\nBarjana Road",
+                "latitude": 26.275145,
+                "longitude": 90.675442,
+                "remarks": "Side Shoulder and Hard Crust are damaged at Several Stretches. As per report received from PWRD dated- 22.05.2026",
+                "createdAt": "2026-05-22T07:48:44.652Z",
+                "updatedAt": "2026-05-22T07:48:44.652Z"
+              },
+              {
+                "id": 57092,
+                "type": "road",
+                "name": "Piradhara to Latibari Road",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Piradhara Pt-I",
+                "location": "Piradhara,\nLatibari-I,\nLatibari-II",
+                "latitude": 26.303445,
+                "longitude": 90.69036,
+                "remarks": "Partially Side Shoulder and Hard Crust are damaged at Several Stretches. As per report received from PWRD dated- 22.05.2026",
+                "createdAt": "2026-05-22T07:48:44.647Z",
+                "updatedAt": "2026-05-22T07:48:44.647Z"
+              },
+              {
+                "id": 57087,
+                "type": "road",
+                "name": "SH2 Ch-35.00 to 40.00 km  (Bartari to Langla) ",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Rangapani",
+                "location": "Bartari,Rangapani,Kendulia,Langla",
+                "latitude": 26.302775,
+                "longitude": 90.776918,
+                "remarks": "Partially Side Shoulder and Hard Crust are damaged at Several Stretches. As per report received from PWRD dated- 22.05.2026",
+                "createdAt": "2026-05-22T07:48:44.638Z",
+                "updatedAt": "2026-05-22T07:48:44.638Z"
+              },
+              {
+                "id": 57088,
+                "type": "road",
+                "name": "Malegarh Barjana Road",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Malegarh Pt-I",
+                "location": "Malegarh,Barjana",
+                "latitude": 26.257527,
+                "longitude": 90.651182,
+                "remarks": "Partially Side Shoulder and Hard Crust are damaged at Several Stretches. As per report received from PWRD dated- 22.05.2026",
+                "createdAt": "2026-05-22T07:48:44.640Z",
+                "updatedAt": "2026-05-22T07:48:44.640Z"
+              },
+              {
+                "id": 57089,
+                "type": "road",
+                "name": "Behulapara-Bhadaipara Road",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Behulapara",
+                "location": "Behulapara, Bhadaipara",
+                "latitude": 26.326646,
+                "longitude": 90.702096,
+                "remarks": "Partially Side Shoulder and Hard Crust are damaged at Several Stretches. As per report received from PWRD dated- 22.05.2026",
+                "createdAt": "2026-05-22T07:48:44.642Z",
+                "updatedAt": "2026-05-22T07:48:44.642Z"
+              },
+              {
+                "id": 57090,
+                "type": "road",
+                "name": "Borjana-I to Borjana-III Road",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Barjana Pt-I",
+                "location": "Barjana I,Barjana III",
+                "latitude": 26.260705,
+                "longitude": 90.661757,
+                "remarks": "Partially Side Shoulder and Hard Crust are damaged at Several Stretches. As per report received from PWRD dated- 22.05.2026",
+                "createdAt": "2026-05-22T07:48:44.643Z",
+                "updatedAt": "2026-05-22T07:48:44.643Z"
+              },
+              {
+                "id": 57091,
+                "type": "road",
+                "name": "Kirtanpara to Nararvita Road (Ch 3.00 to 7.00 Km)",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Jopea Boraichala",
+                "location": "Borichala,Moinnapara,Nararvita",
+                "latitude": 26.343222,
+                "longitude": 90.762792,
+                "remarks": "Partially Side Shoulder and Hard Crust are damaged at Several Stretches. As per report received from PWRD dated- 22.05.2026",
+                "createdAt": "2026-05-22T07:48:44.645Z",
+                "updatedAt": "2026-05-22T07:48:44.645Z"
+              },
+              {
+                "id": 57102,
+                "type": "road",
+                "name": "Piradhara to Latibari Road",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Piradhara Pt-I",
+                "location": "Piradhara to Latibari Road",
+                "latitude": 26.303445,
+                "longitude": 90.69036,
+                "remarks": "Partially side shoulder and hard crust are damaged at several  stretches. reported by PWRD. Dated- 23.05.2026",
+                "createdAt": "2026-05-23T08:10:42.073Z",
+                "updatedAt": "2026-05-23T08:10:42.073Z"
+              },
+              {
+                "id": 57100,
+                "type": "road",
+                "name": "Latibari Pagla  Bazar to barjana",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Lotibari Pt-I",
+                "location": "Lotibari paglabazaar",
+                "latitude": 26.275145,
+                "longitude": 90.675442,
+                "remarks": "Partially Side shoulder and hard crust are damaged at several stretches reported by PWD (Rd.) on 23/05/2026",
+                "createdAt": "2026-05-23T08:10:42.068Z",
+                "updatedAt": "2026-05-23T08:10:42.068Z"
+              },
+              {
+                "id": 57101,
+                "type": "road",
+                "name": "Piradhara to Latibari Road",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Piradhara Pt-I",
+                "location": "Piradhara to Latibari Road.",
+                "latitude": 26.291505,
+                "longitude": 90.687932,
+                "remarks": "Both Approaches of RCC Br. No 3/1 is damaged. reported by PWRD. dated -23.05.2026",
+                "createdAt": "2026-05-23T08:10:42.070Z",
+                "updatedAt": "2026-05-23T08:10:42.070Z"
+              }
+            ]
+          },
+          {
+            "block": "(Bongaigaon | 1)",
+            "details": [
+              {
+                "id": 57096,
+                "type": "road",
+                "name": "Puran Bongaigaon to Bhatipara (Road Length-500Mtr)",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Bhatipara Pt-I",
+                "location": "Puran Bongaigaon",
+                "latitude": 26.44189,
+                "longitude": 90.567291,
+                "remarks": "Road surface has been completely damaged.  As per report received from PWRD dated- 22.05.2026",
+                "createdAt": "2026-05-22T07:55:02.982Z",
+                "updatedAt": "2026-05-22T07:55:02.982Z"
+              }
+            ]
+          },
+          {
+            "block": "(Manikpur | 3)",
+            "details": [
+              {
+                "id": 57113,
+                "type": "road",
+                "name": "Manikpur to Chakihali Road",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Manikpur",
+                "location": "Chakihali",
+                "latitude": 26.435731,
+                "longitude": 90.825537,
+                "remarks": "Side shoulder and hard crust partially damaged at several stretches. As per report received from PWRD, Bongaigaon dated-26.05.2026",
+                "createdAt": "2026-05-26T09:15:09.032Z",
+                "updatedAt": "2026-05-26T09:15:09.032Z"
+              },
+              {
+                "id": 57114,
+                "type": "road",
+                "name": "RCC Bridge No. 1/1. Raha Chakla Kokila Road",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Manikpur",
+                "location": "Chakal",
+                "latitude": 26.430749,
+                "longitude": 90.848514,
+                "remarks": "Side shoulder and hard crust are partially damaged on approaches of Bridge No. 1/1. As per report received from PWRD, Bongaigaon dated-26.05.2026",
+                "createdAt": "2026-05-26T09:15:09.035Z",
+                "updatedAt": "2026-05-26T09:15:09.035Z"
+              },
+              {
+                "id": 57115,
+                "type": "road",
+                "name": "NH-27 to Darkinamari",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Manikpur",
+                "location": "Dakinamari",
+                "latitude": 26.493912,
+                "longitude": 90.644571,
+                "remarks": "Side shoulder and hard crust partially damaged at several stretches.As per report received from PWRD, Bongaigaon dated-26.05.2026 ",
+                "createdAt": "2026-05-26T09:15:09.037Z",
+                "updatedAt": "2026-05-26T09:15:09.037Z"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "district": "Cachar",
+        "total": 7,
+        "details": [
+          {
+            "block": "(Silchar | 1)",
+            "details": [
+              {
+                "id": 57073,
+                "type": "road",
+                "name": "Rongpur Koratigram Simultala Road ",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Rongpur Part – II",
+                "location": "Rongpur Koraigram Simultala ",
+                "latitude": 0,
+                "longitude": 0,
+                "remarks": "As report received on 20.05.2026 from EE PWRD Silchar Udharbond T Road Division Rongpur Koratigram Simultala Road - Length Ch. 1985.00 M to Ch. 2040.00 M ( 55.00 M) damaged on 16.05.2026",
+                "createdAt": "2026-05-20T11:44:57.024Z",
+                "updatedAt": "2026-05-20T11:44:57.024Z"
+              }
+            ]
+          },
+          {
+            "block": "(Katigorah | 0)",
+            "details": []
+          },
+          {
+            "block": "(Udharbond | 6)",
+            "details": [
+              {
+                "id": 57070,
+                "type": "road",
+                "name": "Road side berm of the Road from Neairgram to algapur",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Nayagram",
+                "location": "Neirgram Algapur",
+                "latitude": 0,
+                "longitude": 0,
+                "remarks": "As report received on 20.05.2026 from  EE PWD Silchar Udharbond T Road Div,Road side berm of the Road from Neairgram to algapur Length- 1950 M, damaged  on 16.05.2026",
+                "createdAt": "2026-05-20T11:42:37.672Z",
+                "updatedAt": "2026-05-20T11:42:37.672Z"
+              },
+              {
+                "id": 57071,
+                "type": "road",
+                "name": "Sonacherra Satyanagar Bridge Approch ",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Sonatola Garden (Bagicha)",
+                "location": "Sonacherra ",
+                "latitude": 0,
+                "longitude": 0,
+                "remarks": "As report received on 20.05.2026 from EE PWD Silchar Udharbond T Road Div,Sonacherra Satyanagar Bridge Approch  Length- 350 m, damaged on 16.05.2026 ",
+                "createdAt": "2026-05-20T11:42:37.674Z",
+                "updatedAt": "2026-05-20T11:42:37.674Z"
+              },
+              {
+                "id": 57069,
+                "type": "road",
+                "name": "Road from Tikalpar ONGC Point to Kumbirgram via Khumba bus stand and Endogram ",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Tikolpar Grant (Bagicha)",
+                "location": "Tikolpar",
+                "latitude": 0,
+                "longitude": 0,
+                "remarks": "As report received on 20.05.2026 from EE PWD Silchar Udharbond T Road Div,Road from Tikalpar ONGC Point to Kumbirgram via Khumba bus stand and Endogram  Length- 30 m,  damaged  on 16.05.2026",
+                "createdAt": "2026-05-20T11:42:37.670Z",
+                "updatedAt": "2026-05-20T11:42:37.670Z"
+              },
+              {
+                "id": 57072,
+                "type": "road",
+                "name": "Sristhal Amranagar Bridge approch ",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Amoranagar Bagicha",
+                "location": "Amornagar",
+                "latitude": 0,
+                "longitude": 0,
+                "remarks": "As report received on 20.05.2026 from EE PWD Silchar Udharbond T Road Div, Sristhal Amranagar Bridge approch Length- 150 m, damaged  on 16.05.2026",
+                "createdAt": "2026-05-20T11:42:37.676Z",
+                "updatedAt": "2026-05-20T11:42:37.676Z"
+              },
+              {
+                "id": 57084,
+                "type": "road",
+                "name": "Larsing Bagan road Udharbond ",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Larsingpar Grant",
+                "location": "Larsing Grant",
+                "latitude": 24.908082,
+                "longitude": 92.893198,
+                "remarks": "Larsing Bagan road Udharbond  Damaged length- 496.00 M on 16.05.2026,  Executive Engineer PWD Silchar Udharbond T Road division, reported 22.05.2026.",
+                "createdAt": "2026-05-22T07:45:47.060Z",
+                "updatedAt": "2026-05-22T07:45:47.060Z"
+              },
+              {
+                "id": 57085,
+                "type": "road",
+                "name": "Mazargram T.E to Scoutpur T.E Road ",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Majar Gram Grant",
+                "location": "Majargram TE  Scoutpur",
+                "latitude": 24.890282,
+                "longitude": 92.955609,
+                "remarks": "Mazargram T.E to Scoutpur T.E Road  Damaged length- 500.00M on 16.05.2026,  Executive Engineer PWD Silchar Udharbond T Road division, reported 22.05.2026.",
+                "createdAt": "2026-05-22T07:45:47.063Z",
+                "updatedAt": "2026-05-22T07:45:47.063Z"
+              }
+            ]
+          },
+          {
+            "block": "(Sonai | 0)",
+            "details": []
+          },
+          {
+            "block": "(Lakhipur | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Goalpara",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Rongjuli | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Hailakandi",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Katlicherra | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Kamrup",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Hajo | 0)",
+            "details": []
+          },
+          {
+            "block": "(Kamalpur | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Lakhimpur",
+        "total": 1,
+        "details": [
+          {
+            "block": "(Narayanpur | 0)",
+            "details": []
+          },
+          {
+            "block": "(Bihpuria | 1)",
+            "details": [
+              {
+                "id": 57104,
+                "type": "road",
+                "name": "Baligaon-Joriguri road ",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Dhakiajuli Gaon",
+                "location": "Ch. 1350.00 to Ch. 1550.00 m",
+                "latitude": 0,
+                "longitude": 0,
+                "remarks": "The road was submerged due to heavy rainfall at the mentioned location   as reported by officials of PWRD, Ranganodi TRSD on 24/05/2026.",
+                "createdAt": "2026-05-24T08:39:52.728Z",
+                "updatedAt": "2026-05-24T08:39:52.728Z"
+              }
+            ]
+          },
+          {
+            "block": "(Nowboicha | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "South Salmara",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Mankachar | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Sribhumi",
+        "total": 5,
+        "details": [
+          {
+            "block": "(Sribhumi Sadar | 0)",
+            "details": []
+          },
+          {
+            "block": "(Patherkandi | 5)",
+            "details": [
+              {
+                "id": 57105,
+                "type": "road",
+                "name": "PM road to Paschim Defolala PMGSY PKG NO AS-13 153",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Defalala",
+                "location": "Paschim Defolala",
+                "latitude": 24.621732,
+                "longitude": 92.288778,
+                "remarks": "As per report submitted by the AEE, PWRD Patharkandi Territorial Road Sub Div, Patharkandi dated 24-05-2026, the said road has been damaged from Ch 0.0 M to 3.0 KM due to incessant rainfall. Also breached occurred at Ch 430.0 M , 930 M and 2540 M",
+                "createdAt": "2026-05-25T07:28:50.625Z",
+                "updatedAt": "2026-05-25T07:28:50.625Z"
+              },
+              {
+                "id": 57107,
+                "type": "road",
+                "name": "PM Road at Lakhipur Bazar to Sonatola BOP",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Hatirgool",
+                "location": "Hatirgool ",
+                "latitude": 24.65593,
+                "longitude": 92.273775,
+                "remarks": "As per report submitted by the AEE, PWRD Patharkandi Territorial Road Sub Div, Patharkandi dated 24-05-2026, the said road has been damaged at ch 800.0 M  and retain wall damaged at Ch 2400 M due to incessant rainfall ",
+                "createdAt": "2026-05-25T07:28:50.639Z",
+                "updatedAt": "2026-05-25T07:28:50.639Z"
+              },
+              {
+                "id": 57109,
+                "type": "road",
+                "name": "Patharkandi Bilbari Road via Patharkandi Police Station ",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Patharkandi Pt-I",
+                "location": "Patharkandi Sluice gate",
+                "latitude": 24.603435,
+                "longitude": 92.311638,
+                "remarks": "As per report submitted by the AEE, PWRD Patharkandi Territorial Road Sub Div, Patharkandi dated 24-05-2026, the said road has been damaged at ch 500.0 M  and 1200.0 M due to incessant rainfall ",
+                "createdAt": "2026-05-25T07:28:50.643Z",
+                "updatedAt": "2026-05-25T07:28:50.643Z"
+              },
+              {
+                "id": 57106,
+                "type": "road",
+                "name": "PM road to Lamar Defolala Road ",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Defalala",
+                "location": "Lamar Defolala ",
+                "latitude": 24.626937,
+                "longitude": 92.295075,
+                "remarks": "As per report submitted by the AEE, PWRD Patharkandi Territorial Road Sub Div, Patharkandi dated 24-05-2026, the said road has been damaged at ch 750.0 M  and 2540 M due to incessant rainfall ",
+                "createdAt": "2026-05-25T07:28:50.637Z",
+                "updatedAt": "2026-05-25T07:28:50.637Z"
+              },
+              {
+                "id": 57108,
+                "type": "road",
+                "name": "Patharkandi Kazirbazar Road",
+                "departmentName": "PWD (Roads)",
+                "villageName": "Patharkandi Pt-I",
+                "location": "ONGC Road",
+                "latitude": 24.598778,
+                "longitude": 92.323483,
+                "remarks": "As per report submitted by the AEE, PWRD Patharkandi Territorial Road Sub Div, Patharkandi dated 24-05-2026, the said road has been damaged at ch 50.0 M  and 3000.0 M due to incessant rainfall ",
+                "createdAt": "2026-05-25T07:28:50.641Z",
+                "updatedAt": "2026-05-25T07:28:50.641Z"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "bridgeAffected": [
+      {
+        "district": "Bongaigaon",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Srijangram | 0)",
+            "details": []
+          },
+          {
+            "block": "(Bongaigaon | 0)",
+            "details": []
+          },
+          {
+            "block": "(Manikpur | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Cachar",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Silchar | 0)",
+            "details": []
+          },
+          {
+            "block": "(Katigorah | 0)",
+            "details": []
+          },
+          {
+            "block": "(Udharbond | 0)",
+            "details": []
+          },
+          {
+            "block": "(Sonai | 0)",
+            "details": []
+          },
+          {
+            "block": "(Lakhipur | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Goalpara",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Rongjuli | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Hailakandi",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Katlicherra | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Kamrup",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Hajo | 0)",
+            "details": []
+          },
+          {
+            "block": "(Kamalpur | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Lakhimpur",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Narayanpur | 0)",
+            "details": []
+          },
+          {
+            "block": "(Bihpuria | 0)",
+            "details": []
+          },
+          {
+            "block": "(Nowboicha | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "South Salmara",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Mankachar | 0)",
+            "details": []
+          }
+        ]
+      },
+      {
+        "district": "Sribhumi",
+        "total": 0,
+        "details": [
+          {
+            "block": "(Sribhumi Sadar | 0)",
+            "details": []
+          },
+          {
+            "block": "(Patherkandi | 0)",
+            "details": []
+          }
+        ]
+      }
+    ]
+  },
+  "otherDamageDetails": [
+    {
+      "district": "Bongaigaon",
+      "details": [
+        {
+          "block": "Srijangram",
+          "damages": []
+        },
+        {
+          "block": "Bongaigaon",
+          "damages": []
+        },
+        {
+          "block": "Manikpur",
+          "damages": []
+        }
+      ]
+    },
+    {
+      "district": "Cachar",
+      "details": [
+        {
+          "block": "Silchar",
+          "damages": [
+            {
+              "damageName": "Public Health Engineering (PHE) (in Nos)",
+              "noOfDamage": 3,
+              "details": [
+                {
+                  "id": 109967,
+                  "name": "SRIKONA PT II PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Srikona Part – II",
+                  "location": "Srikona Pt ii",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "As report received on 20.05.2026 from AE PHE Div I,  SRIKONA PT II PWSS (Damage due to Flash Flood ) on 16.05.2026",
+                  "createdAt": "2026-05-20T11:44:38.470Z",
+                  "updatedAt": "2026-05-20T11:44:38.470Z"
+                },
+                {
+                  "id": 109966,
+                  "name": "  VITOR GANGAPUR PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Vitor Gangapur Part – I",
+                  "location": "Vitor Garngapur ",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "As report received on 20.05.2026 from AE PHE Div I,  VITOR GANGAPUR PWSS (Damage due to Flash Flood ) on 20.05.2026",
+                  "createdAt": "2026-05-20T11:44:38.456Z",
+                  "updatedAt": "2026-05-20T11:44:38.456Z"
+                },
+                {
+                  "id": 109965,
+                  "name": "MAINACHERRA PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Moiracherra Grant",
+                  "location": "Moinacherra ",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "As report received on 20.05.2026 from AE PHE Div I, MAINACHERRA PWSS (Damage due to Flash Flood ) on  16.05.2026",
+                  "createdAt": "2026-05-20T11:44:38.445Z",
+                  "updatedAt": "2026-05-20T11:44:38.445Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block": "Katigorah",
+          "damages": [
+            {
+              "damageName": "Public Health Engineering (PHE) (in Nos)",
+              "noOfDamage": 3,
+              "details": [
+                {
+                  "id": 109899,
+                  "name": "Cheragi Bazar WSS ",
+                  "departmentName": "PHE",
+                  "villageName": "Niz-Katigorah Part – III",
+                  "location": "Niz Katigorah Pt III",
+                  "latitude": 24.878937,
+                  "longitude": 92.558005,
+                  "remarks": "As reprorted by AE PHE DIV I, Cheragi Bazar WSS  scheme damaged due to flash flood on dated 16.05.2026.",
+                  "createdAt": "2026-05-16T13:50:12.354Z",
+                  "updatedAt": "2026-05-16T13:50:12.354Z"
+                },
+                {
+                  "id": 109900,
+                  "name": "Bhairabpur Pt II PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Bhairabpur Part – II",
+                  "location": "Bhairabpur Pt II",
+                  "latitude": 24.957735,
+                  "longitude": 92.52908,
+                  "remarks": "As reprorted by AE PHE DIV I, Bhairabpur Pt II PWSS scheme damaged due to flash flood on dated 16.05.2026.",
+                  "createdAt": "2026-05-16T13:50:12.359Z",
+                  "updatedAt": "2026-05-16T13:50:12.359Z"
+                },
+                {
+                  "id": 109898,
+                  "name": "Khelma Part-V WSS ",
+                  "departmentName": "PHE",
+                  "villageName": "Khelma Part – V",
+                  "location": "Khelma Pt V",
+                  "latitude": 24.957735,
+                  "longitude": 92.52908,
+                  "remarks": "As reprorted by AE PHE DIV I, Khelma Part-V WSS scheme damaged due to flash flood on dated 16.05.2026.",
+                  "createdAt": "2026-05-16T13:50:12.349Z",
+                  "updatedAt": "2026-05-16T13:50:12.349Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block": "Udharbond",
+          "damages": [
+            {
+              "damageName": "Public Health Engineering (PHE) (in Nos)",
+              "noOfDamage": 5,
+              "details": [
+                {
+                  "id": 109891,
+                  "name": "Kashpur Bagerkona PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Khaspur Bagerkona",
+                  "location": "Kashpur Bagerkona",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "As reported by AE PHE Div I Kashpur Bagerkona PWSS damge due to Flash Flood on dated 15.05.2026",
+                  "createdAt": "2026-05-15T11:53:22.200Z",
+                  "updatedAt": "2026-05-15T11:53:22.200Z"
+                },
+                {
+                  "id": 109962,
+                  "name": "Kashipur TE PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Khasipur Grant",
+                  "location": "Khasipur Grant ",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "As report received on 20.05.2026 from AE PHE Div I, Kashipur TE PWSS (Damage Due to Flash Flood)  on 16.05.2026",
+                  "createdAt": "2026-05-20T11:43:05.781Z",
+                  "updatedAt": "2026-05-20T11:43:05.781Z"
+                },
+                {
+                  "id": 109960,
+                  "name": "Tikal TE WSS",
+                  "departmentName": "PHE",
+                  "villageName": "Tikolpar Grant (Bagicha)",
+                  "location": "Tikolpar Grant",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "As report received on 20.05.2026 from AE PHE Div I, Tikal TE WSS (Damage Due to Flash Flood) on 16.05.2026",
+                  "createdAt": "2026-05-20T11:43:05.766Z",
+                  "updatedAt": "2026-05-20T11:43:05.766Z"
+                },
+                {
+                  "id": 109961,
+                  "name": "Pangram PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Pangram Part – I",
+                  "location": "Pangram Pt I",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "As report received on 20.05.2026 from AE PHE Div I, Pangram PWSS (Damage Due to Flash Flood)  on 16.05.2026",
+                  "createdAt": "2026-05-20T11:43:05.775Z",
+                  "updatedAt": "2026-05-20T11:43:05.775Z"
+                },
+                {
+                  "id": 109959,
+                  "name": "Bajarighat WSS",
+                  "departmentName": "PHE",
+                  "villageName": "Dayapur Part – II",
+                  "location": "Dayapur Pt II",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "As report received on 20.05.2026 from AE PHE Div I, Bajarighat WSS (Damage Due to Flash Flood) 16.05.2026",
+                  "createdAt": "2026-05-20T11:43:05.751Z",
+                  "updatedAt": "2026-05-20T11:43:05.751Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block": "Sonai",
+          "damages": [
+            {
+              "damageName": "Public Health Engineering (PHE) (in Nos)",
+              "noOfDamage": 4,
+              "details": [
+                {
+                  "id": 109958,
+                  "name": "Rupaibali PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Niz-Rupaibali",
+                  "location": "Rupaibali ",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "As report received on 20.05.2026 from  PHE Div- II,  Rupaibali PWSS damaged due (Flash Flood) on dated 16.05.2026.",
+                  "createdAt": "2026-05-20T11:40:43.775Z",
+                  "updatedAt": "2026-05-20T11:40:43.775Z"
+                },
+                {
+                  "id": 109955,
+                  "name": "Dungirpar PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Dungripar Part – I",
+                  "location": "Dungirpar Pt I",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "As report received on 20.05.2026 from AE PHE Div- II, Dungirpar PWSS damaged due (Flash Flood) on dated 16.05.2026",
+                  "createdAt": "2026-05-20T11:40:43.745Z",
+                  "updatedAt": "2026-05-20T11:40:43.745Z"
+                },
+                {
+                  "id": 109957,
+                  "name": " West Rajghat wss",
+                  "departmentName": "PHE",
+                  "villageName": "Rajghat",
+                  "location": "Rajghat",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "As report received on 20.05.2026  from AE PHE Div- II, West Rajghat wss damaged due (Flash Flood) on dated 16.05.2026",
+                  "createdAt": "2026-05-20T11:40:43.763Z",
+                  "updatedAt": "2026-05-20T11:40:43.763Z"
+                },
+                {
+                  "id": 109956,
+                  "name": "Niz Banskandi pt-iv PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Niz-Banskandi Part – III",
+                  "location": "Niz Banskandi Pt iii",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "As report received on 20.05.2026 from AE PHE Div- II, Niz Banskandi pt-iv PWSS  damaged due (Flash Flood) on dated 16.05.2026",
+                  "createdAt": "2026-05-20T11:40:43.756Z",
+                  "updatedAt": "2026-05-20T11:40:43.756Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block": "Lakhipur",
+          "damages": [
+            {
+              "damageName": "Public Health Engineering (PHE) (in Nos)",
+              "noOfDamage": 2,
+              "details": [
+                {
+                  "id": 109963,
+                  "name": "Sub Lalong PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Laboc Grant",
+                  "location": "Laboc Grant",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "As report received  on 20.05.2026 from AE PHE Div I, Sub Lalong PWSS damaged due to Flash Flood) on 16.05.2026.",
+                  "createdAt": "2026-05-20T11:44:06.461Z",
+                  "updatedAt": "2026-05-20T11:44:06.461Z"
+                },
+                {
+                  "id": 109964,
+                  "name": "Uzan Tarapur PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Uzantarapur",
+                  "location": "Uzantarapur",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "As report received on 20.05.2026 from AE PHE Div I, Uzan Tarapur PWSS damaged due to Flash Flood) on  16.05.2026.",
+                  "createdAt": "2026-05-20T11:44:06.469Z",
+                  "updatedAt": "2026-05-20T11:44:06.469Z"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "district": "Goalpara",
+      "details": [
+        {
+          "block": "Rongjuli",
+          "damages": []
+        }
+      ]
+    },
+    {
+      "district": "Hailakandi",
+      "details": [
+        {
+          "block": "Katlicherra",
+          "damages": [
+            {
+              "damageName": "Public Health Engineering (PHE) (in Nos)",
+              "noOfDamage": 5,
+              "details": [
+                {
+                  "id": 110011,
+                  "name": "DINANATHPUR PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Appin Pt- II",
+                  "location": "Appin",
+                  "latitude": 24,
+                  "longitude": 92.531079,
+                  "remarks": "SCHEME SUBMERGED DTD. 25.05.2026",
+                  "createdAt": "2026-05-25T09:47:16.224Z",
+                  "updatedAt": "2026-05-25T09:47:16.224Z"
+                },
+                {
+                  "id": 110012,
+                  "name": "KARARPAR PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Dholai Pt-V",
+                  "location": "Dholai Molai",
+                  "latitude": 24.457071,
+                  "longitude": 92.566812,
+                  "remarks": "S/F BARGE DAMAGED DTD.25.05.2026",
+                  "createdAt": "2026-05-25T09:47:16.229Z",
+                  "updatedAt": "2026-05-25T09:47:16.229Z"
+                },
+                {
+                  "id": 110009,
+                  "name": "SWAPANPUR PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Appin Pt- II",
+                  "location": "Appin",
+                  "latitude": 24.495063,
+                  "longitude": 92.547394,
+                  "remarks": "SCHEME SUBMERGED DTD. 25.05.2026",
+                  "createdAt": "2026-05-25T09:47:16.186Z",
+                  "updatedAt": "2026-05-25T09:47:16.186Z"
+                },
+                {
+                  "id": 110010,
+                  "name": "DHOLAI MOLAI DAKHIN PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Dholai Pt-V",
+                  "location": "DholaiMOLAI",
+                  "latitude": 24.432044,
+                  "longitude": 92.55726,
+                  "remarks": "S/F Barge Submerged Dtd.25.05.2026",
+                  "createdAt": "2026-05-25T09:47:16.209Z",
+                  "updatedAt": "2026-05-25T09:47:16.209Z"
+                },
+                {
+                  "id": 110013,
+                  "name": "KATLICHERRA GRANT PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Katlicherra Grant",
+                  "location": "Katlicherra",
+                  "latitude": 24.43887,
+                  "longitude": 92.548425,
+                  "remarks": "S/F Barge damaged.DTD.25.05.2026",
+                  "createdAt": "2026-05-25T09:47:16.233Z",
+                  "updatedAt": "2026-05-25T09:47:16.233Z"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "district": "Kamrup",
+      "details": [
+        {
+          "block": "Hajo",
+          "damages": []
+        },
+        {
+          "block": "Kamalpur",
+          "damages": []
+        }
+      ]
+    },
+    {
+      "district": "Lakhimpur",
+      "details": [
+        {
+          "block": "Narayanpur",
+          "damages": [
+            {
+              "damageName": "Agri Bundh Damaged (in Nos)",
+              "noOfDamage": 2,
+              "details": [
+                {
+                  "id": 109994,
+                  "name": "Dihiri Agri bundh",
+                  "departmentName": "P&RD",
+                  "villageName": "Athanibari",
+                  "location": "Athanibari",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "As per report from Rangati Panchayat one agri bundh breached by river Dihiri on dated 23/05/2026",
+                  "createdAt": "2026-05-23T11:09:18.507Z",
+                  "updatedAt": "2026-05-23T11:09:18.507Z"
+                },
+                {
+                  "id": 109993,
+                  "name": "Farm bundh",
+                  "departmentName": "P&RD",
+                  "villageName": "Burhaburi",
+                  "location": "Burhaburi",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "As per report from BDO Narayanpur due to heavy rainfall and the consequent rise in water level in the paddy fields , the farm bundh from Baralapara tiniali to malay dutta pathar at village burhaburi has been breached on dated 23/05/2026",
+                  "createdAt": "2026-05-23T11:09:18.502Z",
+                  "updatedAt": "2026-05-23T11:09:18.502Z"
+                }
+              ]
+            },
+            {
+              "damageName": "Fisheries/Pond (in Hect.)",
+              "noOfDamage": 1.96,
+              "details": [
+                {
+                  "id": 110000,
+                  "name": "Fisherie",
+                  "departmentName": "Fishery",
+                  "villageName": "Athanibari",
+                  "location": "Athanibari",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "As per report from Fihery Dept. Narayanpur 1.96 Ha. Of fisheries and 12 nos of farmers fisheries affected on 24-05-2026.",
+                  "createdAt": "2026-05-24T10:44:33.605Z",
+                  "updatedAt": "2026-05-24T10:44:33.605Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block": "Bihpuria",
+          "damages": [
+            {
+              "damageName": "Protection Bundh Damaged (in Nos)",
+              "noOfDamage": 1,
+              "details": [
+                {
+                  "id": 109992,
+                  "name": "Protection bundh from NH15 to Kanduluna Chuburi under MGNREGA Scheme",
+                  "departmentName": "P&RD",
+                  "villageName": "Garmur",
+                  "location": "Breach portion is under Niz Laluk GP and Uttar Laluk GP",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "Approximately 120 m (previous year and recent ) of the bundh has been breached as reported by officials of Karunabari Development Block on 23/05/2026.",
+                  "createdAt": "2026-05-23T11:03:38.375Z",
+                  "updatedAt": "2026-05-23T11:03:38.375Z"
+                }
+              ]
+            },
+            {
+              "damageName": "Culvert Approach Road Damaged (in Nos)",
+              "noOfDamage": 1,
+              "details": [
+                {
+                  "id": 109999,
+                  "name": "Culvert Approach damaged at Garmur to Tunijan road",
+                  "departmentName": "PWD (Roads)",
+                  "villageName": "Torajuli",
+                  "location": "Ch. 350.00m (Garmur-Torajuli road)",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "The culvert approach damaged at mentioned location as reported by officials of PWRD, Ranganodi TRSD on 24/05/2026.",
+                  "createdAt": "2026-05-24T08:40:18.107Z",
+                  "updatedAt": "2026-05-24T08:40:18.107Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block": "Nowboicha",
+          "damages": [
+            {
+              "damageName": "Agri Bundh Damaged (in Nos)",
+              "noOfDamage": 1,
+              "details": [
+                {
+                  "id": 110014,
+                  "name": "Singra River Agri Bundh/Earthen Peripheral Bundh",
+                  "departmentName": "P&RD",
+                  "villageName": "Mahghuli",
+                  "location": "Uttar Mahghuli ",
+                  "latitude": 0,
+                  "longitude": 0,
+                  "remarks": "As per report received from the concerned GP Secretary of BMP GP under Nowboicha Development Block, one Agri Bundh/Earthen Peripheral Bundh of Singra River (From Ramjan Chuburi to Mofij Chuburi) breached Approx 20 Mtrs. on 25.05.2026 at Uttar Mahghuli ",
+                  "createdAt": "2026-05-25T10:02:11.345Z",
+                  "updatedAt": "2026-05-25T10:02:11.345Z"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "district": "South Salmara",
+      "details": [
+        {
+          "block": "Mankachar",
+          "damages": [
+            {
+              "damageName": "Public Health Engineering (PHE) (in Nos)",
+              "noOfDamage": 1,
+              "details": [
+                {
+                  "id": 109889,
+                  "name": "EODT under SBM Scheme",
+                  "departmentName": "PHE",
+                  "villageName": "Thakuranbari",
+                  "location": "Thakuranbari near Tilargaon Bridge",
+                  "latitude": 25.533,
+                  "longitude": 89.867,
+                  "remarks": "As per the report received from the PHE Department, the EODT structure’s base and wall were damaged due to heavy rain on 02-05-2026.",
+                  "createdAt": "2026-05-02T07:59:46.228Z",
+                  "updatedAt": "2026-05-02T07:59:46.228Z"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "district": "Sribhumi",
+      "details": [
+        {
+          "block": "Sribhumi Sadar",
+          "damages": [
+            {
+              "damageName": "PWSS Damaged (in Nos)",
+              "noOfDamage": 3,
+              "details": [
+                {
+                  "id": 109986,
+                  "name": "Nandanbond PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Nondonbond",
+                  "location": "Nondonbond",
+                  "latitude": 24.858857,
+                  "longitude": 92.315961,
+                  "remarks": "As per the information received from Executive Engineer (PHE), Sribhumi Division, Sribhumi, the barge of Nandanbond PWSS was damaged due to flood on 15-05-2026.",
+                  "createdAt": "2026-05-21T11:38:13.718Z",
+                  "updatedAt": "2026-05-21T11:38:13.718Z"
+                },
+                {
+                  "id": 109988,
+                  "name": "Serulbag PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Serulbhag Kette Noldori",
+                  "location": "Serulbag",
+                  "latitude": 24.901957,
+                  "longitude": 92.281177,
+                  "remarks": "As per the information received from Executive Engineer (PHE), Sribhumi Division, Sribhumi, the barge of Serulbag PWSS was damaged due to flood on 15-05-2026.",
+                  "createdAt": "2026-05-21T11:38:13.729Z",
+                  "updatedAt": "2026-05-21T11:38:13.729Z"
+                },
+                {
+                  "id": 109987,
+                  "name": "Maizgram PWSS",
+                  "departmentName": "PHE",
+                  "villageName": "Sojpur Part- I",
+                  "location": "Sajpur Part 1",
+                  "latitude": 24.849415,
+                  "longitude": 92.291888,
+                  "remarks": "As per the information received from Executive Engineer (PHE), Sribhumi Division, Sribhumi, the barge of Mizgram PWSS was damaged due to flood on 15-05-2026.",
+                  "createdAt": "2026-05-21T11:38:13.727Z",
+                  "updatedAt": "2026-05-21T11:38:13.727Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "block": "Patherkandi",
+          "damages": [
+            {
+              "damageName": "Culvert Approach Road Damaged (in Nos)",
+              "noOfDamage": 1,
+              "details": [
+                {
+                  "id": 110015,
+                  "name": "Patharkandi Mukamtilla Road (HP culvert)",
+                  "departmentName": "PWD (Roads)",
+                  "villageName": "Defalala",
+                  "location": "Jurbari Defolala ",
+                  "latitude": 24.638277,
+                  "longitude": 92.281308,
+                  "remarks": "As per report submitted by the AEE, PWRD Patharkandi Territorial Road Sub Div, Patharkandi dated 24-05-2026, the HP culvert over said road has been damaged at ch 550.0 M, 900.0 M and 8000.0 M due to incessant rainfall ",
+                  "createdAt": "2026-05-25T10:26:21.142Z",
+                  "updatedAt": "2026-05-25T10:26:21.142Z"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "wildlife": [
+    {
+      "district": "Bongaigaon",
+      "wildlifeAffected": ""
+    },
+    {
+      "district": "Cachar",
+      "wildlifeAffected": ""
+    },
+    {
+      "district": "Goalpara",
+      "wildlifeAffected": ""
+    },
+    {
+      "district": "Hailakandi",
+      "wildlifeAffected": ""
+    },
+    {
+      "district": "Kamrup",
+      "wildlifeAffected": ""
+    },
+    {
+      "district": "Lakhimpur",
+      "wildlifeAffected": ""
+    },
+    {
+      "district": "South Salmara",
+      "wildlifeAffected": ""
+    },
+    {
+      "district": "Sribhumi",
+      "wildlifeAffected": ""
+    }
+  ],
+  "remarks": [
+    {
+      "district": "Bongaigaon",
+      "remarks": ""
+    },
+    {
+      "district": "Cachar",
+      "remarks": "(Silchar - Villages have been inundated due to heavy rainfall and the overflowing of the River Harang, Cachar. (Flash Flood)), (Katigorah - Following heavy overnight rainfall, a flash flood occurred, Following heavy overnight rainfall, a flash flood occured ), (Udharbond - Following heavy overnight rainfall, a flash flood occurred.)"
+    },
+    {
+      "district": "Goalpara",
+      "remarks": "(Rongjuli - As per report submitted by Agriculture department, crop submergence is due to heavy rainfall , As per report submitted by Agriculture Department, crop submergence is due to heavy rainfall, As per report submitted by Agriculture department, crop submergence is due to heavy rainfall)"
+    },
+    {
+      "district": "Hailakandi",
+      "remarks": ""
+    },
+    {
+      "district": "Kamrup",
+      "remarks": ""
+    },
+    {
+      "district": "Lakhimpur",
+      "remarks": "(Narayanpur - As per report from ADO dhalpur 4.42 ha. Of crop submergged due to rainfall on dated 21st may 2026), (Bihpuria - Due to incessant rainfall, the increasing water of Gabharu river has entered through the open portion of a bundh under Karunabari Development Block affecting the adjacent residential area on 23/05/2026.), (Nowboicha - As informed by the Gaon Pradhan, Mahghuli village, one cow died due to the breach of the  Agri Bundh at Singra River on 25.05.2026)"
+    },
+    {
+      "district": "South Salmara",
+      "remarks": ""
+    },
+    {
+      "district": "Sribhumi",
+      "remarks": ""
+    }
+  ]
+}

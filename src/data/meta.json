@@ -1,0 +1,25 @@
+{
+  "scrapedAt": "2026-07-25T11:59:34Z",
+  "period": "2026-07-24",
+  "reportDate": "2026-07-24",
+  "floodDataOrigin": "asdma-daily-pdf",
+  "pdfUrl": "https://sdrf.assam.gov.in/dfr/",
+  "sources": [
+    {
+      "name": "ASDMA / SDRF Daily Flood Report",
+      "url": "https://sdrf.assam.gov.in/dfr/",
+      "notes": "Official Daily Flood Report portal (DRIMS-backed)."
+    },
+    {
+      "name": "ASDMA website",
+      "url": "https://asdma.assam.gov.in",
+      "notes": "Toll-free numbers, safety tips and disaster info."
+    }
+  ],
+  "counts": {
+    "districts": 18,
+    "floodReports": 12,
+    "reliefCamps": 5,
+    "updates": 2
+  }
+}

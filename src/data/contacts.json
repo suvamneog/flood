@@ -1,0 +1,62 @@
+[
+  {
+    "id": "police",
+    "name": "Police",
+    "number": "100",
+    "description": "Assam Police emergency helpline",
+    "icon": "Shield",
+    "priority": 1,
+    "color": "blue",
+    "source": "National Emergency"
+  },
+  {
+    "id": "ambulance",
+    "name": "Ambulance",
+    "number": "108",
+    "description": "Emergency medical & ambulance services",
+    "icon": "Ambulance",
+    "priority": 2,
+    "color": "red",
+    "source": "National Emergency"
+  },
+  {
+    "id": "fire",
+    "name": "Fire & Rescue",
+    "number": "101",
+    "description": "Fire service and rescue operations",
+    "icon": "Flame",
+    "priority": 3,
+    "color": "orange",
+    "source": "National Emergency"
+  },
+  {
+    "id": "seoc-1070",
+    "name": "State Emergency Operation Centre",
+    "number": "1070",
+    "description": "ASDMA State Emergency Operation Centre (toll-free)",
+    "icon": "LifeBuoy",
+    "priority": 4,
+    "color": "blue",
+    "source": "ASDMA"
+  },
+  {
+    "id": "asdma-1079",
+    "name": "ASDMA Helpline",
+    "number": "1079",
+    "description": "Assam State Disaster Management Authority helpline",
+    "icon": "Building2",
+    "priority": 5,
+    "color": "green",
+    "source": "ASDMA"
+  },
+  {
+    "id": "deoc-1077",
+    "name": "District Control Room",
+    "number": "1077",
+    "description": "District Emergency Operation Centre (toll-free)",
+    "icon": "PhoneCall",
+    "priority": 6,
+    "color": "slate",
+    "source": "ASDMA"
+  }
+]

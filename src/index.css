@@ -1,0 +1,99 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+
+  --color-emergency: #ef4444;
+  --color-emergency-dark: #dc2626;
+  --color-success: #22c55e;
+  --color-success-dark: #16a34a;
+  --color-warning: #f97316;
+  --color-warning-dark: #ea580c;
+
+  --color-surface: #ffffff;
+  --color-surface-muted: #f8fafc;
+  --color-surface-dark: #0f172a;
+  --color-surface-dark-muted: #1e293b;
+  --color-border: #e2e8f0;
+  --color-border-dark: #334155;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply m-0 min-h-screen bg-surface font-sans text-slate-900 antialiased;
+  @apply dark:bg-surface-dark dark:text-slate-100;
+  overscroll-behavior-y: none;
+}
+
+/* Friendlier touch interactions on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a,
+select,
+input {
+  touch-action: manipulation;
+}
+
+/* Momentum scrolling inside drawers/modals */
+.overflow-y-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+::selection {
+  @apply bg-primary-200 text-primary-900;
+}
+
+.leaflet-container {
+  @apply z-0 h-full w-full rounded-2xl;
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  @apply rounded-xl! shadow-lg! border border-border;
+}
+
+.leaflet-popup-content {
+  @apply m-3! text-sm;
+}
+
+.dark .leaflet-popup-content-wrapper {
+  @apply bg-surface-dark-muted! text-slate-100! border-border-dark!;
+}
+
+.dark .leaflet-popup-tip {
+  @apply bg-surface-dark-muted!;
+}
+
+.skeleton {
+  @apply animate-pulse rounded-xl bg-slate-200 dark:bg-slate-700;
+}
+
+.glass {
+  @apply border border-white/60 bg-white/80 backdrop-blur-xl;
+  @apply dark:border-white/10 dark:bg-slate-900/80;
+}

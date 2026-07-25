@@ -1,0 +1,10 @@
+[
+  { "id": "documents", "label": "Important Documents", "description": "Aadhaar, ration card, bank passbook, land papers in waterproof cover" },
+  { "id": "medicines", "label": "Medicines", "description": "Essential medicines, first-aid kit, ORS packets" },
+  { "id": "powerbank", "label": "Power Bank", "description": "Fully charged power bank and phone charger" },
+  { "id": "torch", "label": "Torch / Flashlight", "description": "Torch with spare batteries or a solar lantern" },
+  { "id": "dryfood", "label": "Dry Food", "description": "Ready-to-eat food, biscuits, baby food if needed" },
+  { "id": "water", "label": "Drinking Water", "description": "Sealed bottles — at least 3 litres per person" },
+  { "id": "cash", "label": "Cash", "description": "Small denomination cash for emergencies" },
+  { "id": "blanket", "label": "Blanket / Warm Clothes", "description": "Blanket, towel and a change of dry clothes" }
+]

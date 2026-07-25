@@ -1,0 +1,33 @@
+{
+  "scrapedAt": "2026-07-25T11:11:22.698Z",
+  "pages": {
+    "tollFree": "Toll Free Numbers | Assam State Disaster Management Authority | Government Of Assam, India Skip to content A + A A - A A I am now accessing as a : Government Of Assam Revenue & Disaster Management Assam State Disaster Management Authority Main Home Information & Services Do's & Don'ts during Disaster Toll Free Numbers DSS based on GIS mapping of utilities Assam Flood Report Web Portal/ Web Services We have tried to link all Information & Services together to help you locate them faster. Documents Disaster Management Plan MoU Signing Resource Material Acts Guidelines/SOP/Advisory Minutes of Meeting Notifications Office Memorandums Office Orders Reports Rules Tenders Policy Handbook on DM CA Audit Report of ASDMA A document repository where all types of the documents of the organization can be searched and located in the shortest possible time. School Safety About Us Who We Are Our Divisions / Field Offices You can find information on Our Ministers, Key Officials, Our Vision,Mission and Functions and more details about our department here. Contact Us FAQ Feedback More Home ❯ Information & Services ❯ Toll Free Numbers Do's & Don'ts during Disaster Toll Free Numbers DSS based on GIS mapping of utilities Assam Flood Report Web Portal/ Web Services --> Toll Free Numbers --> Emergency Toll Free Numbers State Emergency Operation Centre: 1070, 1079 District Emergency Operation Centre: 1077 --> Information & Services Do's & Don'ts during Disaster Toll Free Numbers DSS based on GIS mapping of utilities Assam Flood Report Web Portal/ Web Services Policies Copyright Policy Disclaimer Hyperlinking Policy Privacy Policy Terms & Conditions Content management policies Accessibility statement Terms of Use About the Government Assam State Portal CM Portal Home Site Map Contact Us Feedback Disclaimer Website Governance Website Information Manager Standardised Website Framework of Govt. of Assam Last Reviewed & Updated: 24 Jul 2026 Visitors : 1126174 Content Ownership Assam State Disast"
+  },
+  "links": [
+    {
+      "title": "ASDMA Flood Safety Tips (PDF)",
+      "url": "https://asdma.assam.gov.in/sites/default/files/swf_utility_folder/departments/asdma_revenue_uneecopscloud_com_oid_70/this_comm/flood-safetytips_0.pdf",
+      "type": "safety-pdf"
+    },
+    {
+      "title": "ASDMA Do's & Don'ts during Disaster",
+      "url": "https://asdma.assam.gov.in/information-services/dos-and-donts-during-disaster",
+      "type": "safety-page"
+    },
+    {
+      "title": "Assam Flood Report (ASDMA)",
+      "url": "https://asdma.assam.gov.in/information-services/assam-flood-report",
+      "type": "flood-report"
+    },
+    {
+      "title": "Daily Flood Reports portal",
+      "url": "https://onlineasdma.assam.gov.in/reports.html",
+      "type": "flood-report"
+    },
+    {
+      "title": "Daily Flood Report PDF URL pattern",
+      "url": "https://www.asdma.gov.in/pdf/flood_report/{YYYY}/Daily_Flood_Report_{DD.MM.YYYY}.pdf",
+      "type": "flood-pdf-pattern"
+    }
+  ]
+}
