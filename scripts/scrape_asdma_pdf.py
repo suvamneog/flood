@@ -986,16 +986,35 @@ def process_one_day(
     if parsed.get("reportDate"):
         report_date = parsed["reportDate"]
 
+    people_parsed = sum(d["population"] for d in parsed["population"].values())
+    camps_parsed = sum(parsed["reliefCamps"].values())
+    affected_n = len(parsed["affectedDistricts"])
+
     print(
         f"\nParsed report {report_date.isoformat()}: "
-        f"{len(parsed['affectedDistricts'])} affected districts, "
-        f"{sum(d['population'] for d in parsed['population'].values()):,} people, "
-        f"{sum(parsed['reliefCamps'].values())} relief camps, "
+        f"{affected_n} affected districts, "
+        f"{people_parsed:,} people, "
+        f"{camps_parsed} relief camps, "
         f"{len(parsed['rivers']['danger'])} rivers > danger."
     )
 
+    # Refuse to overwrite live/history with a clearly broken parse (PDF layout change).
+    # A real ASDMA daily report always names affected districts or has population/camp rows.
+    if affected_n == 0 and people_parsed == 0 and camps_parsed == 0 and not parsed["population"]:
+        raise RuntimeError(
+            f"Parse produced empty flood figures for {report_date.isoformat()}. "
+            "Live JSON left unchanged — check PDF layout / scraper regexes."
+        )
+
     pdf_url = "https://sdrf.assam.gov.in/dfr/"
     data = build_datasets(parsed, report_date, pdf_url)
+
+    if not data["districts"]:
+        raise RuntimeError(
+            f"No district rows built for {report_date.isoformat()}. "
+            "Live JSON left unchanged."
+        )
+
     upsert_history(build_history_entry(data, parsed, report_date))
 
     if not archive_only:

@@ -14,17 +14,22 @@ import {
 
 export default function Timeline() {
   const navigate = useNavigate()
-  const { data, loading } = useFetch(getHistory, [])
+  const { data, loading, error } = useFetch(getHistory, [])
   const reports = data?.reports || []
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8">
       <PageHeader
-        title="Report Timeline"
-        subtitle="Every imported ASDMA daily flood report. Click a date to reload the homepage dashboard for that day."
+        title="Past Flood Reports"
+        subtitle="Every imported ASDMA daily flood report. Tap a date to open that day's district figures, camps, and map."
       />
 
-      {loading ? (
+      {error ? (
+        <EmptyState
+          title="Could not load past reports"
+          description="The local report archive failed to load. Refresh the page and try again."
+        />
+      ) : loading ? (
         <ListSkeleton count={4} />
       ) : reports.length === 0 ? (
         <EmptyState
@@ -39,7 +44,7 @@ export default function Timeline() {
               <motion.button
                 key={r.date}
                 type="button"
-                onClick={() => navigate(`/?date=${r.date}`)}
+                onClick={() => navigate(`/districts?date=${r.date}`)}
                 initial={{ opacity: 0, x: -16 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.05, type: 'spring', stiffness: 260, damping: 24 }}

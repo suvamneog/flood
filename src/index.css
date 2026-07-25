@@ -98,3 +98,28 @@ input {
   @apply border border-white/60 bg-white/80 backdrop-blur-xl;
   @apply dark:border-white/10 dark:bg-slate-900/80;
 }
+
+/* Soft glow to draw attention to past-report entry points */
+@keyframes past-reports-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 rgb(22 96 110 / 0.45),
+      0 8px 20px -6px rgb(22 96 110 / 0.55);
+  }
+  50% {
+    box-shadow:
+      0 0 0 6px rgb(22 96 110 / 0),
+      0 10px 28px -4px rgb(22 96 110 / 0.65);
+  }
+}
+
+.past-reports-cta {
+  animation: past-reports-glow 2.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .past-reports-cta {
+    animation: none;
+  }
+}

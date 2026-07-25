@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ExternalLink, Circle } from 'lucide-react'
+import { ExternalLink, Circle, History } from 'lucide-react'
 import {
   formatReportDate,
   formatSyncTime,
@@ -37,27 +37,33 @@ export default function DataFreshnessBanner({ meta, compact = false }) {
             </span>
           </span>
         </div>
-        <a
-          href="https://sdrf.assam.gov.in/dfr/download?type=flood"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-700 hover:underline dark:text-emerald-400"
-        >
-          Official PDF portal
-          <ExternalLink className="h-3.5 w-3.5" />
-        </a>
+        <div className="flex flex-wrap items-center gap-3">
+          {!compact && (
+            <Link
+              to="/timeline"
+              className="past-reports-cta inline-flex items-center gap-1.5 rounded-xl bg-primary-600 px-3.5 py-2 text-sm font-bold text-white shadow-md shadow-primary-600/40 transition hover:bg-primary-700"
+            >
+              <History className="h-4 w-4" />
+              Browse past reports
+            </Link>
+          )}
+          <a
+            href="https://sdrf.assam.gov.in/dfr/download?type=flood"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-700 hover:underline dark:text-emerald-400"
+          >
+            Official PDF portal
+            <ExternalLink className="h-3.5 w-3.5" />
+          </a>
+        </div>
       </div>
 
       {todayMissing && !compact && (
-        <p className="mt-3 rounded-xl bg-amber-50 px-3 py-2 text-sm text-amber-800 dark:bg-amber-950/40 dark:text-amber-200">
+        <p className="mt-3 rounded-xl bg-amber-50 px-3 py-2 text-sm text-amber-900 dark:bg-amber-950/40 dark:text-amber-200">
           Today&apos;s official report has not yet been published. Showing the
-          latest available report.{' '}
-          <Link
-            to="/timeline"
-            className="font-semibold underline-offset-2 hover:underline"
-          >
-            View timeline
-          </Link>
+          latest available report — you can still open earlier days with{' '}
+          <span className="font-semibold">Browse past reports</span> above.
         </p>
       )}
     </div>
