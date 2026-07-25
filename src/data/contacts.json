@@ -1,13 +1,23 @@
 [
   {
-    "id": "police",
-    "name": "Police",
-    "number": "100",
-    "description": "Assam Police emergency helpline",
-    "icon": "Shield",
+    "id": "asdma-1079",
+    "name": "ASDMA Helpline",
+    "number": "1079",
+    "description": "Assam State Disaster Management Authority helpline",
+    "icon": "Building2",
     "priority": 1,
+    "color": "green",
+    "source": "ASDMA"
+  },
+  {
+    "id": "seoc-1070",
+    "name": "State Emergency Operation Centre",
+    "number": "1070",
+    "description": "ASDMA State Emergency Operation Centre (toll-free)",
+    "icon": "LifeBuoy",
+    "priority": 2,
     "color": "blue",
-    "source": "National Emergency"
+    "source": "ASDMA"
   },
   {
     "id": "ambulance",
@@ -15,8 +25,18 @@
     "number": "108",
     "description": "Emergency medical & ambulance services",
     "icon": "Ambulance",
-    "priority": 2,
+    "priority": 3,
     "color": "red",
+    "source": "National Emergency"
+  },
+  {
+    "id": "police",
+    "name": "Police",
+    "number": "100",
+    "description": "Assam Police emergency helpline",
+    "icon": "Shield",
+    "priority": 4,
+    "color": "blue",
     "source": "National Emergency"
   },
   {
@@ -25,29 +45,9 @@
     "number": "101",
     "description": "Fire service and rescue operations",
     "icon": "Flame",
-    "priority": 3,
+    "priority": 5,
     "color": "orange",
     "source": "National Emergency"
-  },
-  {
-    "id": "seoc-1070",
-    "name": "State Emergency Operation Centre",
-    "number": "1070",
-    "description": "ASDMA State Emergency Operation Centre (toll-free)",
-    "icon": "LifeBuoy",
-    "priority": 4,
-    "color": "blue",
-    "source": "ASDMA"
-  },
-  {
-    "id": "asdma-1079",
-    "name": "ASDMA Helpline",
-    "number": "1079",
-    "description": "Assam State Disaster Management Authority helpline",
-    "icon": "Building2",
-    "priority": 5,
-    "color": "green",
-    "source": "ASDMA"
   },
   {
     "id": "deoc-1077",
