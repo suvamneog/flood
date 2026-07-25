@@ -184,7 +184,7 @@ export default function FloodMapView({
         </MapContainer>
 
         {/* Severity legend */}
-        <div className="absolute bottom-3 left-3 z-[400] flex max-w-[calc(100%-1.5rem)] flex-wrap gap-2 rounded-xl border border-border bg-white/90 px-3 py-2 text-[11px] font-semibold shadow-md backdrop-blur dark:border-border-dark dark:bg-slate-900/90">
+        <div className="absolute bottom-3 left-3 z-10 flex max-w-[calc(100%-1.5rem)] flex-wrap gap-2 rounded-xl border border-border bg-white/90 px-3 py-2 text-[11px] font-semibold shadow-md backdrop-blur dark:border-border-dark dark:bg-slate-900/90">
           {Object.entries(HEAT_COLORS).map(([key, color]) => (
             <span key={key} className="inline-flex items-center gap-1.5 text-slate-700 dark:text-slate-200">
               <span
