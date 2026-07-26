@@ -1,16 +1,48 @@
 [
   {
+    "id": "asdma-camp-golaghat",
+    "name": "Golaghat — district relief camps (total)",
+    "district": "Golaghat",
+    "districtId": "golaghat",
+    "campCount": 10,
+    "summary": "10 relief camp(s) reported open in Golaghat district with 1,097 inmates (ASDMA 26 Jul 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
+    "campInmates": 1097,
+    "phone": "1077",
+    "coordinates": {
+      "lat": 26.5234,
+      "lng": 93.9623
+    },
+    "coordinatesNote": "Approximate district headquarters location",
+    "source": "ASDMA Daily Flood Report"
+  },
+  {
     "id": "asdma-camp-jorhat",
     "name": "Jorhat — district relief camps (total)",
     "district": "Jorhat",
     "districtId": "jorhat",
-    "campCount": 14,
-    "summary": "14 relief camp(s) reported open in Jorhat district with 3,069 inmates (ASDMA 25 Jul 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
-    "campInmates": 3069,
+    "campCount": 17,
+    "summary": "17 relief camp(s) reported open in Jorhat district with 2,805 inmates (ASDMA 26 Jul 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
+    "campInmates": 2805,
     "phone": "1077",
     "coordinates": {
       "lat": 26.7509,
       "lng": 94.2037
+    },
+    "coordinatesNote": "Approximate district headquarters location",
+    "source": "ASDMA Daily Flood Report"
+  },
+  {
+    "id": "asdma-camp-sivasagar",
+    "name": "Sivasagar — district relief camps (total)",
+    "district": "Sivasagar",
+    "districtId": "sivasagar",
+    "campCount": 66,
+    "summary": "66 relief camp(s) reported open in Sivasagar district with 30,414 inmates (ASDMA 26 Jul 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
+    "campInmates": 30414,
+    "phone": "1077",
+    "coordinates": {
+      "lat": 26.9844,
+      "lng": 94.6378
     },
     "coordinatesNote": "Approximate district headquarters location",
     "source": "ASDMA Daily Flood Report"
