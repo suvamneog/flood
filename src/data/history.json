@@ -1,6 +1,329 @@
 {
   "reports": [
     {
+      "date": "2026-07-28",
+      "scrapedAt": "2026-07-29T13:44:18Z",
+      "stats": {
+        "peopleAffected": 332639,
+        "floodedDistricts": 7,
+        "reliefCamps": 76,
+        "campInmates": 32477,
+        "riverWarnings": 1,
+        "activeAlerts": 1
+      },
+      "rivers": {
+        "danger": [
+          "Dhansiri (S)"
+        ],
+        "flood": []
+      },
+      "topDistricts": [
+        {
+          "id": "charaideo",
+          "name": "Charaideo",
+          "populationAffected": 142756,
+          "severity": "severe",
+          "reliefCamps": 0,
+          "affectedVillages": 156,
+          "campInmates": 499,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "sivasagar",
+          "name": "Sivasagar",
+          "populationAffected": 97074,
+          "severity": "severe",
+          "reliefCamps": 56,
+          "affectedVillages": 5,
+          "campInmates": 29987,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "jorhat",
+          "name": "Jorhat",
+          "populationAffected": 57371,
+          "severity": "severe",
+          "reliefCamps": 13,
+          "affectedVillages": 87,
+          "campInmates": 1387,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "golaghat",
+          "name": "Golaghat",
+          "populationAffected": 35438,
+          "severity": "severe",
+          "reliefCamps": 7,
+          "affectedVillages": 104,
+          "campInmates": 604,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "dibrugarh",
+          "name": "Dibrugarh",
+          "populationAffected": 0,
+          "severity": "normal",
+          "reliefCamps": 0,
+          "affectedVillages": 0,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "hojai",
+          "name": "Hojai",
+          "populationAffected": 0,
+          "severity": "normal",
+          "reliefCamps": 0,
+          "affectedVillages": 0,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "kamrup",
+          "name": "Kamrup",
+          "populationAffected": 0,
+          "severity": "normal",
+          "reliefCamps": 0,
+          "affectedVillages": 8,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "kamrup-metro",
+          "name": "Kamrup Metro",
+          "populationAffected": 0,
+          "severity": "waterlogging",
+          "reliefCamps": 0,
+          "affectedVillages": 0,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "nagaon",
+          "name": "Nagaon",
+          "populationAffected": 0,
+          "severity": "waterlogging",
+          "reliefCamps": 0,
+          "affectedVillages": 25,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "sonitpur",
+          "name": "Sonitpur",
+          "populationAffected": 0,
+          "severity": "waterlogging",
+          "reliefCamps": 0,
+          "affectedVillages": 1,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        }
+      ],
+      "districts": [
+        {
+          "id": "charaideo",
+          "name": "Charaideo",
+          "severity": "severe",
+          "affectedVillages": 156,
+          "river": null,
+          "populationAffected": 142756,
+          "reliefCamps": 0,
+          "campInmates": 499,
+          "cropAreaHa": 16652.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-07-28T08:00:00Z",
+          "coordinates": {
+            "lat": 27.0333,
+            "lng": 95.0
+          },
+          "coordinatesNote": "Approximate district headquarters location",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
+          "id": "dibrugarh",
+          "name": "Dibrugarh",
+          "severity": "normal",
+          "affectedVillages": 0,
+          "river": null,
+          "populationAffected": 0,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 0.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-07-28T08:00:00Z",
+          "coordinates": {
+            "lat": 27.4728,
+            "lng": 94.912
+          },
+          "coordinatesNote": "Approximate district headquarters location",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
+          "id": "golaghat",
+          "name": "Golaghat",
+          "severity": "severe",
+          "affectedVillages": 104,
+          "river": null,
+          "populationAffected": 35438,
+          "reliefCamps": 7,
+          "campInmates": 604,
+          "cropAreaHa": 2464.4,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-07-28T08:00:00Z",
+          "coordinates": {
+            "lat": 26.5234,
+            "lng": 93.9623
+          },
+          "coordinatesNote": "Approximate district headquarters location",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
+          "id": "hojai",
+          "name": "Hojai",
+          "severity": "normal",
+          "affectedVillages": 0,
+          "river": null,
+          "populationAffected": 0,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 0.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-07-28T08:00:00Z",
+          "coordinates": {
+            "lat": 26.0,
+            "lng": 92.8667
+          },
+          "coordinatesNote": "Approximate district headquarters location",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
+          "id": "jorhat",
+          "name": "Jorhat",
+          "severity": "severe",
+          "affectedVillages": 87,
+          "river": null,
+          "populationAffected": 57371,
+          "reliefCamps": 13,
+          "campInmates": 1387,
+          "cropAreaHa": 2944.42,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-07-28T08:00:00Z",
+          "coordinates": {
+            "lat": 26.7509,
+            "lng": 94.2037
+          },
+          "coordinatesNote": "Approximate district headquarters location",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
+          "id": "kamrup",
+          "name": "Kamrup",
+          "severity": "normal",
+          "affectedVillages": 8,
+          "river": null,
+          "populationAffected": 0,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 107.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-07-28T08:00:00Z",
+          "coordinates": {
+            "lat": 26.3161,
+            "lng": 91.5986
+          },
+          "coordinatesNote": "Approximate district headquarters location",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
+          "id": "kamrup-metro",
+          "name": "Kamrup Metro",
+          "severity": "waterlogging",
+          "affectedVillages": 0,
+          "river": null,
+          "populationAffected": 0,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 0.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-07-28T08:00:00Z",
+          "coordinates": {
+            "lat": 26.1445,
+            "lng": 91.7362
+          },
+          "coordinatesNote": "Approximate district headquarters location",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
+          "id": "nagaon",
+          "name": "Nagaon",
+          "severity": "waterlogging",
+          "affectedVillages": 25,
+          "river": null,
+          "populationAffected": 0,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 895.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-07-28T08:00:00Z",
+          "coordinates": {
+            "lat": 26.3509,
+            "lng": 92.6925
+          },
+          "coordinatesNote": "Approximate district headquarters location",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
+          "id": "sivasagar",
+          "name": "Sivasagar",
+          "severity": "severe",
+          "affectedVillages": 5,
+          "river": null,
+          "populationAffected": 97074,
+          "reliefCamps": 56,
+          "campInmates": 29987,
+          "cropAreaHa": 22276.5,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-07-28T08:00:00Z",
+          "coordinates": {
+            "lat": 26.9844,
+            "lng": 94.6378
+          },
+          "coordinatesNote": "Approximate district headquarters location",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
+          "id": "sonitpur",
+          "name": "Sonitpur",
+          "severity": "waterlogging",
+          "affectedVillages": 1,
+          "river": null,
+          "populationAffected": 0,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 2.66,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-07-28T08:00:00Z",
+          "coordinates": {
+            "lat": 26.634,
+            "lng": 92.79
+          },
+          "coordinatesNote": "Approximate district headquarters location",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        }
+      ],
+      "summary": {
+        "affectedNames": [
+          "Sivasagar",
+          "Charaideo",
+          "Golaghat",
+          "Jorhat",
+          "Nagaon",
+          "Sonitpur",
+          "Kamrup Metro"
+        ]
+      }
+    },
+    {
       "date": "2026-07-27",
       "scrapedAt": "2026-07-27T23:24:36Z",
       "stats": {
@@ -3393,5 +3716,5 @@
       }
     }
   ],
-  "updatedAt": "2026-07-27T23:24:36Z"
+  "updatedAt": "2026-07-29T13:44:18Z"
 }
