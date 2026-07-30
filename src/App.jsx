@@ -14,6 +14,7 @@ const Updates = lazy(() => import('./pages/Updates'))
 const Weather = lazy(() => import('./pages/Weather'))
 const SafetyTips = lazy(() => import('./pages/SafetyTips'))
 const Timeline = lazy(() => import('./pages/Timeline'))
+const Donate = lazy(() => import('./pages/Donate'))
 const About = lazy(() => import('./pages/About'))
 
 function ScrollToTop() {
@@ -116,6 +117,14 @@ export default function App() {
               element={
                 <LazyPage>
                   <SafetyTips />
+                </LazyPage>
+              }
+            />
+            <Route
+              path="donate"
+              element={
+                <LazyPage>
+                  <Donate />
                 </LazyPage>
               }
             />

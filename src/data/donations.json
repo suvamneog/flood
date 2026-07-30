@@ -1,0 +1,18 @@
+{
+  "note": "FloodAssist Assam does not collect donations and is not affiliated with these organisations. Each button opens that organisation’s own website in a new tab. Listed campaigns are Assam flood relief pages active in 2026.",
+  "channels": [
+    {
+      "id": "bondhu-streams",
+      "kind": "creator",
+      "name": "Bondhu Streams — Assam Flood Relief",
+      "organization": "Initiative by Bondhu Streams × Dhiman Streams × Daden Group",
+      "summary": "Creator-run Assam flood relief page with a public donation ledger.",
+      "howTo": "Opens bondhustreams.com/assam-flood.",
+      "url": "https://bondhustreams.com/assam-flood",
+      "donateUrl": "https://bondhustreams.com/assam-flood",
+      "tags": ["Assam 2026", "Creator campaign"]
+    }
+  ],
+  "inKindNote": "For donating physical supplies (not money), contact ASDMA / District Control on toll-free 1077 for current guidance.",
+  "linksUpdated": "2026-07-31"
+}
