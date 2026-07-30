@@ -2,6 +2,19 @@
   "note": "Every Donate button opens that organisation's own page. FloodAssist Assam does not collect or route money.",
   "channels": [
     {
+      "id": "bondhu-streams",
+      "kind": "creator",
+      "name": "Bondhu Streams — Assam Flood Relief",
+      "organization": "Bondhu Streams × Dhiman Streams × Daden Group",
+      "summary": "Assam creator fundraiser for flood-hit families, with a live public donation ledger showing supporters and amounts.",
+      "howTo": "Open their Assam Flood Relief page and use Donate for Assam. The live ledger updates as contributions come in.",
+      "url": "https://bondhustreams.com/assam-flood",
+      "donateUrl": "https://bondhustreams.com/assam-flood",
+      "tags": ["Creator-led", "Live ledger", "Assam"],
+      "recommended": true,
+      "trust": "creator"
+    },
+    {
       "id": "ndrf-bharatkosh",
       "kind": "government",
       "name": "National Disaster Response Fund (NDRF)",
@@ -39,18 +52,6 @@
       "tags": ["80G", "Government", "UPI"],
       "recommended": true,
       "trust": "official"
-    },
-    {
-      "id": "bondhu-streams",
-      "kind": "creator",
-      "name": "Bondhu Streams — Assam Flood Relief",
-      "organization": "Bondhu Streams × Dhiman Streams × Daden Group",
-      "summary": "Assam creator fundraiser for flood-hit families, with a live public donation ledger showing supporters and amounts.",
-      "howTo": "Open their Assam Flood Relief page and use Donate for Assam. The live ledger updates as contributions come in.",
-      "url": "https://bondhustreams.com/assam-flood",
-      "donateUrl": "https://bondhustreams.com/assam-flood",
-      "tags": ["Creator-led", "Live ledger", "Assam"],
-      "trust": "creator"
     },
     {
       "id": "goonj-rahat",

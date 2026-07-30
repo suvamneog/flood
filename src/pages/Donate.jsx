@@ -263,8 +263,7 @@ export default function Donate() {
   const [filter, setFilter] = useState('all')
 
   const channels = useMemo(() => {
-    const rows = [...(donationsData.channels || [])]
-    rows.sort((a, b) => Number(Boolean(b.recommended)) - Number(Boolean(a.recommended)))
+    const rows = donationsData.channels || []
     if (filter === 'all') return rows
     return rows.filter((c) => c.kind === filter)
   }, [filter])
