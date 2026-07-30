@@ -255,7 +255,7 @@ export default function Home() {
               {
                 to: '/donate',
                 title: 'Help flood-hit families',
-                desc: 'Verified donation channels — CM Relief Fund, PM CARES, and trusted NGOs.',
+                desc: 'NDRF, PM CARES, Bondhu Streams, and trusted NGO relief campaigns.',
               },
               {
                 to: '/timeline',

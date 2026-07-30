@@ -10,7 +10,6 @@ import {
   ShieldCheck,
   Phone,
   Info,
-  Sparkles,
   Radio,
   ArrowUpRight,
   HandHeart,
@@ -126,12 +125,6 @@ function ChannelCard({ c, index }) {
             <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200">
               <ShieldCheck className="h-3 w-3 text-primary-600" />
               Official
-            </span>
-          )}
-          {c.trust === 'creator' && (
-            <span className="inline-flex items-center gap-1 rounded-full border border-amber-200 bg-amber-50 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-amber-900 dark:border-amber-800 dark:bg-amber-950/50 dark:text-amber-100">
-              <Sparkles className="h-3 w-3" />
-              Not govt fund
             </span>
           )}
           {featured && (
@@ -319,16 +312,16 @@ export default function Donate() {
         >
           {[
             {
-              title: 'Official first',
-              body: 'CM Relief Fund Assam & NDRF (BharatKosh) are government channels.',
+              title: 'Official channels',
+              body: 'NDRF (BharatKosh) and PM CARES are Government of India funds with published bank details.',
             },
             {
-              title: 'Creator campaigns labelled',
-              body: 'Bondhu Streams is creator-led with a public ledger — not a govt fund.',
+              title: 'Creator & NGO relief',
+              body: 'Bondhu Streams and partner NGOs run Assam flood campaigns with live pages you can open in one tap.',
             },
             {
-              title: 'One-tap redirect',
-              body: 'Donate opens their page in a new tab. Copy UPI / IFSC when shown.',
+              title: 'Direct redirects',
+              body: 'Donate opens their site in a new tab. Copy UPI or IFSC when shown on the card.',
             },
           ].map((item) => (
             <div

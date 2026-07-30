@@ -1,33 +1,12 @@
 {
-  "note": "Every Donate button opens the organisation's own official page. FloodAssist Assam never collects or routes money. Confirm the account on that site before you pay.",
+  "note": "Every Donate button opens that organisation's own page. FloodAssist Assam does not collect or route money.",
   "channels": [
-    {
-      "id": "cmrf-assam",
-      "kind": "government",
-      "name": "Chief Minister's Relief Fund, Assam",
-      "organization": "Government of Assam",
-      "summary": "Official state relief fund used for flood aid and rehabilitation in Assam. 80G tax exemption available.",
-      "howTo": "Pay via SBI Collect, UPI (cmrfassam@sbi), or bank transfer using the details below.",
-      "url": "https://cm.assam.gov.in/donate",
-      "donateUrl": "https://www.onlinesbi.com/sbicollect/icollecthome.htm?corpID=671715",
-      "upi": "cmrfassam@sbi",
-      "account": {
-        "name": "Chief Minister's Relief Fund Assam",
-        "number": "35969660230",
-        "bank": "State Bank of India, Secretariat Branch",
-        "ifsc": "SBIN0010755"
-      },
-      "phone": "0361-2237043",
-      "tags": ["80G", "Assam-specific", "UPI"],
-      "recommended": true,
-      "trust": "official"
-    },
     {
       "id": "ndrf-bharatkosh",
       "kind": "government",
       "name": "National Disaster Response Fund (NDRF)",
       "organization": "Ministry of Home Affairs · Government of India",
-      "summary": "Central government disaster fund via BharatKosh. CarryMinati's Assam flood charity stream directed viewers here.",
+      "summary": "Central government disaster response fund. CarryMinati's Assam flood charity stream directed viewers here via BharatKosh.",
       "howTo": "Open BharatKosh → Quick Payment → Ministry: Home Affairs → Purpose: Contributions/Grants to NDRF.",
       "url": "https://ndmindia.mha.gov.in/ndmi/response-fund",
       "donateUrl": "https://bharatkosh.gov.in/",
@@ -46,9 +25,10 @@
       "kind": "government",
       "name": "PM CARES Fund",
       "organization": "Prime Minister's Office, Government of India",
-      "summary": "National emergency relief fund. Accepts domestic and foreign donations with 80G exemption.",
-      "url": "https://www.pmcares.gov.in/en/",
-      "donateUrl": "https://www.pmcares.gov.in/en/web/contribution/donate_india",
+      "summary": "National emergency relief fund for distress situations. Accepts domestic and foreign donations with 80G tax exemption.",
+      "howTo": "Donate online on pmcares.gov.in, or use UPI / bank transfer with the details below.",
+      "url": "https://pmcares.gov.in/en/",
+      "donateUrl": "https://pmcares.gov.in/en/web/contribution/donate_india",
       "upi": "pmcares@sbi",
       "account": {
         "name": "PM CARES",
@@ -57,6 +37,7 @@
         "ifsc": "SBIN0000691"
       },
       "tags": ["80G", "Government", "UPI"],
+      "recommended": true,
       "trust": "official"
     },
     {
@@ -64,11 +45,11 @@
       "kind": "creator",
       "name": "Bondhu Streams — Assam Flood Relief",
       "organization": "Bondhu Streams × Dhiman Streams × Daden Group",
-      "summary": "Creator-led Assam flood fundraiser with a public live donation ledger. Not a government fund — verify details on their page before donating.",
-      "howTo": "Open their transparency page and use Donate for Assam. The live ledger lists verified contributions.",
+      "summary": "Assam creator fundraiser for flood-hit families, with a live public donation ledger showing supporters and amounts.",
+      "howTo": "Open their Assam Flood Relief page and use Donate for Assam. The live ledger updates as contributions come in.",
       "url": "https://bondhustreams.com/assam-flood",
       "donateUrl": "https://bondhustreams.com/assam-flood",
-      "tags": ["Creator-led", "Transparency ledger", "Assam"],
+      "tags": ["Creator-led", "Live ledger", "Assam"],
       "trust": "creator"
     },
     {
@@ -76,7 +57,7 @@
       "kind": "ngo",
       "name": "Goonj — Rahat Floods",
       "organization": "Goonj",
-      "summary": "Long-running NGO delivering essential relief material to families in Assam and other flood-hit states.",
+      "summary": "NGO delivering essential relief material to families in Assam and other flood-hit states through the Rahat Floods campaign.",
       "url": "https://goonj.org/donate/campaign/rahat-floods",
       "donateUrl": "https://goonj.org/donate/campaign/rahat-floods",
       "tags": ["NGO", "80G", "Relief kits"],
@@ -87,7 +68,7 @@
       "kind": "ngo",
       "name": "SEEDS India — Flood Response",
       "organization": "SEEDS India",
-      "summary": "Emergency kits and transitional shelters in Assam districts including Jorhat and Cachar.",
+      "summary": "Emergency kits and transitional shelters for flood-affected communities in Assam, including Jorhat and Cachar.",
       "url": "https://www.seedsindia.org/india-flood-response-2025/",
       "donateUrl": "https://www.seedsindia.org/india-flood-response-2025/",
       "tags": ["NGO", "80G", "On-ground"],
@@ -98,7 +79,7 @@
       "kind": "ngo",
       "name": "Rapid Response — Assam Floods",
       "organization": "Rapid Response",
-      "summary": "Disaster relief NGO active in Assam since 2016 — food packets, dry ration, hygiene kits, medical camps.",
+      "summary": "Disaster relief NGO active in Assam since 2016 — food packets, dry ration, hygiene kits, and medical camps.",
       "url": "https://give.do/discover/19X0/rapid-response/",
       "donateUrl": "https://give.do/discover/19X0/rapid-response/",
       "tags": ["NGO", "80G"],
@@ -109,7 +90,7 @@
       "kind": "ngo",
       "name": "Assam Foundation of North America",
       "organization": "AFNA — Flood Relief 2026",
-      "summary": "Volunteer foundation channeling international donations through FCRA partners for Upper Assam supplies.",
+      "summary": "Volunteer foundation supporting Upper Assam flood relief through FCRA-registered partners — groceries, medical aid, and emergency supplies.",
       "url": "https://www.assamfoundation.net/flood-relief",
       "donateUrl": "https://www.assamfoundation.net/flood-relief",
       "tags": ["International", "USD", "Diaspora"],
