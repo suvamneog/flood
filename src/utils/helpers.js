@@ -106,6 +106,7 @@ export const NAV_LINKS = [
   { to: '/districts', label: 'District Status' },
   { to: '/relief-camps', label: 'Relief Camps' },
   { to: '/emergency', label: 'Emergency' },
+  { to: '/donate', label: 'Donate' },
   { to: '/timeline', label: 'Past Reports' },
   { to: '/checklist', label: 'Checklist' },
   { to: '/updates', label: 'Updates' },

@@ -1,7 +1,7 @@
 import { useMemo, useState, lazy, Suspense } from 'react'
 import { useSearchParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, Phone, History } from 'lucide-react'
+import { ArrowRight, Phone, History, HeartHandshake } from 'lucide-react'
 import Button from '../components/ui/Button'
 import floodHero from '../assets/flood-hero.jpeg'
 import StatsCards from '../components/home/StatsCards'
@@ -155,6 +155,10 @@ export default function Home() {
                 <Phone className="h-4 w-4" />
                 Emergency Contacts
               </Button>
+              <Button size="lg" variant="soft" to="/donate">
+                <HeartHandshake className="h-4 w-4" />
+                Donate for relief
+              </Button>
             </motion.div>
           </div>
 
@@ -247,6 +251,11 @@ export default function Home() {
                 to: '/relief-camps',
                 title: 'Relief Camps',
                 desc: 'Find open camps near you with capacity and phone numbers.',
+              },
+              {
+                to: '/donate',
+                title: 'Help flood-hit families',
+                desc: 'Verified donation channels — CM Relief Fund, PM CARES, and trusted NGOs.',
               },
               {
                 to: '/timeline',
