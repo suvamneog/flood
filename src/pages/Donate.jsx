@@ -292,12 +292,12 @@ export default function Donate() {
               body: 'Each button opens that organisation’s own website. FloodAssist Assam never takes payment.',
             },
             {
-              title: 'Government vs others',
-              body: 'NDRF and PM CARES are Government of India channels. Creator and NGO pages are listed separately.',
+              title: 'Assam flood 2026',
+              body: 'Only current Assam flood relief campaign pages are listed here — not general national funds.',
             },
             {
               title: 'No false claims',
-              body: 'We are not ASDMA, not affiliated with these funds, and do not mark any campaign as verified by us.',
+              body: 'We are not ASDMA, not affiliated with these campaigns, and do not mark any fund as verified by us.',
             },
           ].map((item) => (
             <div

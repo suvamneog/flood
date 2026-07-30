@@ -257,7 +257,7 @@ export default function Home() {
               {
                 to: '/donate',
                 title: 'Help flood-hit families',
-                desc: 'External links to NDRF, PM CARES, Bondhu Streams, and NGO campaign pages.',
+                desc: 'External links to Assam flood 2026 relief campaigns only.',
               },
               {
                 to: '/timeline',
