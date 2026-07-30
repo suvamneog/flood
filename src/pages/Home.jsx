@@ -155,10 +155,12 @@ export default function Home() {
                 <Phone className="h-4 w-4" />
                 Emergency Contacts
               </Button>
-              <Button size="lg" variant="soft" to="/donate">
-                <HeartHandshake className="h-4 w-4" />
-                Donate for relief
-              </Button>
+              <Link to="/donate" className="donate-glow-cta">
+                <span className="donate-glow-inner">
+                  <HeartHandshake className="h-4 w-4" />
+                  Donate for relief
+                </span>
+              </Link>
             </motion.div>
           </div>
 
