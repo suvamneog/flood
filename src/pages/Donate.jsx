@@ -49,8 +49,26 @@ const KIND_META = {
   },
 }
 
+/** HTTPS donate links only — host must match an allowlisted domain. */
+const ALLOWED_DONATE_HOSTS = [
+  'bondhustreams.com',
+  'assamfoundation.net',
+  'assam.gov.in',
+  'sdrf.assam.gov.in',
+]
+
 function isSafeExternal(url) {
-  return typeof url === 'string' && /^https:\/\//i.test(url)
+  if (typeof url !== 'string') return false
+  try {
+    const u = new URL(url)
+    if (u.protocol !== 'https:') return false
+    const host = u.hostname.toLowerCase()
+    return ALLOWED_DONATE_HOSTS.some(
+      (domain) => host === domain || host.endsWith(`.${domain}`)
+    )
+  } catch {
+    return false
+  }
 }
 
 function CopyButton({ value, label }) {

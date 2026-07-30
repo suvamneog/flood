@@ -26,7 +26,7 @@ export default function DistrictDrawer({ district, open, onClose }) {
 
   const shareDistrict = async () => {
     if (!district) return
-    const url = `${window.location.origin}/districts?district=${district.id}`
+    const url = `${window.location.origin}/districts?district=${encodeURIComponent(district.id)}`
     const sev = SEVERITY[district.severity] || SEVERITY.normal
     const text = `${district.name} flood status: ${sev.label} — ${formatIndianNumber(
       district.populationAffected
