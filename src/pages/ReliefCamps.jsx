@@ -166,7 +166,13 @@ export default function ReliefCamps() {
         />
       ) : (
         <div className="grid gap-4 sm:grid-cols-2">
-          {camps.map((camp, i) => (
+          {camps.map((camp, i) => {
+            const mapsUrl = googleMapsUrl(
+              camp.coordinates?.lat,
+              camp.coordinates?.lng,
+              camp.district
+            )
+            return (
             <motion.div
               key={camp.id}
               initial={{ opacity: 0, y: 12 }}
@@ -203,16 +209,12 @@ export default function ReliefCamps() {
                   </a>
                 </div>
 
-                {camp.coordinates?.lat != null && (
+                {mapsUrl ? (
                   <div className="mt-5">
                     <Button
                       variant="soft"
                       size="sm"
-                      href={googleMapsUrl(
-                        camp.coordinates.lat,
-                        camp.coordinates.lng,
-                        camp.district
-                      )}
+                      href={mapsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -220,10 +222,11 @@ export default function ReliefCamps() {
                       Open district on Maps
                     </Button>
                   </div>
-                )}
+                ) : null}
               </Card>
             </motion.div>
-          ))}
+            )
+          })}
         </div>
       )}
     </div>

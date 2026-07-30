@@ -82,8 +82,18 @@ export const formatRelative = (iso) => {
   return `${days}d ago`
 }
 
-export const googleMapsUrl = (lat, lng, label = '') =>
-  `https://www.google.com/maps/search/?api=1&query=${lat},${lng}${label ? `&query_place_id=${encodeURIComponent(label)}` : ''}`
+/** Google Maps search URL — returns null if coords are invalid / out of Assam+NE buffer. */
+export const googleMapsUrl = (lat, lng, label = '') => {
+  const la = Number(lat)
+  const ln = Number(lng)
+  if (!Number.isFinite(la) || !Number.isFinite(ln)) return null
+  // Assam / NE India with modest buffer
+  if (la < 22 || la > 29.5 || ln < 88 || ln > 98) return null
+  const query = label
+    ? `${la},${ln} (${String(label).slice(0, 80)})`
+    : `${la},${ln}`
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`
+}
 
 /** Safe tel: link — digits and leading + only (blocks javascript:/data: abuse). */
 export const telLink = (number) => {

@@ -13,7 +13,6 @@
     "scrape:pdf:seed": "python3 scripts/scrape_asdma_pdf.py --seed-history 5"
   },
   "dependencies": {
-    "axios": "^1.18.1",
     "framer-motion": "^12.42.2",
     "leaflet": "^1.9.4",
     "lucide-react": "^1.26.0",

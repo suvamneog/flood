@@ -1,19 +1,7 @@
 /**
- * Central API helpers — data currently ships as static JSON via services.
- * Set VITE_API_BASE_URL when a live backend is available.
+ * Shared API helpers. Live HTTP client removed until a backend exists
+ * (set VITE_API_BASE_URL + reintroduce axios when needed; update CSP connect-src).
  */
-import axios from 'axios'
-
-const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || '/api',
-  timeout: 15000,
-  headers: { 'Content-Type': 'application/json' },
-})
-
-api.interceptors.response.use(
-  (response) => response,
-  (error) => Promise.reject(toUserError(error))
-)
 
 /** Convert any thrown value into a safe, user-facing Error (no stack dumps). */
 export function toUserError(err) {
@@ -33,5 +21,3 @@ export function toUserError(err) {
   e.name = 'UserFacingError'
   return e
 }
-
-export default api
