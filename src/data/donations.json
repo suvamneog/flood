@@ -1,26 +1,24 @@
 {
-  "note": "Every Donate button opens that organisation's own page. FloodAssist Assam does not collect or route money.",
+  "note": "FloodAssist Assam does not collect donations and is not affiliated with these organisations. Each button opens that organisation’s own website in a new tab.",
   "channels": [
     {
       "id": "bondhu-streams",
       "kind": "creator",
       "name": "Bondhu Streams — Assam Flood Relief",
       "organization": "Initiative by Bondhu Streams × Dhiman Streams × Daden Group",
-      "summary": "Assam flood relief campaign with a live donation ledger — every verified contribution is shown openly.",
-      "howTo": "Open their Assam Flood Relief page and use Donate for Assam. The live ledger updates as contributions come in.",
+      "summary": "Creator-run Assam flood relief page with a public donation ledger.",
+      "howTo": "Opens bondhustreams.com/assam-flood.",
       "url": "https://bondhustreams.com/assam-flood",
       "donateUrl": "https://bondhustreams.com/assam-flood",
-      "tags": ["Creator-led", "Live ledger", "Assam"],
-      "recommended": true,
-      "trust": "creator"
+      "tags": ["Creator campaign", "Assam"]
     },
     {
       "id": "ndrf-bharatkosh",
       "kind": "government",
       "name": "National Disaster Response Fund (NDRF)",
       "organization": "Ministry of Home Affairs · Government of India",
-      "summary": "Central government disaster response fund. CarryMinati's Assam flood charity stream directed viewers here via BharatKosh.",
-      "howTo": "Open BharatKosh → Quick Payment → Ministry: Home Affairs → Purpose: Contributions/Grants to NDRF.",
+      "summary": "Central government disaster response fund. Donations can be made on the BharatKosh portal.",
+      "howTo": "On BharatKosh choose Quick Payment → Ministry: Home Affairs → Purpose: Contributions/Grants to NDRF.",
       "url": "https://ndmindia.mha.gov.in/ndmi/response-fund",
       "donateUrl": "https://bharatkosh.gov.in/",
       "account": {
@@ -29,17 +27,16 @@
         "bank": "State Bank of India, Central Secretariat Branch, New Delhi",
         "ifsc": "SBIN0000625"
       },
-      "tags": ["Government", "BharatKosh", "CarryMinati stream"],
-      "recommended": true,
-      "trust": "official"
+      "paymentSource": "Bank details as published by the Ministry of Home Affairs for NDRF contributions.",
+      "tags": ["Government of India", "BharatKosh"]
     },
     {
       "id": "pm-cares",
       "kind": "government",
       "name": "PM CARES Fund",
-      "organization": "Prime Minister's Office, Government of India",
-      "summary": "National emergency relief fund for distress situations. Accepts domestic and foreign donations with 80G tax exemption.",
-      "howTo": "Donate online on pmcares.gov.in, or use UPI / bank transfer with the details below.",
+      "organization": "Prime Minister's Office · Government of India",
+      "summary": "Public charitable trust for emergency and distress relief. Donations can be made on pmcares.gov.in.",
+      "howTo": "Opens the official PM CARES domestic donation page.",
       "url": "https://pmcares.gov.in/en/",
       "donateUrl": "https://pmcares.gov.in/en/web/contribution/donate_india",
       "upi": "pmcares@sbi",
@@ -49,44 +46,43 @@
         "bank": "State Bank of India, New Delhi Main Branch",
         "ifsc": "SBIN0000691"
       },
-      "tags": ["80G", "Government", "UPI"],
-      "recommended": true,
-      "trust": "official"
+      "paymentSource": "UPI and bank details as published on pmindia.gov.in / pmcares.gov.in.",
+      "tags": ["Government of India"]
     },
     {
       "id": "goonj-rahat",
       "kind": "ngo",
       "name": "Goonj — Rahat Floods",
       "organization": "Goonj",
-      "summary": "NGO delivering essential relief material to families in Assam and other flood-hit states through the Rahat Floods campaign.",
+      "summary": "Goonj’s Rahat Floods campaign page for flood relief contributions.",
+      "howTo": "Opens goonj.org donate campaign page.",
       "url": "https://goonj.org/donate/campaign/rahat-floods",
       "donateUrl": "https://goonj.org/donate/campaign/rahat-floods",
-      "tags": ["NGO", "80G", "Relief kits"],
-      "trust": "ngo"
+      "tags": ["NGO"]
     },
     {
       "id": "seeds-india",
       "kind": "ngo",
       "name": "SEEDS India — Flood Response",
       "organization": "SEEDS India",
-      "summary": "Emergency kits and transitional shelters for flood-affected communities in Assam, including Jorhat and Cachar.",
+      "summary": "SEEDS India flood response campaign page.",
+      "howTo": "Opens the SEEDS India flood response page.",
       "url": "https://www.seedsindia.org/india-flood-response-2025/",
       "donateUrl": "https://www.seedsindia.org/india-flood-response-2025/",
-      "tags": ["NGO", "80G", "On-ground"],
-      "trust": "ngo"
+      "tags": ["NGO"]
     },
     {
       "id": "afna",
       "kind": "ngo",
       "name": "Assam Foundation of North America",
       "organization": "AFNA — Flood Relief 2026",
-      "summary": "Volunteer foundation supporting Upper Assam flood relief through FCRA-registered partners — groceries, medical aid, and emergency supplies.",
+      "summary": "AFNA’s Flood Relief 2026 campaign page for Assam.",
+      "howTo": "Opens assamfoundation.net/flood-relief.",
       "url": "https://www.assamfoundation.net/flood-relief",
       "donateUrl": "https://www.assamfoundation.net/flood-relief",
-      "tags": ["International", "USD", "Diaspora"],
-      "trust": "ngo"
+      "tags": ["NGO", "International"]
     }
   ],
-  "inKindNote": "Donating supplies (dry ration, hygiene kits, tarpaulin, etc.) is coordinated by ASDMA. Call toll-free 1077 before sending anything — unsolicited perishables slow relief.",
-  "lastVerified": "2026-07-30"
+  "inKindNote": "For donating physical supplies (not money), contact ASDMA / District Control on toll-free 1077 for current guidance.",
+  "linksUpdated": "2026-07-30"
 }

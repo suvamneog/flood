@@ -255,7 +255,7 @@ export default function Home() {
               {
                 to: '/donate',
                 title: 'Help flood-hit families',
-                desc: 'NDRF, PM CARES, Bondhu Streams, and trusted NGO relief campaigns.',
+                desc: 'External links to NDRF, PM CARES, Bondhu Streams, and NGO campaign pages.',
               },
               {
                 to: '/timeline',

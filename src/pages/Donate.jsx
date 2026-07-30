@@ -7,7 +7,6 @@ import {
   ExternalLink,
   Copy,
   Check,
-  ShieldCheck,
   Phone,
   Info,
   Radio,
@@ -42,7 +41,7 @@ const KIND_META = {
     soft: 'bg-emerald-50/70 dark:bg-emerald-950/25',
   },
   creator: {
-    label: 'Creator-led',
+    label: 'Creator campaign',
     icon: Radio,
     chip: 'border-amber-200 bg-amber-50 text-amber-950 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-100',
     accent: 'from-amber-500 to-orange-600',
@@ -91,7 +90,6 @@ function ChannelCard({ c, index }) {
       ? c.url
       : null
   const learnMoreUrl = isSafeExternal(c.url) ? c.url : null
-  const featured = Boolean(c.recommended)
 
   return (
     <motion.article
@@ -105,11 +103,7 @@ function ChannelCard({ c, index }) {
         stiffness: 280,
         damping: 26,
       }}
-      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border bg-white shadow-sm transition duration-300 dark:bg-surface-dark-muted ${
-        featured
-          ? 'border-primary-300 ring-1 ring-primary-200/70 dark:border-primary-700 dark:ring-primary-900/60'
-          : 'border-border hover:border-primary-300 dark:border-border-dark dark:hover:border-primary-700'
-      }`}
+      className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition duration-300 hover:border-primary-300 dark:border-border-dark dark:bg-surface-dark-muted dark:hover:border-primary-700"
     >
       <div className={`h-1.5 w-full bg-gradient-to-r ${meta.accent}`} />
 
@@ -121,17 +115,6 @@ function ChannelCard({ c, index }) {
             <KindIcon className="h-3 w-3" />
             {meta.label}
           </span>
-          {c.trust === 'official' && (
-            <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200">
-              <ShieldCheck className="h-3 w-3 text-primary-600" />
-              Official
-            </span>
-          )}
-          {featured && (
-            <span className="inline-flex items-center gap-1 rounded-full border border-primary-200 bg-primary-50 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-primary-800 dark:border-primary-800 dark:bg-primary-950/50 dark:text-primary-200">
-              Recommended
-            </span>
-          )}
         </div>
 
         <h3 className="text-lg font-extrabold leading-snug tracking-tight text-slate-900 dark:text-white sm:text-[1.2rem]">
@@ -150,7 +133,7 @@ function ChannelCard({ c, index }) {
             className={`mt-4 rounded-xl border border-border/80 px-3 py-2.5 text-xs leading-relaxed text-slate-600 dark:border-border-dark dark:text-slate-300 ${meta.soft}`}
           >
             <span className="font-bold text-slate-800 dark:text-slate-100">
-              How to donate:{' '}
+              Link:{' '}
             </span>
             {c.howTo}
           </div>
@@ -204,6 +187,11 @@ function ChannelCard({ c, index }) {
                 {c.account.bank}
               </p>
             )}
+            {c.paymentSource && (
+              <p className="border-t border-border/70 pt-2 text-[10px] leading-snug text-slate-400 dark:border-border-dark dark:text-slate-500">
+                {c.paymentSource}
+              </p>
+            )}
           </div>
         )}
 
@@ -229,7 +217,7 @@ function ChannelCard({ c, index }) {
               className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl bg-primary-600 px-4 text-sm font-bold text-white shadow-sm shadow-primary-600/20 transition hover:bg-primary-700 active:scale-[0.98] sm:w-auto"
             >
               <HeartHandshake className="h-4 w-4" />
-              Donate now
+              Open donate page
               <ArrowUpRight className="h-3.5 w-3.5 opacity-80" />
             </a>
           )}
@@ -241,16 +229,7 @@ function ChannelCard({ c, index }) {
               className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl border border-border bg-white px-4 text-sm font-semibold text-slate-700 transition hover:border-primary-300 hover:text-primary-700 active:scale-[0.98] dark:border-border-dark dark:bg-surface-dark dark:text-slate-200 sm:w-auto"
             >
               <ExternalLink className="h-4 w-4" />
-              Details
-            </a>
-          )}
-          {c.phone && (
-            <a
-              href={telLink(c.phone)}
-              className="inline-flex min-h-10 items-center justify-center gap-1.5 px-2 text-xs font-semibold text-slate-500 transition hover:text-primary-600 dark:hover:text-primary-400 sm:justify-start"
-            >
-              <Phone className="h-3.5 w-3.5" />
-              {c.phone}
+              More info
             </a>
           )}
         </div>
@@ -280,7 +259,6 @@ export default function Donate() {
 
   return (
     <div className="relative overflow-hidden">
-      {/* Soft atmosphere — not a flat white slab */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-0 h-[420px] bg-[radial-gradient(ellipse_at_top,_rgba(46,120,134,0.14),_transparent_60%),linear-gradient(180deg,_rgba(238,247,248,0.9),_transparent)] dark:bg-[radial-gradient(ellipse_at_top,_rgba(46,120,134,0.22),_transparent_55%),linear-gradient(180deg,_rgba(15,23,42,0.4),_transparent)]"
@@ -299,10 +277,9 @@ export default function Donate() {
 
         <PageHeader
           title="Help flood-affected families"
-          subtitle="Tap a channel to open its official site. We never collect money — every donation goes straight to that organisation."
+          subtitle="Links to external donation pages only. We do not collect money, endorse campaigns, or verify how funds are spent."
         />
 
-        {/* Trust strip */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -311,16 +288,16 @@ export default function Donate() {
         >
           {[
             {
-              title: 'Official channels',
-              body: 'NDRF (BharatKosh) and PM CARES are Government of India funds with published bank details.',
+              title: 'External links only',
+              body: 'Each button opens that organisation’s own website. FloodAssist Assam never takes payment.',
             },
             {
-              title: 'Creator & NGO relief',
-              body: 'Bondhu Streams and partner NGOs run Assam flood campaigns with live pages you can open in one tap.',
+              title: 'Government vs others',
+              body: 'NDRF and PM CARES are Government of India channels. Creator and NGO pages are listed separately.',
             },
             {
-              title: 'Direct redirects',
-              body: 'Donate opens their site in a new tab. Copy UPI or IFSC when shown on the card.',
+              title: 'No false claims',
+              body: 'We are not ASDMA, not affiliated with these funds, and do not mark any campaign as verified by us.',
             },
           ].map((item) => (
             <div
@@ -337,7 +314,6 @@ export default function Donate() {
           ))}
         </motion.div>
 
-        {/* Filters — horizontal scroll on mobile */}
         <div className="-mx-4 mb-5 px-4 sm:mx-0 sm:px-0">
           <div className="flex items-center gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {FILTERS.map((f) => {
@@ -369,9 +345,9 @@ export default function Donate() {
                 </button>
               )
             })}
-            {donationsData.lastVerified && (
+            {donationsData.linksUpdated && (
               <span className="ml-auto hidden shrink-0 text-xs text-slate-400 sm:inline">
-                Checked {donationsData.lastVerified}
+                Links updated {donationsData.linksUpdated}
               </span>
             )}
           </div>
@@ -419,7 +395,7 @@ export default function Donate() {
             <div className="mt-4">
               <Button href={telLink('1077')} size="sm" variant="soft">
                 <Phone className="h-4 w-4" />
-                Call ASDMA / 1077
+                Call 1077
               </Button>
             </div>
           </motion.div>
