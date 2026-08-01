@@ -63,6 +63,7 @@ DFR_POST = "https://sdrf.assam.gov.in/dfr/download"
 # Assam district canonical list + approximate centroids for map pins.
 # ---------------------------------------------------------------------------
 DISTRICTS: dict[str, dict[str, float]] = {
+    "Bajali": {"lat": 26.4994, "lng": 91.1792},
     "Baksa": {"lat": 26.6935, "lng": 91.5082},
     "Barpeta": {"lat": 26.3228, "lng": 91.0065},
     "Biswanath": {"lat": 26.7333, "lng": 93.15},
@@ -254,8 +255,11 @@ DISTRICT_NAMES_RE = "|".join(
 )
 
 # Population line: District Male Female Children Total Crop
+# Optional header-fragment prefixes ("And Crop"/"Area"/"Submerged") leak when
+# pdfplumber wraps the section title onto the first district row.
 POP_LINE_RE = re.compile(
-    rf"^\s*({DISTRICT_NAMES_RE})\s+(\d[\d,]*)\s+(\d[\d,]*)\s+(\d[\d,]*)\s+(\d[\d,]*)\s+([\d,\.]+)"
+    rf"^\s*(?:And\s+Crop|Area|Submerged|Submerge|d)?\s*"
+    rf"({DISTRICT_NAMES_RE})\s+(\d[\d,]*)\s+(\d[\d,]*)\s+(\d[\d,]*)\s+(\d[\d,]*)\s+([\d,\.]+)"
 )
 # Circle-level detail inside Population section
 CIRCLE_DETAIL_RE = re.compile(
@@ -439,17 +443,27 @@ def parse_pdf(pdf_path: Path) -> dict[str, Any]:
         ]
 
     # --- Population & Crop Area section ---
+    # Headers vary by PDF export: "Population District Male…" vs wrapped
+    # "And Crop Area Submerged" fragments; camps header is usually
+    # "Relief Camps District Total Relief Camp…".
+    pop_end = [
+        r"Relief\s+Camps\s*/?\s*Centres\s+Opened",
+        r"Relief\s+Camps\s+District\s+Total",
+        r"Relief\s+District\s+Total\s+Relief\s+Camp",
+        r"Inmates\s+In\s+Relief",
+        r"Inmates\s+In\b",
+    ]
     pop_block = slice_section(
         full,
         r"Population\s+District\s+Male",
-        [r"Relief\s+District\s+Total\s+Relief Camp", r"Inmates\s+In\s+Relief"],
+        pop_end,
     )
     if not pop_block:
         # fallback: any 'Population' near 'And Crop'
         pop_block = slice_section(
             full,
-            r"Population\s+District\s+Male|And Crop\s+Area",
-            [r"Relief\s+District", r"Inmates\s+In"],
+            r"Population\s+District\s+Male|And Crop\s+Area|Population\s+and\s+Crop",
+            pop_end,
         )
     # Iterate line-by-line so we grab per-district totals AND collect circle details
     pop_data: dict[str, dict[str, Any]] = {}
@@ -477,7 +491,7 @@ def parse_pdf(pdf_path: Path) -> dict[str, Any]:
         if m:
             flush_detail(current_district, detail_buffer)
             current_district = m.group(1)
-            pop_data[current_district] = {
+            next_row = {
                 "male": to_int(m.group(2)),
                 "female": to_int(m.group(3)),
                 "children": to_int(m.group(4)),
@@ -485,6 +499,14 @@ def parse_pdf(pdf_path: Path) -> dict[str, Any]:
                 "cropArea": to_float(m.group(6)),
                 "circles": [],
             }
+            # Later PDF sections reuse "District N N N…" shapes (HLL, animals,
+            # infrastructure). Never let a zero row wipe a real population total.
+            prev = pop_data.get(current_district)
+            if prev and prev.get("population", 0) > 0 and next_row["population"] == 0:
+                current_district = None
+                detail_buffer = []
+                continue
+            pop_data[current_district] = next_row
             detail_buffer = [line]
         elif current_district and line and not line.startswith("Total"):
             detail_buffer.append(line)
@@ -498,7 +520,7 @@ def parse_pdf(pdf_path: Path) -> dict[str, Any]:
     # --- Relief Camps opened section ---
     camps_block = slice_section(
         full,
-        r"Relief\s+District\s+Total\s+Relief Camp|Relief Camps\s*/\s*Centres Opened",
+        r"Relief\s+Camps\s+District\s+Total|Relief\s+District\s+Total\s+Relief\s+Camp|Relief\s+Camps\s*/\s*Centres\s+Opened",
         [
             r"Inmates\s+In\b",
             r"Non\s*Camp\b",
@@ -578,7 +600,11 @@ def parse_pdf(pdf_path: Path) -> dict[str, Any]:
     )
     villages_data: dict[str, int] = {}
     for raw_line in villages_block.splitlines():
-        m = re.match(rf"^\s*({DISTRICT_NAMES_RE})\s+(\d[\d,]*)\s", raw_line)
+        # Optional "Affected" title fragment glued onto the first district row.
+        m = re.match(
+            rf"^\s*(?:Affected\s+)?({DISTRICT_NAMES_RE})\s+(\d[\d,]*)\b",
+            raw_line,
+        )
         if m:
             villages_data[m.group(1)] = to_int(m.group(2))
     result["villages"] = villages_data

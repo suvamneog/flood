@@ -1,16 +1,64 @@
 [
   {
+    "id": "asdma-camp-charaideo",
+    "name": "Charaideo — district relief camps (total)",
+    "district": "Charaideo",
+    "districtId": "charaideo",
+    "campCount": 1,
+    "summary": "1 relief camp(s) reported open in Charaideo district with 210 inmates (ASDMA 01 Aug 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
+    "campInmates": 210,
+    "phone": "1077",
+    "coordinates": {
+      "lat": 27.0333,
+      "lng": 95.0
+    },
+    "coordinatesNote": "Approximate district headquarters location",
+    "source": "ASDMA Daily Flood Report"
+  },
+  {
+    "id": "asdma-camp-golaghat",
+    "name": "Golaghat — district relief camps (total)",
+    "district": "Golaghat",
+    "districtId": "golaghat",
+    "campCount": 3,
+    "summary": "3 relief camp(s) reported open in Golaghat district with 172 inmates (ASDMA 01 Aug 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
+    "campInmates": 172,
+    "phone": "1077",
+    "coordinates": {
+      "lat": 26.5234,
+      "lng": 93.9623
+    },
+    "coordinatesNote": "Approximate district headquarters location",
+    "source": "ASDMA Daily Flood Report"
+  },
+  {
     "id": "asdma-camp-jorhat",
     "name": "Jorhat — district relief camps (total)",
     "district": "Jorhat",
     "districtId": "jorhat",
-    "campCount": 11,
-    "summary": "11 relief camp(s) reported open in Jorhat district with 957 inmates (ASDMA 31 Jul 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
-    "campInmates": 957,
+    "campCount": 9,
+    "summary": "9 relief camp(s) reported open in Jorhat district with 1,012 inmates (ASDMA 01 Aug 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
+    "campInmates": 1012,
     "phone": "1077",
     "coordinates": {
       "lat": 26.7509,
       "lng": 94.2037
+    },
+    "coordinatesNote": "Approximate district headquarters location",
+    "source": "ASDMA Daily Flood Report"
+  },
+  {
+    "id": "asdma-camp-sivasagar",
+    "name": "Sivasagar — district relief camps (total)",
+    "district": "Sivasagar",
+    "districtId": "sivasagar",
+    "campCount": 31,
+    "summary": "31 relief camp(s) reported open in Sivasagar district with 10,095 inmates (ASDMA 01 Aug 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
+    "campInmates": 10095,
+    "phone": "1077",
+    "coordinates": {
+      "lat": 26.9844,
+      "lng": 94.6378
     },
     "coordinatesNote": "Approximate district headquarters location",
     "source": "ASDMA Daily Flood Report"
