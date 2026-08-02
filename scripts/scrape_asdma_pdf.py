@@ -210,21 +210,59 @@ def fetch_pdf(target_date: dt.date, lookback: int) -> tuple[bytes, dt.date, str]
 #      immediately follows) — repair to "Biswanath 0 ..."
 #   B) LETTER-CONTINUATION: "Biswanat0 ...\nCentres h\n" — the missing letter
 #      appears at the start of a later line as a lone token — drop that token.
+# Truncated stem immediately followed by a digit (next column).
+# Longer stems first so "Charaide" wins over "Charaid".
 GLUED_TRUNCATIONS = [
     ("Biswanat", "Biswanath"),
     ("Charaide", "Charaideo"),
+    ("Charaid", "Charaideo"),
     ("Dibrugar", "Dibrugarh"),
-    ("Kokraj",   "Kokrajhar"),
-    ("Sivasa",   "Sivasagar"),
-    ("Hailak",   "Hailakandi"),
-    ("Bongaig",  "Bongaigaon"),
-    ("Karim",    "Karimganj"),
+    ("Dibruga", "Dibrugarh"),
+    ("Kokrajha", "Kokrajhar"),
+    ("Kokraj", "Kokrajhar"),
+    ("Sivasaga", "Sivasagar"),
+    ("Sivasa", "Sivasagar"),
+    ("Hailakan", "Hailakandi"),
+    ("Hailak", "Hailakandi"),
+    ("Bongaigao", "Bongaigaon"),
+    ("Bongaiga", "Bongaigaon"),
+    ("Bongaig", "Bongaigaon"),
+    ("Golagha", "Golaghat"),
+    ("Karimgan", "Karimganj"),
+    ("Karim", "Karimganj"),
+    ("Sonitpu", "Sonitpur"),
+    ("Tinsuki", "Tinsukia"),
+    ("Lakhimpu", "Lakhimpur"),
+    ("Goalpar", "Goalpara"),
+    ("Nalbari", "Nalbari"),
 ]
-CONTINUATION_LETTERS = ["h", "o", "har", "ganj", "gar", "andi", "aon"]
+
+# Truncated stem + leftover letters on the next line: "Charaid\neo" → Charaideo
+SPLIT_NAME_FIXES = [
+    (r"\bCharaid\s*\n\s*eo\b", "Charaideo"),
+    (r"\bDibruga\s*\n\s*rh\b", "Dibrugarh"),
+    (r"\bGolagha\s*\n\s*t\b", "Golaghat"),
+    (r"\bBongaigao\s*\n\s*n\b", "Bongaigaon"),
+    (r"\bBiswanat\s*\n\s*h\b", "Biswanath"),
+    (r"\bSivasa\s*\n\s*gar\b", "Sivasagar"),
+    (r"\bKokraj\s*\n\s*har\b", "Kokrajhar"),
+    (r"\bHailak\s*\n\s*andi\b", "Hailakandi"),
+    (r"\bKarim\s*\n\s*ganj\b", "Karimganj"),
+    (r"\bSonitpu\s*\n\s*r\b", "Sonitpur"),
+    (r"\bTinsuki\s*\n\s*a\b", "Tinsukia"),
+]
+
+CONTINUATION_LETTERS = ["h", "o", "har", "ganj", "gar", "andi", "aon", "eo", "rh", "t"]
 
 WORDWRAP_FIXES = [
+    # "Karbi <numbers/details>\nAnglong" — name split across the row
+    (r"\bKarbi\s+(\d[\d,]*.*?)\n\s*Anglong\b", r"Karbi Anglong \1"),
     (r"Karbi\s*\n?\s*Anglong\b", "Karbi Anglong"),
     (r"Dima\s*\n?\s*Hasao\b", "Dima Hasao"),
+    # "Kamrup 6 (Azara | 1), (Sonapur | 5)\n(M)" — metro marker on the next line
+    (r"\bKamrup\s+(\d[\d,]*)\s+((?:\([^()\n]*\)(?:,\s*)?)+)\s*\n\s*\(M\)", r"Kamrup Metro \1 \2"),
+    # Population rows: "Kamrup 0 0 0 0 0 (Sonapur…)\n(M)"
+    (r"\bKamrup\s+(\d[\d,]*(?:\s+[\d,\.]+){4,}.*?)\n\s*\(M\)", r"Kamrup Metro \1"),
     (r"Kamrup\s*\n?\s*\(M\)", "Kamrup Metro"),
     (r"Kamrup\s*\(M\)", "Kamrup Metro"),
     (r"South\s*\n?\s*Salmara(?:-\s*\n?\s*Mankachar)?", "South Salmara"),
@@ -235,16 +273,22 @@ WORDWRAP_FIXES = [
 def normalize_text(text: str) -> str:
     """Fix district-name word-wraps and other pdfplumber artefacts."""
     out = text
-    # A) Repair digit-glued truncations: "Biswanat0" -> "Biswanath 0"
-    for short, full in GLUED_TRUNCATIONS:
+    # A) Re-join split district names before dropping orphan tails
+    for pat, repl in SPLIT_NAME_FIXES:
+        out = re.sub(pat, repl, out)
+    # B) Repair digit-glued truncations: "Golagha18787" -> "Golaghat 18787"
+    for short, full in sorted(GLUED_TRUNCATIONS, key=lambda x: len(x[0]), reverse=True):
         out = re.sub(rf"\b{short}(?=\d)", f"{full} ", out)
-    # B) Drop leftover single-letter continuation tokens like "\nCentres h\n"
-    #    or " h " that pdfplumber emitted after a broken cell.
-    #    We only strip when the letter is a whole token AND is one of the
-    #    known continuation letters.
+    # C) Truncated stem + space + digits (continuation letters landed elsewhere):
+    #    "Area Charaid 71578" -> "Area Charaideo 71578"
+    for short, full in sorted(GLUED_TRUNCATIONS, key=lambda x: len(x[0]), reverse=True):
+        if short == full:
+            continue
+        out = re.sub(rf"\b{short}\s+(?=\d)", f"{full} ", out)
+    # D) Drop leftover continuation tokens that were not re-joined
     for tail in CONTINUATION_LETTERS:
         out = re.sub(rf"(?<=[A-Za-z0-9\)])\s+{tail}\s*(?=\n)", "", out)
-    # C) Multi-line district-name fixes
+    # E) Multi-line district-name fixes
     for pat, repl in WORDWRAP_FIXES:
         out = re.sub(pat, repl, out)
     return out
@@ -270,7 +314,8 @@ CIRCLE_DETAIL_RE = re.compile(
 # Relief Camps section: District | Total | ReliefCamp count | (details) | RDC count | (details)
 # Capture Total (grp 2), Relief-Camp count (grp 3), and RDC count if present.
 CAMP_LINE_RE = re.compile(
-    rf"^\s*({DISTRICT_NAMES_RE})\s+(\d[\d,]*)\s+(\d[\d,]*)\b"
+    rf"^\s*(?:/?\s*Centres\s+|Camps\s*/\s*Centres\s+Opened\s*|Centres\s+Opened\s*|Opened\s*|Camps\s*/\s*)?"
+    rf"({DISTRICT_NAMES_RE})\s+(\d[\d,]*)\s+(\d[\d,]*)\b"
 )
 # Human lives lost — Total is the 3rd column after District, first is a "date"
 # but format is: District Total FloodDeath General Male Female Children Others ...
@@ -455,14 +500,14 @@ def parse_pdf(pdf_path: Path) -> dict[str, Any]:
     ]
     pop_block = slice_section(
         full,
-        r"Population\s+District\s+Male",
+        r"Populat(?:io(?:n)?)?\s+District\s+Male",
         pop_end,
     )
     if not pop_block:
         # fallback: any 'Population' near 'And Crop'
         pop_block = slice_section(
             full,
-            r"Population\s+District\s+Male|And Crop\s+Area|Population\s+and\s+Crop",
+            r"Populat(?:io(?:n)?)?\s+District\s+Male|And Crop\s+Area|Population\s+and\s+Crop",
             pop_end,
         )
     # Iterate line-by-line so we grab per-district totals AND collect circle details

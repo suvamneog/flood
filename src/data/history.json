@@ -2,7 +2,7 @@
   "reports": [
     {
       "date": "2026-08-02",
-      "scrapedAt": "2026-08-02T23:23:40Z",
+      "scrapedAt": "2026-08-02T23:37:46Z",
       "stats": {
         "peopleAffected": 136203,
         "floodedDistricts": 5,
@@ -265,7 +265,7 @@
     },
     {
       "date": "2026-08-01",
-      "scrapedAt": "2026-08-01T20:56:09Z",
+      "scrapedAt": "2026-08-02T23:37:43Z",
       "stats": {
         "peopleAffected": 178837,
         "floodedDistricts": 7,
@@ -627,12 +627,12 @@
     },
     {
       "date": "2026-07-31",
-      "scrapedAt": "2026-07-31T17:49:28Z",
+      "scrapedAt": "2026-08-02T23:37:38Z",
       "stats": {
-        "peopleAffected": 115343,
+        "peopleAffected": 192799,
         "floodedDistricts": 5,
-        "reliefCamps": 11,
-        "campInmates": 12784,
+        "reliefCamps": 54,
+        "campInmates": 12994,
         "riverWarnings": 1,
         "activeAlerts": 1
       },
@@ -644,12 +644,22 @@
       },
       "topDistricts": [
         {
+          "id": "charaideo",
+          "name": "Charaideo",
+          "populationAffected": 77456,
+          "severity": "severe",
+          "reliefCamps": 1,
+          "affectedVillages": 66,
+          "campInmates": 210,
+          "humanLivesLost": 0
+        },
+        {
           "id": "sivasagar",
           "name": "Sivasagar",
           "populationAffected": 63492,
           "severity": "severe",
-          "reliefCamps": 0,
-          "affectedVillages": 5,
+          "reliefCamps": 38,
+          "affectedVillages": 185,
           "campInmates": 11611,
           "humanLivesLost": 0
         },
@@ -668,16 +678,16 @@
           "name": "Golaghat",
           "populationAffected": 17784,
           "severity": "severe",
-          "reliefCamps": 0,
+          "reliefCamps": 4,
           "affectedVillages": 66,
           "campInmates": 216,
           "humanLivesLost": 0
         },
         {
-          "id": "charaideo",
-          "name": "Charaideo",
+          "id": "cachar",
+          "name": "Cachar",
           "populationAffected": 0,
-          "severity": "waterlogging",
+          "severity": "normal",
           "reliefCamps": 0,
           "affectedVillages": 0,
           "campInmates": 0,
@@ -714,6 +724,16 @@
           "humanLivesLost": 0
         },
         {
+          "id": "kamrup-metro",
+          "name": "Kamrup Metro",
+          "populationAffected": 0,
+          "severity": "normal",
+          "reliefCamps": 0,
+          "affectedVillages": 0,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        },
+        {
           "id": "nagaon",
           "name": "Nagaon",
           "populationAffected": 0,
@@ -726,15 +746,34 @@
       ],
       "districts": [
         {
-          "id": "charaideo",
-          "name": "Charaideo",
-          "severity": "waterlogging",
+          "id": "cachar",
+          "name": "Cachar",
+          "severity": "normal",
           "affectedVillages": 0,
           "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
           "cropAreaHa": 0.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-07-31T08:00:00Z",
+          "coordinates": {
+            "lat": 24.8333,
+            "lng": 92.7789
+          },
+          "coordinatesNote": "Approximate district headquarters location",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
+          "id": "charaideo",
+          "name": "Charaideo",
+          "severity": "severe",
+          "affectedVillages": 66,
+          "river": null,
+          "populationAffected": 77456,
+          "reliefCamps": 1,
+          "campInmates": 210,
+          "cropAreaHa": 8700.0,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-31T08:00:00Z",
           "coordinates": {
@@ -789,7 +828,7 @@
           "affectedVillages": 66,
           "river": null,
           "populationAffected": 17784,
-          "reliefCamps": 0,
+          "reliefCamps": 4,
           "campInmates": 216,
           "cropAreaHa": 1428.0,
           "humanLivesLost": 0,
@@ -840,6 +879,25 @@
           "source": "ASDMA Daily Flood Report (SDRF/DFR)"
         },
         {
+          "id": "kamrup-metro",
+          "name": "Kamrup Metro",
+          "severity": "normal",
+          "affectedVillages": 0,
+          "river": null,
+          "populationAffected": 0,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 0.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-07-31T08:00:00Z",
+          "coordinates": {
+            "lat": 26.1445,
+            "lng": 91.7362
+          },
+          "coordinatesNote": "Approximate district headquarters location",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
           "id": "nagaon",
           "name": "Nagaon",
           "severity": "waterlogging",
@@ -862,10 +920,10 @@
           "id": "sivasagar",
           "name": "Sivasagar",
           "severity": "severe",
-          "affectedVillages": 5,
+          "affectedVillages": 185,
           "river": null,
           "populationAffected": 63492,
-          "reliefCamps": 0,
+          "reliefCamps": 38,
           "campInmates": 11611,
           "cropAreaHa": 4980.0,
           "humanLivesLost": 0,
@@ -890,7 +948,7 @@
     },
     {
       "date": "2026-07-30",
-      "scrapedAt": "2026-07-30T21:26:54Z",
+      "scrapedAt": "2026-08-02T23:37:33Z",
       "stats": {
         "peopleAffected": 212441,
         "floodedDistricts": 8,
@@ -942,7 +1000,7 @@
           "populationAffected": 24306,
           "severity": "severe",
           "reliefCamps": 7,
-          "affectedVillages": 4,
+          "affectedVillages": 69,
           "campInmates": 416,
           "humanLivesLost": 0
         },
@@ -953,6 +1011,16 @@
           "severity": "waterlogging",
           "reliefCamps": 0,
           "affectedVillages": 4,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "bongaigaon",
+          "name": "Bongaigaon",
+          "populationAffected": 0,
+          "severity": "normal",
+          "reliefCamps": 0,
+          "affectedVillages": 0,
           "campInmates": 0,
           "humanLivesLost": 0
         },
@@ -992,16 +1060,6 @@
           "populationAffected": 0,
           "severity": "normal",
           "reliefCamps": 0,
-          "affectedVillages": 8,
-          "campInmates": 0,
-          "humanLivesLost": 0
-        },
-        {
-          "id": "kamrup-metro",
-          "name": "Kamrup Metro",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
           "affectedVillages": 0,
           "campInmates": 0,
           "humanLivesLost": 0
@@ -1017,12 +1075,31 @@
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 14.09,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-30T08:00:00Z",
           "coordinates": {
             "lat": 26.7333,
             "lng": 93.15
+          },
+          "coordinatesNote": "Approximate district headquarters location",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
+          "id": "bongaigaon",
+          "name": "Bongaigaon",
+          "severity": "normal",
+          "affectedVillages": 0,
+          "river": null,
+          "populationAffected": 0,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 0.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-07-30T08:00:00Z",
+          "coordinates": {
+            "lat": 26.4833,
+            "lng": 90.55
           },
           "coordinatesNote": "Approximate district headquarters location",
           "source": "ASDMA Daily Flood Report (SDRF/DFR)"
@@ -1088,7 +1165,7 @@
           "id": "golaghat",
           "name": "Golaghat",
           "severity": "severe",
-          "affectedVillages": 4,
+          "affectedVillages": 69,
           "river": null,
           "populationAffected": 24306,
           "reliefCamps": 7,
@@ -1145,12 +1222,12 @@
           "id": "kamrup",
           "name": "Kamrup",
           "severity": "normal",
-          "affectedVillages": 8,
+          "affectedVillages": 0,
           "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 105.0,
+          "cropAreaHa": 0.0,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-30T08:00:00Z",
           "coordinates": {
@@ -1164,12 +1241,12 @@
           "id": "kamrup-metro",
           "name": "Kamrup Metro",
           "severity": "waterlogging",
-          "affectedVillages": 0,
+          "affectedVillages": 8,
           "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 105.0,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-30T08:00:00Z",
           "coordinates": {
@@ -1252,11 +1329,11 @@
     },
     {
       "date": "2026-07-29",
-      "scrapedAt": "2026-07-30T21:26:40Z",
+      "scrapedAt": "2026-08-02T23:37:26Z",
       "stats": {
         "peopleAffected": 300031,
         "floodedDistricts": 7,
-        "reliefCamps": 66,
+        "reliefCamps": 71,
         "campInmates": 16567,
         "riverWarnings": 0,
         "activeAlerts": 0
@@ -1271,8 +1348,8 @@
           "name": "Charaideo",
           "populationAffected": 137561,
           "severity": "severe",
-          "reliefCamps": 0,
-          "affectedVillages": 2,
+          "reliefCamps": 5,
+          "affectedVillages": 117,
           "campInmates": 479,
           "humanLivesLost": 0
         },
@@ -1352,7 +1429,7 @@
           "populationAffected": 0,
           "severity": "normal",
           "reliefCamps": 0,
-          "affectedVillages": 8,
+          "affectedVillages": 0,
           "campInmates": 0,
           "humanLivesLost": 0
         },
@@ -1362,7 +1439,7 @@
           "populationAffected": 0,
           "severity": "waterlogging",
           "reliefCamps": 0,
-          "affectedVillages": 0,
+          "affectedVillages": 8,
           "campInmates": 0,
           "humanLivesLost": 0
         }
@@ -1377,7 +1454,7 @@
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 14.5,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-29T08:00:00Z",
           "coordinates": {
@@ -1410,10 +1487,10 @@
           "id": "charaideo",
           "name": "Charaideo",
           "severity": "severe",
-          "affectedVillages": 2,
+          "affectedVillages": 117,
           "river": null,
           "populationAffected": 137561,
-          "reliefCamps": 0,
+          "reliefCamps": 5,
           "campInmates": 479,
           "cropAreaHa": 11600.0,
           "humanLivesLost": 0,
@@ -1505,12 +1582,12 @@
           "id": "kamrup",
           "name": "Kamrup",
           "severity": "normal",
-          "affectedVillages": 8,
+          "affectedVillages": 0,
           "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 107.0,
+          "cropAreaHa": 0.0,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-29T08:00:00Z",
           "coordinates": {
@@ -1524,12 +1601,12 @@
           "id": "kamrup-metro",
           "name": "Kamrup Metro",
           "severity": "waterlogging",
-          "affectedVillages": 0,
+          "affectedVillages": 8,
           "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 107.0,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-29T08:00:00Z",
           "coordinates": {
@@ -1630,11 +1707,11 @@
     },
     {
       "date": "2026-07-28",
-      "scrapedAt": "2026-07-29T13:44:18Z",
+      "scrapedAt": "2026-08-02T23:37:19Z",
       "stats": {
         "peopleAffected": 332639,
         "floodedDistricts": 7,
-        "reliefCamps": 76,
+        "reliefCamps": 81,
         "campInmates": 32477,
         "riverWarnings": 1,
         "activeAlerts": 1
@@ -1651,7 +1728,7 @@
           "name": "Charaideo",
           "populationAffected": 142756,
           "severity": "severe",
-          "reliefCamps": 0,
+          "reliefCamps": 5,
           "affectedVillages": 156,
           "campInmates": 499,
           "humanLivesLost": 0
@@ -1662,7 +1739,7 @@
           "populationAffected": 97074,
           "severity": "severe",
           "reliefCamps": 56,
-          "affectedVillages": 5,
+          "affectedVillages": 241,
           "campInmates": 29987,
           "humanLivesLost": 0
         },
@@ -1684,6 +1761,16 @@
           "reliefCamps": 7,
           "affectedVillages": 104,
           "campInmates": 604,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "cachar",
+          "name": "Cachar",
+          "populationAffected": 0,
+          "severity": "normal",
+          "reliefCamps": 0,
+          "affectedVillages": 0,
+          "campInmates": 0,
           "humanLivesLost": 0
         },
         {
@@ -1712,7 +1799,7 @@
           "populationAffected": 0,
           "severity": "normal",
           "reliefCamps": 0,
-          "affectedVillages": 8,
+          "affectedVillages": 0,
           "campInmates": 0,
           "humanLivesLost": 0
         },
@@ -1722,7 +1809,7 @@
           "populationAffected": 0,
           "severity": "waterlogging",
           "reliefCamps": 0,
-          "affectedVillages": 0,
+          "affectedVillages": 8,
           "campInmates": 0,
           "humanLivesLost": 0
         },
@@ -1735,19 +1822,28 @@
           "affectedVillages": 25,
           "campInmates": 0,
           "humanLivesLost": 0
-        },
-        {
-          "id": "sonitpur",
-          "name": "Sonitpur",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 1,
-          "campInmates": 0,
-          "humanLivesLost": 0
         }
       ],
       "districts": [
+        {
+          "id": "cachar",
+          "name": "Cachar",
+          "severity": "normal",
+          "affectedVillages": 0,
+          "river": null,
+          "populationAffected": 0,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 0.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-07-28T08:00:00Z",
+          "coordinates": {
+            "lat": 24.8333,
+            "lng": 92.7789
+          },
+          "coordinatesNote": "Approximate district headquarters location",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
         {
           "id": "charaideo",
           "name": "Charaideo",
@@ -1755,7 +1851,7 @@
           "affectedVillages": 156,
           "river": null,
           "populationAffected": 142756,
-          "reliefCamps": 0,
+          "reliefCamps": 5,
           "campInmates": 499,
           "cropAreaHa": 16652.0,
           "humanLivesLost": 0,
@@ -1847,12 +1943,12 @@
           "id": "kamrup",
           "name": "Kamrup",
           "severity": "normal",
-          "affectedVillages": 8,
+          "affectedVillages": 0,
           "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 107.0,
+          "cropAreaHa": 0.0,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-28T08:00:00Z",
           "coordinates": {
@@ -1866,12 +1962,12 @@
           "id": "kamrup-metro",
           "name": "Kamrup Metro",
           "severity": "waterlogging",
-          "affectedVillages": 0,
+          "affectedVillages": 8,
           "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 107.0,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-28T08:00:00Z",
           "coordinates": {
@@ -1904,7 +2000,7 @@
           "id": "sivasagar",
           "name": "Sivasagar",
           "severity": "severe",
-          "affectedVillages": 5,
+          "affectedVillages": 241,
           "river": null,
           "populationAffected": 97074,
           "reliefCamps": 56,
@@ -1953,11 +2049,11 @@
     },
     {
       "date": "2026-07-27",
-      "scrapedAt": "2026-07-27T23:24:36Z",
+      "scrapedAt": "2026-08-02T23:37:12Z",
       "stats": {
-        "peopleAffected": 257091,
+        "peopleAffected": 445495,
         "floodedDistricts": 6,
-        "reliefCamps": 79,
+        "reliefCamps": 90,
         "campInmates": 28695,
         "riverWarnings": 1,
         "activeAlerts": 1
@@ -1970,12 +2066,22 @@
       },
       "topDistricts": [
         {
+          "id": "charaideo",
+          "name": "Charaideo",
+          "populationAffected": 188404,
+          "severity": "severe",
+          "reliefCamps": 11,
+          "affectedVillages": 149,
+          "campInmates": 1609,
+          "humanLivesLost": 0
+        },
+        {
           "id": "sivasagar",
           "name": "Sivasagar",
           "populationAffected": 144461,
           "severity": "severe",
           "reliefCamps": 58,
-          "affectedVillages": 5,
+          "affectedVillages": 232,
           "campInmates": 24695,
           "humanLivesLost": 0
         },
@@ -1997,16 +2103,6 @@
           "reliefCamps": 7,
           "affectedVillages": 111,
           "campInmates": 618,
-          "humanLivesLost": 0
-        },
-        {
-          "id": "charaideo",
-          "name": "Charaideo",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 149,
-          "campInmates": 1609,
           "humanLivesLost": 0
         },
         {
@@ -2035,7 +2131,7 @@
           "populationAffected": 0,
           "severity": "normal",
           "reliefCamps": 0,
-          "affectedVillages": 1,
+          "affectedVillages": 0,
           "campInmates": 0,
           "humanLivesLost": 0
         },
@@ -2045,7 +2141,7 @@
           "populationAffected": 0,
           "severity": "waterlogging",
           "reliefCamps": 0,
-          "affectedVillages": 0,
+          "affectedVillages": 1,
           "campInmates": 0,
           "humanLivesLost": 0
         },
@@ -2064,13 +2160,13 @@
         {
           "id": "charaideo",
           "name": "Charaideo",
-          "severity": "waterlogging",
+          "severity": "severe",
           "affectedVillages": 149,
           "river": null,
-          "populationAffected": 0,
-          "reliefCamps": 0,
+          "populationAffected": 188404,
+          "reliefCamps": 11,
           "campInmates": 1609,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 17649.0,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-27T08:00:00Z",
           "coordinates": {
@@ -2160,12 +2256,12 @@
           "id": "kamrup",
           "name": "Kamrup",
           "severity": "normal",
-          "affectedVillages": 1,
+          "affectedVillages": 0,
           "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.9,
+          "cropAreaHa": 0.0,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-27T08:00:00Z",
           "coordinates": {
@@ -2179,12 +2275,12 @@
           "id": "kamrup-metro",
           "name": "Kamrup Metro",
           "severity": "waterlogging",
-          "affectedVillages": 0,
+          "affectedVillages": 1,
           "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 0.9,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-27T08:00:00Z",
           "coordinates": {
@@ -2217,7 +2313,7 @@
           "id": "sivasagar",
           "name": "Sivasagar",
           "severity": "severe",
-          "affectedVillages": 5,
+          "affectedVillages": 232,
           "river": null,
           "populationAffected": 144461,
           "reliefCamps": 58,
@@ -2246,11 +2342,11 @@
     },
     {
       "date": "2026-07-26",
-      "scrapedAt": "2026-07-26T20:45:54Z",
+      "scrapedAt": "2026-08-02T23:37:06Z",
       "stats": {
-        "peopleAffected": 336329,
+        "peopleAffected": 524733,
         "floodedDistricts": 9,
-        "reliefCamps": 93,
+        "reliefCamps": 109,
         "campInmates": 37724,
         "riverWarnings": 1,
         "activeAlerts": 1
@@ -2262,6 +2358,16 @@
         "flood": []
       },
       "topDistricts": [
+        {
+          "id": "charaideo",
+          "name": "Charaideo",
+          "populationAffected": 188404,
+          "severity": "severe",
+          "reliefCamps": 16,
+          "affectedVillages": 148,
+          "campInmates": 3408,
+          "humanLivesLost": 0
+        },
         {
           "id": "sivasagar",
           "name": "Sivasagar",
@@ -2303,16 +2409,6 @@
           "humanLivesLost": 0
         },
         {
-          "id": "charaideo",
-          "name": "Charaideo",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 0,
-          "campInmates": 3408,
-          "humanLivesLost": 0
-        },
-        {
           "id": "dibrugarh",
           "name": "Dibrugarh",
           "populationAffected": 0,
@@ -2338,7 +2434,7 @@
           "populationAffected": 0,
           "severity": "waterlogging",
           "reliefCamps": 0,
-          "affectedVillages": 3,
+          "affectedVillages": 2,
           "campInmates": 0,
           "humanLivesLost": 0
         },
@@ -2348,7 +2444,7 @@
           "populationAffected": 0,
           "severity": "waterlogging",
           "reliefCamps": 0,
-          "affectedVillages": 0,
+          "affectedVillages": 3,
           "campInmates": 0,
           "humanLivesLost": 0
         }
@@ -2357,13 +2453,13 @@
         {
           "id": "charaideo",
           "name": "Charaideo",
-          "severity": "waterlogging",
-          "affectedVillages": 0,
+          "severity": "severe",
+          "affectedVillages": 148,
           "river": null,
-          "populationAffected": 0,
-          "reliefCamps": 0,
+          "populationAffected": 188404,
+          "reliefCamps": 16,
           "campInmates": 3408,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 15647.0,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-26T08:00:00Z",
           "coordinates": {
@@ -2453,12 +2549,12 @@
           "id": "kamrup",
           "name": "Kamrup",
           "severity": "waterlogging",
-          "affectedVillages": 3,
+          "affectedVillages": 2,
           "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 8.5,
+          "cropAreaHa": 6.5,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-26T08:00:00Z",
           "coordinates": {
@@ -2472,12 +2568,12 @@
           "id": "kamrup-metro",
           "name": "Kamrup Metro",
           "severity": "waterlogging",
-          "affectedVillages": 0,
+          "affectedVillages": 3,
           "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 8.5,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-26T08:00:00Z",
           "coordinates": {
@@ -2542,12 +2638,12 @@
     },
     {
       "date": "2026-07-25",
-      "scrapedAt": "2026-07-25T21:41:30Z",
+      "scrapedAt": "2026-08-02T23:36:59Z",
       "stats": {
-        "peopleAffected": 134647,
+        "peopleAffected": 654838,
         "floodedDistricts": 10,
-        "reliefCamps": 14,
-        "campInmates": 3069,
+        "reliefCamps": 90,
+        "campInmates": 18902,
         "riverWarnings": 2,
         "activeAlerts": 2
       },
@@ -2560,6 +2656,26 @@
       },
       "topDistricts": [
         {
+          "id": "sivasagar",
+          "name": "Sivasagar",
+          "populationAffected": 290777,
+          "severity": "severe",
+          "reliefCamps": 46,
+          "affectedVillages": 255,
+          "campInmates": 11193,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "charaideo",
+          "name": "Charaideo",
+          "populationAffected": 188404,
+          "severity": "severe",
+          "reliefCamps": 16,
+          "affectedVillages": 148,
+          "campInmates": 3342,
+          "humanLivesLost": 0
+        },
+        {
           "id": "jorhat",
           "name": "Jorhat",
           "populationAffected": 131948,
@@ -2567,6 +2683,16 @@
           "reliefCamps": 14,
           "affectedVillages": 185,
           "campInmates": 3069,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "golaghat",
+          "name": "Golaghat",
+          "populationAffected": 40846,
+          "severity": "severe",
+          "reliefCamps": 13,
+          "affectedVillages": 119,
+          "campInmates": 1210,
           "humanLivesLost": 0
         },
         {
@@ -2580,13 +2706,13 @@
           "humanLivesLost": 0
         },
         {
-          "id": "charaideo",
-          "name": "Charaideo",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 0,
-          "campInmates": 0,
+          "id": "dibrugarh",
+          "name": "Dibrugarh",
+          "populationAffected": 164,
+          "severity": "moderate",
+          "reliefCamps": 1,
+          "affectedVillages": 22,
+          "campInmates": 88,
           "humanLivesLost": 0
         },
         {
@@ -2594,26 +2720,6 @@
           "name": "Dhemaji",
           "populationAffected": 0,
           "severity": "normal",
-          "reliefCamps": 0,
-          "affectedVillages": 5,
-          "campInmates": 0,
-          "humanLivesLost": 0
-        },
-        {
-          "id": "dibrugarh",
-          "name": "Dibrugarh",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 0,
-          "campInmates": 0,
-          "humanLivesLost": 0
-        },
-        {
-          "id": "golaghat",
-          "name": "Golaghat",
-          "populationAffected": 0,
-          "severity": "waterlogging",
           "reliefCamps": 0,
           "affectedVillages": 0,
           "campInmates": 0,
@@ -2635,7 +2741,7 @@
           "populationAffected": 0,
           "severity": "waterlogging",
           "reliefCamps": 0,
-          "affectedVillages": 8,
+          "affectedVillages": 2,
           "campInmates": 0,
           "humanLivesLost": 0
         },
@@ -2645,17 +2751,7 @@
           "populationAffected": 0,
           "severity": "waterlogging",
           "reliefCamps": 0,
-          "affectedVillages": 0,
-          "campInmates": 0,
-          "humanLivesLost": 0
-        },
-        {
-          "id": "sivasagar",
-          "name": "Sivasagar",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 0,
+          "affectedVillages": 8,
           "campInmates": 0,
           "humanLivesLost": 0
         }
@@ -2664,13 +2760,13 @@
         {
           "id": "charaideo",
           "name": "Charaideo",
-          "severity": "waterlogging",
-          "affectedVillages": 0,
+          "severity": "severe",
+          "affectedVillages": 148,
           "river": null,
-          "populationAffected": 0,
-          "reliefCamps": 0,
-          "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "populationAffected": 188404,
+          "reliefCamps": 16,
+          "campInmates": 3342,
+          "cropAreaHa": 16449.0,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-25T08:00:00Z",
           "coordinates": {
@@ -2684,7 +2780,7 @@
           "id": "dhemaji",
           "name": "Dhemaji",
           "severity": "normal",
-          "affectedVillages": 5,
+          "affectedVillages": 0,
           "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
@@ -2702,13 +2798,13 @@
         {
           "id": "dibrugarh",
           "name": "Dibrugarh",
-          "severity": "waterlogging",
-          "affectedVillages": 0,
+          "severity": "moderate",
+          "affectedVillages": 22,
           "river": null,
-          "populationAffected": 0,
-          "reliefCamps": 0,
-          "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "populationAffected": 164,
+          "reliefCamps": 1,
+          "campInmates": 88,
+          "cropAreaHa": 611.5,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-25T08:00:00Z",
           "coordinates": {
@@ -2721,13 +2817,13 @@
         {
           "id": "golaghat",
           "name": "Golaghat",
-          "severity": "waterlogging",
-          "affectedVillages": 0,
+          "severity": "severe",
+          "affectedVillages": 119,
           "river": null,
-          "populationAffected": 0,
-          "reliefCamps": 0,
-          "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "populationAffected": 40846,
+          "reliefCamps": 13,
+          "campInmates": 1210,
+          "cropAreaHa": 2985.44,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-25T08:00:00Z",
           "coordinates": {
@@ -2779,12 +2875,12 @@
           "id": "kamrup",
           "name": "Kamrup",
           "severity": "waterlogging",
-          "affectedVillages": 8,
+          "affectedVillages": 2,
           "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 21.0,
+          "cropAreaHa": 6.5,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-25T08:00:00Z",
           "coordinates": {
@@ -2798,12 +2894,12 @@
           "id": "kamrup-metro",
           "name": "Kamrup Metro",
           "severity": "waterlogging",
-          "affectedVillages": 0,
+          "affectedVillages": 8,
           "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 21.0,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-25T08:00:00Z",
           "coordinates": {
@@ -2835,13 +2931,13 @@
         {
           "id": "sivasagar",
           "name": "Sivasagar",
-          "severity": "waterlogging",
-          "affectedVillages": 0,
+          "severity": "severe",
+          "affectedVillages": 255,
           "river": "Dikhou",
-          "populationAffected": 0,
-          "reliefCamps": 0,
-          "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "populationAffected": 290777,
+          "reliefCamps": 46,
+          "campInmates": 11193,
+          "cropAreaHa": 6158.45,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-25T08:00:00Z",
           "coordinates": {
@@ -2888,9 +2984,9 @@
     },
     {
       "date": "2026-07-24",
-      "scrapedAt": "2026-07-25T11:59:34Z",
+      "scrapedAt": "2026-08-02T23:36:50Z",
       "stats": {
-        "peopleAffected": 704295,
+        "peopleAffected": 705148,
         "floodedDistricts": 12,
         "reliefCamps": 96,
         "campInmates": 115205,
@@ -2979,12 +3075,22 @@
           "humanLivesLost": 0
         },
         {
+          "id": "karbi-anglong",
+          "name": "Karbi Anglong",
+          "populationAffected": 853,
+          "severity": "waterlogging",
+          "reliefCamps": 0,
+          "affectedVillages": 3,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        },
+        {
           "id": "dibrugarh",
           "name": "Dibrugarh",
           "populationAffected": 661,
           "severity": "moderate",
           "reliefCamps": 1,
-          "affectedVillages": 2,
+          "affectedVillages": 33,
           "campInmates": 88,
           "humanLivesLost": 0
         },
@@ -2995,16 +3101,6 @@
           "severity": "waterlogging",
           "reliefCamps": 0,
           "affectedVillages": 2,
-          "campInmates": 0,
-          "humanLivesLost": 0
-        },
-        {
-          "id": "cachar",
-          "name": "Cachar",
-          "populationAffected": 0,
-          "severity": "normal",
-          "reliefCamps": 0,
-          "affectedVillages": 0,
           "campInmates": 0,
           "humanLivesLost": 0
         }
@@ -3019,7 +3115,7 @@
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 4.5,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-24T08:00:00Z",
           "coordinates": {
@@ -3128,7 +3224,7 @@
           "id": "dibrugarh",
           "name": "Dibrugarh",
           "severity": "moderate",
-          "affectedVillages": 2,
+          "affectedVillages": 33,
           "river": null,
           "populationAffected": 661,
           "reliefCamps": 1,
@@ -3204,7 +3300,7 @@
           "id": "kamrup",
           "name": "Kamrup",
           "severity": "normal",
-          "affectedVillages": 16,
+          "affectedVillages": 0,
           "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
@@ -3223,7 +3319,7 @@
           "id": "kamrup-metro",
           "name": "Kamrup Metro",
           "severity": "waterlogging",
-          "affectedVillages": 1,
+          "affectedVillages": 16,
           "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
@@ -3242,9 +3338,9 @@
           "id": "karbi-anglong",
           "name": "Karbi Anglong",
           "severity": "waterlogging",
-          "affectedVillages": 0,
+          "affectedVillages": 3,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 853,
           "reliefCamps": 0,
           "campInmates": 0,
           "cropAreaHa": 0.0,
@@ -3372,11 +3468,11 @@
     },
     {
       "date": "2026-07-23",
-      "scrapedAt": "2026-07-25T11:59:40Z",
+      "scrapedAt": "2026-08-02T23:36:43Z",
       "stats": {
-        "peopleAffected": 8,
+        "peopleAffected": 721024,
         "floodedDistricts": 11,
-        "reliefCamps": 0,
+        "reliefCamps": 103,
         "campInmates": 24124,
         "riverWarnings": 4,
         "activeAlerts": 4
@@ -3392,102 +3488,102 @@
       },
       "topDistricts": [
         {
-          "id": "jorhat",
-          "name": "Jorhat",
-          "populationAffected": 8,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 179,
-          "campInmates": 3499,
+          "id": "sivasagar",
+          "name": "Sivasagar",
+          "populationAffected": 375682,
+          "severity": "severe",
+          "reliefCamps": 46,
+          "affectedVillages": 300,
+          "campInmates": 14788,
           "humanLivesLost": 0
         },
         {
           "id": "charaideo",
           "name": "Charaideo",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
+          "populationAffected": 186351,
+          "severity": "severe",
+          "reliefCamps": 22,
           "affectedVillages": 109,
           "campInmates": 4120,
           "humanLivesLost": 0
         },
         {
-          "id": "darrang",
-          "name": "Darrang",
-          "populationAffected": 0,
-          "severity": "normal",
-          "reliefCamps": 0,
-          "affectedVillages": 0,
-          "campInmates": 0,
-          "humanLivesLost": 0
-        },
-        {
-          "id": "dibrugarh",
-          "name": "Dibrugarh",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 61,
-          "campInmates": 222,
+          "id": "jorhat",
+          "name": "Jorhat",
+          "populationAffected": 115764,
+          "severity": "severe",
+          "reliefCamps": 15,
+          "affectedVillages": 179,
+          "campInmates": 3499,
           "humanLivesLost": 0
         },
         {
           "id": "golaghat",
           "name": "Golaghat",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 0,
+          "populationAffected": 29476,
+          "severity": "severe",
+          "reliefCamps": 16,
+          "affectedVillages": 135,
           "campInmates": 1495,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "dibrugarh",
+          "name": "Dibrugarh",
+          "populationAffected": 4585,
+          "severity": "moderate",
+          "reliefCamps": 4,
+          "affectedVillages": 61,
+          "campInmates": 222,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "karbi-anglong",
+          "name": "Karbi Anglong",
+          "populationAffected": 3020,
+          "severity": "moderate",
+          "reliefCamps": 0,
+          "affectedVillages": 8,
+          "campInmates": 0,
           "humanLivesLost": 0
         },
         {
           "id": "hojai",
           "name": "Hojai",
-          "populationAffected": 0,
-          "severity": "waterlogging",
+          "populationAffected": 2752,
+          "severity": "moderate",
           "reliefCamps": 0,
           "affectedVillages": 27,
           "campInmates": 0,
           "humanLivesLost": 0
         },
         {
+          "id": "nagaon",
+          "name": "Nagaon",
+          "populationAffected": 2614,
+          "severity": "moderate",
+          "reliefCamps": 0,
+          "affectedVillages": 38,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        },
+        {
           "id": "kamrup",
           "name": "Kamrup",
-          "populationAffected": 0,
+          "populationAffected": 310,
           "severity": "waterlogging",
           "reliefCamps": 0,
-          "affectedVillages": 19,
+          "affectedVillages": 4,
           "campInmates": 0,
           "humanLivesLost": 0
         },
         {
           "id": "kamrup-metro",
           "name": "Kamrup Metro",
-          "populationAffected": 0,
+          "populationAffected": 300,
           "severity": "waterlogging",
           "reliefCamps": 0,
-          "affectedVillages": 0,
-          "campInmates": 0,
-          "humanLivesLost": 0
-        },
-        {
-          "id": "karbi-anglong",
-          "name": "Karbi Anglong",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 0,
-          "campInmates": 0,
-          "humanLivesLost": 0
-        },
-        {
-          "id": "nagaon",
-          "name": "Nagaon",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 38,
+          "affectedVillages": 19,
           "campInmates": 0,
           "humanLivesLost": 0
         }
@@ -3496,13 +3592,13 @@
         {
           "id": "charaideo",
           "name": "Charaideo",
-          "severity": "waterlogging",
+          "severity": "severe",
           "affectedVillages": 109,
           "river": null,
-          "populationAffected": 0,
-          "reliefCamps": 0,
+          "populationAffected": 186351,
+          "reliefCamps": 22,
           "campInmates": 4120,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 8665.37,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-23T08:00:00Z",
           "coordinates": {
@@ -3534,13 +3630,13 @@
         {
           "id": "dibrugarh",
           "name": "Dibrugarh",
-          "severity": "waterlogging",
+          "severity": "moderate",
           "affectedVillages": 61,
           "river": null,
-          "populationAffected": 0,
-          "reliefCamps": 0,
+          "populationAffected": 4585,
+          "reliefCamps": 4,
           "campInmates": 222,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 622.5,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-23T08:00:00Z",
           "coordinates": {
@@ -3553,13 +3649,13 @@
         {
           "id": "golaghat",
           "name": "Golaghat",
-          "severity": "waterlogging",
-          "affectedVillages": 0,
+          "severity": "severe",
+          "affectedVillages": 135,
           "river": null,
-          "populationAffected": 0,
-          "reliefCamps": 0,
+          "populationAffected": 29476,
+          "reliefCamps": 16,
           "campInmates": 1495,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 3309.85,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-23T08:00:00Z",
           "coordinates": {
@@ -3572,13 +3668,13 @@
         {
           "id": "hojai",
           "name": "Hojai",
-          "severity": "waterlogging",
+          "severity": "moderate",
           "affectedVillages": 27,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 2752,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 206.7,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-23T08:00:00Z",
           "coordinates": {
@@ -3591,13 +3687,13 @@
         {
           "id": "jorhat",
           "name": "Jorhat",
-          "severity": "waterlogging",
+          "severity": "severe",
           "affectedVillages": 179,
           "river": null,
-          "populationAffected": 8,
-          "reliefCamps": 0,
+          "populationAffected": 115764,
+          "reliefCamps": 15,
           "campInmates": 3499,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 5055.853,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-23T08:00:00Z",
           "coordinates": {
@@ -3611,9 +3707,9 @@
           "id": "kamrup",
           "name": "Kamrup",
           "severity": "waterlogging",
-          "affectedVillages": 19,
+          "affectedVillages": 4,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 310,
           "reliefCamps": 0,
           "campInmates": 0,
           "cropAreaHa": 0.0,
@@ -3630,12 +3726,12 @@
           "id": "kamrup-metro",
           "name": "Kamrup Metro",
           "severity": "waterlogging",
-          "affectedVillages": 0,
+          "affectedVillages": 19,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 300,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 39.18,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-23T08:00:00Z",
           "coordinates": {
@@ -3648,10 +3744,10 @@
         {
           "id": "karbi-anglong",
           "name": "Karbi Anglong",
-          "severity": "waterlogging",
-          "affectedVillages": 0,
+          "severity": "moderate",
+          "affectedVillages": 8,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 3020,
           "reliefCamps": 0,
           "campInmates": 0,
           "cropAreaHa": 0.0,
@@ -3667,13 +3763,13 @@
         {
           "id": "nagaon",
           "name": "Nagaon",
-          "severity": "waterlogging",
+          "severity": "moderate",
           "affectedVillages": 38,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 2614,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 2277.5,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-23T08:00:00Z",
           "coordinates": {
@@ -3686,13 +3782,13 @@
         {
           "id": "sivasagar",
           "name": "Sivasagar",
-          "severity": "waterlogging",
+          "severity": "severe",
           "affectedVillages": 300,
           "river": "Dikhou",
-          "populationAffected": 0,
-          "reliefCamps": 0,
+          "populationAffected": 375682,
+          "reliefCamps": 46,
           "campInmates": 14788,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 5197.49,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-23T08:00:00Z",
           "coordinates": {
@@ -3708,10 +3804,10 @@
           "severity": "waterlogging",
           "affectedVillages": 3,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 170,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 1.0,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-23T08:00:00Z",
           "coordinates": {
@@ -3759,11 +3855,11 @@
     },
     {
       "date": "2026-07-22",
-      "scrapedAt": "2026-07-25T11:59:45Z",
+      "scrapedAt": "2026-08-02T23:36:38Z",
       "stats": {
-        "peopleAffected": 0,
+        "peopleAffected": 653164,
         "floodedDistricts": 11,
-        "reliefCamps": 0,
+        "reliefCamps": 106,
         "campInmates": 24418,
         "riverWarnings": 5,
         "activeAlerts": 5
@@ -3781,117 +3877,136 @@
       },
       "topDistricts": [
         {
+          "id": "sivasagar",
+          "name": "Sivasagar",
+          "populationAffected": 392195,
+          "severity": "severe",
+          "reliefCamps": 49,
+          "affectedVillages": 328,
+          "campInmates": 13686,
+          "humanLivesLost": 0
+        },
+        {
           "id": "charaideo",
           "name": "Charaideo",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
+          "populationAffected": 110755,
+          "severity": "severe",
+          "reliefCamps": 19,
           "affectedVillages": 129,
           "campInmates": 3490,
           "humanLivesLost": 0
         },
         {
-          "id": "dhemaji",
-          "name": "Dhemaji",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 4,
-          "campInmates": 0,
-          "humanLivesLost": 0
-        },
-        {
-          "id": "dibrugarh",
-          "name": "Dibrugarh",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 85,
-          "campInmates": 309,
+          "id": "jorhat",
+          "name": "Jorhat",
+          "populationAffected": 97690,
+          "severity": "severe",
+          "reliefCamps": 16,
+          "affectedVillages": 177,
+          "campInmates": 5361,
           "humanLivesLost": 0
         },
         {
           "id": "golaghat",
           "name": "Golaghat",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
+          "populationAffected": 25591,
+          "severity": "severe",
+          "reliefCamps": 17,
           "affectedVillages": 134,
           "campInmates": 1507,
           "humanLivesLost": 0
         },
         {
+          "id": "dibrugarh",
+          "name": "Dibrugarh",
+          "populationAffected": 13390,
+          "severity": "severe",
+          "reliefCamps": 4,
+          "affectedVillages": 85,
+          "campInmates": 309,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "karbi-anglong",
+          "name": "Karbi Anglong",
+          "populationAffected": 4779,
+          "severity": "moderate",
+          "reliefCamps": 0,
+          "affectedVillages": 14,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        },
+        {
           "id": "hojai",
           "name": "Hojai",
-          "populationAffected": 0,
-          "severity": "waterlogging",
+          "populationAffected": 2752,
+          "severity": "moderate",
           "reliefCamps": 0,
           "affectedVillages": 27,
           "campInmates": 0,
           "humanLivesLost": 0
         },
         {
-          "id": "jorhat",
-          "name": "Jorhat",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 177,
-          "campInmates": 5361,
+          "id": "nagaon",
+          "name": "Nagaon",
+          "populationAffected": 2587,
+          "severity": "moderate",
+          "reliefCamps": 1,
+          "affectedVillages": 18,
+          "campInmates": 65,
           "humanLivesLost": 0
         },
         {
           "id": "kamrup",
           "name": "Kamrup",
-          "populationAffected": 0,
-          "severity": "waterlogging",
+          "populationAffected": 1600,
+          "severity": "moderate",
           "reliefCamps": 0,
-          "affectedVillages": 12,
+          "affectedVillages": 11,
           "campInmates": 0,
           "humanLivesLost": 0
         },
         {
-          "id": "kamrup-metro",
-          "name": "Kamrup Metro",
-          "populationAffected": 0,
-          "severity": "waterlogging",
+          "id": "dhemaji",
+          "name": "Dhemaji",
+          "populationAffected": 1265,
+          "severity": "moderate",
           "reliefCamps": 0,
-          "affectedVillages": 0,
-          "campInmates": 0,
-          "humanLivesLost": 0
-        },
-        {
-          "id": "karbi-anglong",
-          "name": "Karbi Anglong",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 0,
-          "campInmates": 0,
-          "humanLivesLost": 0
-        },
-        {
-          "id": "lakhimpur",
-          "name": "Lakhimpur",
-          "populationAffected": 0,
-          "severity": "normal",
-          "reliefCamps": 0,
-          "affectedVillages": 0,
+          "affectedVillages": 4,
           "campInmates": 0,
           "humanLivesLost": 0
         }
       ],
       "districts": [
         {
-          "id": "charaideo",
-          "name": "Charaideo",
-          "severity": "waterlogging",
-          "affectedVillages": 129,
+          "id": "bongaigaon",
+          "name": "Bongaigaon",
+          "severity": "normal",
+          "affectedVillages": 0,
           "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
-          "campInmates": 3490,
+          "campInmates": 0,
           "cropAreaHa": 0.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-07-22T08:00:00Z",
+          "coordinates": {
+            "lat": 26.4833,
+            "lng": 90.55
+          },
+          "coordinatesNote": "Approximate district headquarters location",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
+          "id": "charaideo",
+          "name": "Charaideo",
+          "severity": "severe",
+          "affectedVillages": 129,
+          "river": null,
+          "populationAffected": 110755,
+          "reliefCamps": 19,
+          "campInmates": 3490,
+          "cropAreaHa": 2937.0,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-22T08:00:00Z",
           "coordinates": {
@@ -3904,13 +4019,13 @@
         {
           "id": "dhemaji",
           "name": "Dhemaji",
-          "severity": "waterlogging",
+          "severity": "moderate",
           "affectedVillages": 4,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 1265,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 5.0,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-22T08:00:00Z",
           "coordinates": {
@@ -3923,13 +4038,13 @@
         {
           "id": "dibrugarh",
           "name": "Dibrugarh",
-          "severity": "waterlogging",
+          "severity": "severe",
           "affectedVillages": 85,
           "river": null,
-          "populationAffected": 0,
-          "reliefCamps": 0,
+          "populationAffected": 13390,
+          "reliefCamps": 4,
           "campInmates": 309,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 240.86,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-22T08:00:00Z",
           "coordinates": {
@@ -3942,13 +4057,13 @@
         {
           "id": "golaghat",
           "name": "Golaghat",
-          "severity": "waterlogging",
+          "severity": "severe",
           "affectedVillages": 134,
           "river": null,
-          "populationAffected": 0,
-          "reliefCamps": 0,
+          "populationAffected": 25591,
+          "reliefCamps": 17,
           "campInmates": 1507,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 2960.63,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-22T08:00:00Z",
           "coordinates": {
@@ -3961,13 +4076,13 @@
         {
           "id": "hojai",
           "name": "Hojai",
-          "severity": "waterlogging",
+          "severity": "moderate",
           "affectedVillages": 27,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 2752,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 454.9,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-22T08:00:00Z",
           "coordinates": {
@@ -3980,13 +4095,13 @@
         {
           "id": "jorhat",
           "name": "Jorhat",
-          "severity": "waterlogging",
+          "severity": "severe",
           "affectedVillages": 177,
           "river": null,
-          "populationAffected": 0,
-          "reliefCamps": 0,
+          "populationAffected": 97690,
+          "reliefCamps": 16,
           "campInmates": 5361,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 5510.96,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-22T08:00:00Z",
           "coordinates": {
@@ -3999,13 +4114,13 @@
         {
           "id": "kamrup",
           "name": "Kamrup",
-          "severity": "waterlogging",
-          "affectedVillages": 12,
+          "severity": "moderate",
+          "affectedVillages": 11,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 1600,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 20.4,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-22T08:00:00Z",
           "coordinates": {
@@ -4019,12 +4134,12 @@
           "id": "kamrup-metro",
           "name": "Kamrup Metro",
           "severity": "waterlogging",
-          "affectedVillages": 0,
+          "affectedVillages": 12,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 560,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 24.91,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-22T08:00:00Z",
           "coordinates": {
@@ -4037,10 +4152,10 @@
         {
           "id": "karbi-anglong",
           "name": "Karbi Anglong",
-          "severity": "waterlogging",
-          "affectedVillages": 0,
+          "severity": "moderate",
+          "affectedVillages": 14,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 4779,
           "reliefCamps": 0,
           "campInmates": 0,
           "cropAreaHa": 0.0,
@@ -4075,13 +4190,13 @@
         {
           "id": "nagaon",
           "name": "Nagaon",
-          "severity": "waterlogging",
+          "severity": "moderate",
           "affectedVillages": 18,
           "river": null,
-          "populationAffected": 0,
-          "reliefCamps": 0,
+          "populationAffected": 2587,
+          "reliefCamps": 1,
           "campInmates": 65,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 326.0,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-22T08:00:00Z",
           "coordinates": {
@@ -4094,13 +4209,13 @@
         {
           "id": "sivasagar",
           "name": "Sivasagar",
-          "severity": "waterlogging",
+          "severity": "severe",
           "affectedVillages": 328,
           "river": "Dikhou",
-          "populationAffected": 0,
-          "reliefCamps": 0,
+          "populationAffected": 392195,
+          "reliefCamps": 49,
           "campInmates": 13686,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 12416.61,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-22T08:00:00Z",
           "coordinates": {
@@ -4129,9 +4244,9 @@
     },
     {
       "date": "2026-07-21",
-      "scrapedAt": "2026-07-25T11:59:51Z",
+      "scrapedAt": "2026-08-02T23:36:33Z",
       "stats": {
-        "peopleAffected": 558835,
+        "peopleAffected": 564660,
         "floodedDistricts": 16,
         "reliefCamps": 71,
         "campInmates": 12284,
@@ -4197,8 +4312,18 @@
           "populationAffected": 16799,
           "severity": "severe",
           "reliefCamps": 19,
-          "affectedVillages": 5,
+          "affectedVillages": 133,
           "campInmates": 1256,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "karbi-anglong",
+          "name": "Karbi Anglong",
+          "populationAffected": 3810,
+          "severity": "moderate",
+          "reliefCamps": 0,
+          "affectedVillages": 8,
+          "campInmates": 0,
           "humanLivesLost": 0
         },
         {
@@ -4208,6 +4333,16 @@
           "severity": "moderate",
           "reliefCamps": 0,
           "affectedVillages": 3,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "kamrup",
+          "name": "Kamrup",
+          "populationAffected": 1600,
+          "severity": "moderate",
+          "reliefCamps": 0,
+          "affectedVillages": 11,
           "campInmates": 0,
           "humanLivesLost": 0
         },
@@ -4222,32 +4357,12 @@
           "humanLivesLost": 0
         },
         {
-          "id": "kamrup",
-          "name": "Kamrup",
+          "id": "kamrup-metro",
+          "name": "Kamrup Metro",
           "populationAffected": 576,
           "severity": "waterlogging",
           "reliefCamps": 0,
           "affectedVillages": 6,
-          "campInmates": 0,
-          "humanLivesLost": 0
-        },
-        {
-          "id": "tinsukia",
-          "name": "Tinsukia",
-          "populationAffected": 70,
-          "severity": "severe",
-          "reliefCamps": 6,
-          "affectedVillages": 21,
-          "campInmates": 72,
-          "humanLivesLost": 0
-        },
-        {
-          "id": "biswanath",
-          "name": "Biswanath",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 7,
           "campInmates": 0,
           "humanLivesLost": 0
         }
@@ -4259,6 +4374,25 @@
           "severity": "waterlogging",
           "affectedVillages": 7,
           "river": null,
+          "populationAffected": 415,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 32.5,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-07-21T08:00:00Z",
+          "coordinates": {
+            "lat": 26.7333,
+            "lng": 93.15
+          },
+          "coordinatesNote": "Approximate district headquarters location",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
+          "id": "bongaigaon",
+          "name": "Bongaigaon",
+          "severity": "normal",
+          "affectedVillages": 0,
+          "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
@@ -4266,8 +4400,8 @@
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-21T08:00:00Z",
           "coordinates": {
-            "lat": 26.7333,
-            "lng": 93.15
+            "lat": 26.4833,
+            "lng": 90.55
           },
           "coordinatesNote": "Approximate district headquarters location",
           "source": "ASDMA Daily Flood Report (SDRF/DFR)"
@@ -4333,7 +4467,7 @@
           "id": "golaghat",
           "name": "Golaghat",
           "severity": "severe",
-          "affectedVillages": 5,
+          "affectedVillages": 133,
           "river": null,
           "populationAffected": 16799,
           "reliefCamps": 19,
@@ -4389,13 +4523,13 @@
         {
           "id": "kamrup",
           "name": "Kamrup",
-          "severity": "waterlogging",
-          "affectedVillages": 6,
+          "severity": "moderate",
+          "affectedVillages": 11,
           "river": null,
-          "populationAffected": 576,
+          "populationAffected": 1600,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 4.15,
+          "cropAreaHa": 20.4,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-21T08:00:00Z",
           "coordinates": {
@@ -4409,12 +4543,12 @@
           "id": "kamrup-metro",
           "name": "Kamrup Metro",
           "severity": "waterlogging",
-          "affectedVillages": 0,
+          "affectedVillages": 6,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 576,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 4.15,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-21T08:00:00Z",
           "coordinates": {
@@ -4427,10 +4561,10 @@
         {
           "id": "karbi-anglong",
           "name": "Karbi Anglong",
-          "severity": "waterlogging",
-          "affectedVillages": 0,
+          "severity": "moderate",
+          "affectedVillages": 8,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 3810,
           "reliefCamps": 0,
           "campInmates": 0,
           "cropAreaHa": 0.0,
@@ -4581,9 +4715,9 @@
     },
     {
       "date": "2026-07-20",
-      "scrapedAt": "2026-07-25T11:59:56Z",
+      "scrapedAt": "2026-08-02T23:36:27Z",
       "stats": {
-        "peopleAffected": 356738,
+        "peopleAffected": 362933,
         "floodedDistricts": 16,
         "reliefCamps": 49,
         "campInmates": 9606,
@@ -4627,7 +4761,7 @@
           "populationAffected": 50987,
           "severity": "severe",
           "reliefCamps": 3,
-          "affectedVillages": 5,
+          "affectedVillages": 162,
           "campInmates": 940,
           "humanLivesLost": 0
         },
@@ -4649,6 +4783,16 @@
           "reliefCamps": 2,
           "affectedVillages": 77,
           "campInmates": 80,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "karbi-anglong",
+          "name": "Karbi Anglong",
+          "populationAffected": 5546,
+          "severity": "moderate",
+          "reliefCamps": 0,
+          "affectedVillages": 11,
+          "campInmates": 0,
           "humanLivesLost": 0
         },
         {
@@ -4682,22 +4826,12 @@
           "humanLivesLost": 0
         },
         {
-          "id": "chirang",
-          "name": "Chirang",
-          "populationAffected": 378,
+          "id": "biswanath",
+          "name": "Biswanath",
+          "populationAffected": 415,
           "severity": "waterlogging",
           "reliefCamps": 0,
-          "affectedVillages": 2,
-          "campInmates": 0,
-          "humanLivesLost": 0
-        },
-        {
-          "id": "kamrup",
-          "name": "Kamrup",
-          "populationAffected": 362,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 3,
+          "affectedVillages": 21,
           "campInmates": 0,
           "humanLivesLost": 0
         }
@@ -4709,6 +4843,25 @@
           "severity": "waterlogging",
           "affectedVillages": 21,
           "river": null,
+          "populationAffected": 415,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 148.8,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-07-20T08:00:00Z",
+          "coordinates": {
+            "lat": 26.7333,
+            "lng": 93.15
+          },
+          "coordinatesNote": "Approximate district headquarters location",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
+          "id": "bongaigaon",
+          "name": "Bongaigaon",
+          "severity": "normal",
+          "affectedVillages": 0,
+          "river": null,
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
@@ -4716,8 +4869,8 @@
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-20T08:00:00Z",
           "coordinates": {
-            "lat": 26.7333,
-            "lng": 93.15
+            "lat": 26.4833,
+            "lng": 90.55
           },
           "coordinatesNote": "Approximate district headquarters location",
           "source": "ASDMA Daily Flood Report (SDRF/DFR)"
@@ -4840,7 +4993,7 @@
           "id": "jorhat",
           "name": "Jorhat",
           "severity": "severe",
-          "affectedVillages": 5,
+          "affectedVillages": 162,
           "river": null,
           "populationAffected": 50987,
           "reliefCamps": 3,
@@ -4861,7 +5014,7 @@
           "severity": "waterlogging",
           "affectedVillages": 3,
           "river": null,
-          "populationAffected": 362,
+          "populationAffected": 234,
           "reliefCamps": 0,
           "campInmates": 0,
           "cropAreaHa": 0.0,
@@ -4878,9 +5031,9 @@
           "id": "kamrup-metro",
           "name": "Kamrup Metro",
           "severity": "waterlogging",
-          "affectedVillages": 0,
+          "affectedVillages": 3,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 362,
           "reliefCamps": 0,
           "campInmates": 0,
           "cropAreaHa": 0.0,
@@ -4896,10 +5049,10 @@
         {
           "id": "karbi-anglong",
           "name": "Karbi Anglong",
-          "severity": "waterlogging",
-          "affectedVillages": 0,
+          "severity": "moderate",
+          "affectedVillages": 11,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 5546,
           "reliefCamps": 0,
           "campInmates": 0,
           "cropAreaHa": 0.0,
@@ -5050,11 +5203,11 @@
     },
     {
       "date": "2026-07-19",
-      "scrapedAt": "2026-07-25T12:00:00Z",
+      "scrapedAt": "2026-08-02T23:36:23Z",
       "stats": {
-        "peopleAffected": 0,
+        "peopleAffected": 57199,
         "floodedDistricts": 8,
-        "reliefCamps": 0,
+        "reliefCamps": 5,
         "campInmates": 440,
         "riverWarnings": 1,
         "activeAlerts": 1
@@ -5069,8 +5222,8 @@
         {
           "id": "charaideo",
           "name": "Charaideo",
-          "populationAffected": 0,
-          "severity": "waterlogging",
+          "populationAffected": 23891,
+          "severity": "severe",
           "reliefCamps": 0,
           "affectedVillages": 57,
           "campInmates": 0,
@@ -5079,8 +5232,8 @@
         {
           "id": "dhemaji",
           "name": "Dhemaji",
-          "populationAffected": 0,
-          "severity": "waterlogging",
+          "populationAffected": 22214,
+          "severity": "severe",
           "reliefCamps": 0,
           "affectedVillages": 76,
           "campInmates": 0,
@@ -5089,20 +5242,50 @@
         {
           "id": "dibrugarh",
           "name": "Dibrugarh",
-          "populationAffected": 0,
-          "severity": "waterlogging",
+          "populationAffected": 4066,
+          "severity": "moderate",
           "reliefCamps": 0,
           "affectedVillages": 44,
           "campInmates": 0,
           "humanLivesLost": 0
         },
         {
+          "id": "tinsukia",
+          "name": "Tinsukia",
+          "populationAffected": 3120,
+          "severity": "moderate",
+          "reliefCamps": 3,
+          "affectedVillages": 15,
+          "campInmates": 237,
+          "humanLivesLost": 0
+        },
+        {
           "id": "jorhat",
           "name": "Jorhat",
-          "populationAffected": 0,
-          "severity": "waterlogging",
+          "populationAffected": 2378,
+          "severity": "moderate",
           "reliefCamps": 0,
           "affectedVillages": 34,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "sivasagar",
+          "name": "Sivasagar",
+          "populationAffected": 1502,
+          "severity": "moderate",
+          "reliefCamps": 2,
+          "affectedVillages": 61,
+          "campInmates": 203,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "udalguri",
+          "name": "Udalguri",
+          "populationAffected": 28,
+          "severity": "waterlogging",
+          "reliefCamps": 0,
+          "affectedVillages": 1,
           "campInmates": 0,
           "humanLivesLost": 0
         },
@@ -5125,49 +5308,19 @@
           "affectedVillages": 10,
           "campInmates": 0,
           "humanLivesLost": 0
-        },
-        {
-          "id": "sivasagar",
-          "name": "Sivasagar",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 61,
-          "campInmates": 203,
-          "humanLivesLost": 0
-        },
-        {
-          "id": "tinsukia",
-          "name": "Tinsukia",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 15,
-          "campInmates": 237,
-          "humanLivesLost": 0
-        },
-        {
-          "id": "udalguri",
-          "name": "Udalguri",
-          "populationAffected": 0,
-          "severity": "waterlogging",
-          "reliefCamps": 0,
-          "affectedVillages": 0,
-          "campInmates": 0,
-          "humanLivesLost": 0
         }
       ],
       "districts": [
         {
           "id": "charaideo",
           "name": "Charaideo",
-          "severity": "waterlogging",
+          "severity": "severe",
           "affectedVillages": 57,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 23891,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 741.68,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-19T08:00:00Z",
           "coordinates": {
@@ -5180,13 +5333,13 @@
         {
           "id": "dhemaji",
           "name": "Dhemaji",
-          "severity": "waterlogging",
+          "severity": "severe",
           "affectedVillages": 76,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 22214,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 1189.5,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-19T08:00:00Z",
           "coordinates": {
@@ -5199,13 +5352,13 @@
         {
           "id": "dibrugarh",
           "name": "Dibrugarh",
-          "severity": "waterlogging",
+          "severity": "moderate",
           "affectedVillages": 44,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 4066,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 856.96,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-19T08:00:00Z",
           "coordinates": {
@@ -5218,13 +5371,13 @@
         {
           "id": "jorhat",
           "name": "Jorhat",
-          "severity": "waterlogging",
+          "severity": "moderate",
           "affectedVillages": 34,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 2378,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 51.27,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-19T08:00:00Z",
           "coordinates": {
@@ -5262,7 +5415,7 @@
           "populationAffected": 0,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 484.0,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-19T08:00:00Z",
           "coordinates": {
@@ -5275,13 +5428,13 @@
         {
           "id": "sivasagar",
           "name": "Sivasagar",
-          "severity": "waterlogging",
+          "severity": "moderate",
           "affectedVillages": 61,
           "river": null,
-          "populationAffected": 0,
-          "reliefCamps": 0,
+          "populationAffected": 1502,
+          "reliefCamps": 2,
           "campInmates": 203,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 117.26,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-19T08:00:00Z",
           "coordinates": {
@@ -5294,13 +5447,13 @@
         {
           "id": "tinsukia",
           "name": "Tinsukia",
-          "severity": "waterlogging",
+          "severity": "moderate",
           "affectedVillages": 15,
           "river": null,
-          "populationAffected": 0,
-          "reliefCamps": 0,
+          "populationAffected": 3120,
+          "reliefCamps": 3,
           "campInmates": 237,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 424.4,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-19T08:00:00Z",
           "coordinates": {
@@ -5314,12 +5467,12 @@
           "id": "udalguri",
           "name": "Udalguri",
           "severity": "waterlogging",
-          "affectedVillages": 0,
+          "affectedVillages": 1,
           "river": null,
-          "populationAffected": 0,
+          "populationAffected": 28,
           "reliefCamps": 0,
           "campInmates": 0,
-          "cropAreaHa": 0.0,
+          "cropAreaHa": 9.7674,
           "humanLivesLost": 0,
           "lastUpdated": "2026-07-19T08:00:00Z",
           "coordinates": {
@@ -5344,5 +5497,5 @@
       }
     }
   ],
-  "updatedAt": "2026-08-02T23:23:40Z"
+  "updatedAt": "2026-08-02T23:37:48Z"
 }
