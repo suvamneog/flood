@@ -4,10 +4,10 @@
     "type": "river-level",
     "title": "Rivers Above Danger Level",
     "level": "red",
-    "value": "2 rivers",
+    "value": "1 rivers",
     "unit": "CWC bulletin · 8 AM (via ASDMA)",
-    "description": "Dikhou (Sivasagar), Dhansiri (S)",
-    "validUntil": "2026-08-01T08:00:00Z",
+    "description": "Dhansiri (S)",
+    "validUntil": "2026-08-02T08:00:00Z",
     "source": "CWC via ASDMA Daily Flood Report"
   },
   {
@@ -18,7 +18,7 @@
     "value": "None",
     "unit": "CWC bulletin · 8 AM (via ASDMA)",
     "description": "No rivers flowing above highest flood level today.",
-    "validUntil": "2026-08-01T08:00:00Z",
+    "validUntil": "2026-08-02T08:00:00Z",
     "source": "CWC via ASDMA Daily Flood Report"
   },
   {
@@ -26,10 +26,10 @@
     "type": "impact",
     "title": "Flood Impact Snapshot",
     "level": "orange",
-    "value": "7 districts",
-    "unit": "178,837 people affected",
-    "description": "ASDMA report as on 01 Aug 2026: 44 relief camps housing 11,489 inmates.",
-    "validUntil": "2026-08-01T08:00:00Z",
+    "value": "5 districts",
+    "unit": "136,203 people affected",
+    "description": "ASDMA report as on 02 Aug 2026: 39 relief camps housing 10,844 inmates.",
+    "validUntil": "2026-08-02T08:00:00Z",
     "source": "ASDMA Daily Flood Report"
   }
 ]

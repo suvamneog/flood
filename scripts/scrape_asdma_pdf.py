@@ -588,25 +588,42 @@ def parse_pdf(pdf_path: Path) -> dict[str, Any]:
     result["hll"] = hll_data
 
     # --- Villages Affected ---
+    # Population header often wraps to "Populatio District…" in pdfplumber text.
     villages_block = slice_section(
         full,
         r"Villages\s+District\s+Total|Villages\s+Affected",
         [
+            r"Populat(?:io(?:n)?)?\s+District",
             r"Population\s+District",
-            r"And Crop",
+            r"Population\s+and\s+Crop",
+            r"And\s+Crop",
             r"Population\s+And\s+Crop",
+            r"Relief\s+Camps\s+District",
             r"Relief\s+District",
         ],
     )
     villages_data: dict[str, int] = {}
     for raw_line in villages_block.splitlines():
+        line = raw_line.strip()
+        # Statewide total ends the villages table — stop before population rows.
+        if re.match(r"^Total\s+\d+", line):
+            break
         # Optional "Affected" title fragment glued onto the first district row.
         m = re.match(
             rf"^\s*(?:Affected\s+)?({DISTRICT_NAMES_RE})\s+(\d[\d,]*)\b",
             raw_line,
         )
-        if m:
-            villages_data[m.group(1)] = to_int(m.group(2))
+        if not m:
+            continue
+        count = to_int(m.group(2))
+        # Guard: Assam districts never have tens of thousands of villages; those
+        # figures are leaked population columns when section slicing fails.
+        if count > 5_000:
+            continue
+        prev = villages_data.get(m.group(1))
+        if prev is not None and prev > 0 and count == 0:
+            continue
+        villages_data[m.group(1)] = count
     result["villages"] = villages_data
 
     return result
