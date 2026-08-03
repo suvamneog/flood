@@ -302,7 +302,7 @@ DISTRICT_NAMES_RE = "|".join(
 # Optional header-fragment prefixes ("And Crop"/"Area"/"Submerged") leak when
 # pdfplumber wraps the section title onto the first district row.
 POP_LINE_RE = re.compile(
-    rf"^\s*(?:And\s+Crop|Area|Submerged|Submerge|d)?\s*"
+    rf"^\s*(?:And\s+Crop|Crop\s+Area|Crop|Area|Submerged|Submerge|d|ed)?\s*"
     rf"({DISTRICT_NAMES_RE})\s+(\d[\d,]*)\s+(\d[\d,]*)\s+(\d[\d,]*)\s+(\d[\d,]*)\s+([\d,\.]+)"
 )
 # Circle-level detail inside Population section
@@ -497,17 +497,18 @@ def parse_pdf(pdf_path: Path) -> dict[str, Any]:
         r"Relief\s+District\s+Total\s+Relief\s+Camp",
         r"Inmates\s+In\s+Relief",
         r"Inmates\s+In\b",
+        r"Inmates\s+District\s+Total",
     ]
     pop_block = slice_section(
         full,
-        r"Populat(?:io(?:n)?)?\s+District\s+Male",
+        r"Populat(?:io(?:n)?)?\s+District\s+Male|Population\s+Total\s+Crop|Population\s+and\s+Crop",
         pop_end,
     )
     if not pop_block:
-        # fallback: any 'Population' near 'And Crop'
+        # fallback: wrapped headers ("Population Total Crop Area…")
         pop_block = slice_section(
             full,
-            r"Populat(?:io(?:n)?)?\s+District\s+Male|And Crop\s+Area|Population\s+and\s+Crop",
+            r"Populat(?:io(?:n)?)?\s+District\s+Male|Population\s+Total\s+Crop|And Crop\s+Area|Population\s+and\s+Crop|Population\s+District",
             pop_end,
         )
     # Iterate line-by-line so we grab per-district totals AND collect circle details
@@ -596,23 +597,38 @@ def parse_pdf(pdf_path: Path) -> dict[str, Any]:
     # order — we terminate BEFORE reaching it to keep numbers clean.
     inmates_block = slice_section(
         full,
-        r"Inmates\s+In\b",
+        r"Inmates\s+In\b|Inmates\s+District\s+Total|Inmates\s+In\s+Relief",
         [
             r"Non\s*Camp\b",
             r"Human\s+Lives",
             r"Animals\s+District",
             r"Animals\s+Affected",
+            r"Animals\s+Washed",
+            r"Houses\s+Damaged",
         ],
     )
     inmates_data: dict[str, int] = {}
-    for raw_line in inmates_block.splitlines():
+    inmate_lines = inmates_block.splitlines()
+    for idx, raw_line in enumerate(inmate_lines):
+        line = raw_line.strip()
+        if re.match(r"^Total\b", line):
+            m_tot = re.match(r"^Total\s+(\d[\d,]*)\b", line)
+            if m_tot:
+                result["_inmatesTotal"] = to_int(m_tot.group(1))
+            elif idx + 1 < len(inmate_lines):
+                # "Total" alone, numbers on the next line
+                m_next = re.match(r"^(\d[\d,]*)\b", inmate_lines[idx + 1].strip())
+                if m_next:
+                    result["_inmatesTotal"] = to_int(m_next.group(1))
+            break
         m = re.match(rf"^\s*({DISTRICT_NAMES_RE})\s+(\d[\d,]*)\b", raw_line)
         if m:
-            # Inmates in Relief Camps is the first number after district
             inmates_data[m.group(1)] = max(
                 inmates_data.get(m.group(1), 0), to_int(m.group(2))
             )
     result["camps"] = inmates_data
+    # If district rows sum cleanly, prefer that; statewide Total is a fallback
+    # used later when building stats if district sum is zero but Total exists.
 
     # --- Human Lives Lost ---
     hll_block = slice_section(
@@ -848,7 +864,12 @@ def build_datasets(parsed: dict[str, Any], report_date: dt.date, pdf_url: str) -
     total_pop = sum(d["populationAffected"] for d in districts_out)
     total_camps = sum(d["reliefCamps"] for d in districts_out)
     total_inmates = sum(d["campInmates"] for d in districts_out)
+    if total_inmates == 0 and parsed.get("_inmatesTotal"):
+        total_inmates = int(parsed["_inmatesTotal"])
     flooded_count = sum(1 for d in districts_out if d["severity"] != "normal")
+    # Prefer official affected-district count from the PDF header when present.
+    if parsed.get("affectedDistricts"):
+        flooded_count = len(parsed["affectedDistricts"])
 
     stats = {
         "floodedDistricts": flooded_count,
