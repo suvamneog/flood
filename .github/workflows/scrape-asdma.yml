@@ -1,15 +1,10 @@
 name: Update ASDMA flood data
 
-# Runs twice daily (IST morning + afternoon) and on manual dispatch.
-# Scrapes the latest official Daily Flood Report PDF and opens a PR with
-# JSON updates — never pushes to main directly.
+# Scheduled GitHub scrapes are disabled — ASDMA is unreliable from Actions
+# runners. Refresh locally and open a data PR instead.
+# Optional: run this workflow manually via Actions → workflow_dispatch.
 
 on:
-  schedule:
-    # 03:30 UTC ≈ 09:00 IST
-    - cron: '30 3 * * *'
-    # 10:30 UTC ≈ 16:00 IST
-    - cron: '30 10 * * *'
   workflow_dispatch:
 
 permissions:

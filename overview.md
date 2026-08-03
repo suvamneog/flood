@@ -176,10 +176,10 @@ python3 scripts/scrape_asdma_pdf.py --date 2026-07-31
 
 | Path | Schedule | Reality |
 | --- | --- | --- |
-| **GitHub Actions** (`.github/workflows/scrape-asdma.yml`) | 09:00 & 16:00 IST + manual | Often fails: GitHub runners (US) cannot reliably reach `sdrf.assam.gov.in` |
-| **Local Mac launchd** (`scripts/install_local_scheduler.sh`) | 09:00 & 16:00 local | Works: scrapes from an Indian IP, pushes a data branch, opens a PR |
+| **Manual / local scrape** | When you push a data PR | Primary path: `npm run scrape:pdf` (or Mac scheduler) → review → merge |
+| **GitHub Actions** (`.github/workflows/scrape-asdma.yml`) | Manual `workflow_dispatch` only | **Daily cron disabled** — ASDMA is unreliable from GitHub runners |
 
-Primary production refresh: **local Mac scheduler** or manual scrape + PR. GitHub Action remains as a fallback if ASDMA becomes reachable from Actions.
+Primary production refresh: **manual scrape + PR** (or local Mac scheduler). Do not rely on Actions cron.
 
 ```bash
 ./scripts/install_local_scheduler.sh install   # schedule
@@ -290,7 +290,7 @@ python3 scripts/scrape_asdma_pdf.py --date YYYY-MM-DD
 | Donate | Outbound Bondhu Streams + AFNA; no payments on-site |
 | Past Reports | History snapshots + date filter |
 | Intelligence | Rule-based; updates with each report |
-| GitHub Actions scrape | Limited by ASDMA network block from runners |
+| GitHub Actions scrape | Cron off; optional manual dispatch only |
 | Backend / live API | Not required for v1; service layer ready |
 | Repo visibility | May be private; site remains public |
 
