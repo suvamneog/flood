@@ -184,6 +184,32 @@ def fetch_pdf(target_date: dt.date, lookback: int) -> tuple[bytes, dt.date, str]
         )
         ct = resp.headers.get("Content-Type", "")
         if resp.status_code == 200 and "pdf" in ct.lower() and len(resp.content) > 1024:
+            # Portal sometimes returns an older report for a newer date.
+            # Peek the "as on DD-MM-YYYY" line before accepting the file.
+            pdf_date = None
+            try:
+                import pdfplumber  # local import — already a project dependency
+
+                probe = RAW_DIR / f"_fetch_probe_{date_str}.pdf"
+                RAW_DIR.mkdir(parents=True, exist_ok=True)
+                probe.write_bytes(resp.content)
+                with pdfplumber.open(probe) as pdf:
+                    head = "\n".join((p.extract_text() or "") for p in pdf.pages[:2])
+                pdf_date = extract_report_date(head)
+                probe.unlink(missing_ok=True)
+            except Exception as exc:
+                print(f"⚠ could not verify PDF date ({exc}); accepting download")
+                print(f"✓ found ({len(resp.content):,} bytes)")
+                return resp.content, candidate, date_str
+
+            if pdf_date and pdf_date != candidate:
+                tried.append(f"{date_str}(wrong-date:{pdf_date.isoformat()})")
+                print(
+                    f"× wrong report date inside PDF "
+                    f"({pdf_date.isoformat()}, wanted {date_str})"
+                )
+                continue
+
             print(f"✓ found ({len(resp.content):,} bytes)")
             return resp.content, candidate, date_str
         tried.append(f"{date_str}({resp.status_code})")
@@ -1084,16 +1110,30 @@ def process_one_day(
     archive_only: bool,
     keep_existing_camps: bool,
 ) -> dt.date:
-    pdf_bytes, report_date, date_str = fetch_pdf(target, lookback)
+    pdf_bytes, requested_date, date_str = fetch_pdf(target, lookback)
 
+    parsed_probe_path = RAW_DIR / f"_probe_{date_str}.pdf"
     RAW_DIR.mkdir(parents=True, exist_ok=True)
-    pdf_path = RAW_DIR / f"asdma_flood_{date_str}.pdf"
-    pdf_path.write_bytes(pdf_bytes)
-    print(f"  ✓ Saved PDF → {pdf_path.relative_to(ROOT)}")
+    parsed_probe_path.write_bytes(pdf_bytes)
 
-    parsed = parse_pdf(pdf_path)
-    if parsed.get("reportDate"):
-        report_date = parsed["reportDate"]
+    parsed = parse_pdf(parsed_probe_path)
+    report_date = parsed.get("reportDate") or requested_date
+
+    # ASDMA sometimes returns an older PDF for a newer date request.
+    # Never publish under the wrong day — rename/save using the PDF's own date.
+    if report_date != requested_date:
+        parsed_probe_path.unlink(missing_ok=True)
+        raise RuntimeError(
+            f"ASDMA returned report dated {report_date.isoformat()} when "
+            f"{requested_date.isoformat()} was requested. "
+            "Live JSON left unchanged — that day's PDF is not published yet "
+            "(or the portal served the wrong file)."
+        )
+
+    pdf_path = RAW_DIR / f"asdma_flood_{report_date.isoformat()}.pdf"
+    pdf_path.write_bytes(pdf_bytes)
+    parsed_probe_path.unlink(missing_ok=True)
+    print(f"  ✓ Saved PDF → {pdf_path.relative_to(ROOT)}")
 
     people_parsed = sum(d["population"] for d in parsed["population"].values())
     camps_parsed = sum(parsed["reliefCamps"].values())
