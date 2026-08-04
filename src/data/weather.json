@@ -7,7 +7,7 @@
     "value": "1 rivers",
     "unit": "CWC bulletin · 8 AM (via ASDMA)",
     "description": "Dhansiri (S)",
-    "validUntil": "2026-08-03T08:00:00Z",
+    "validUntil": "2026-08-04T08:00:00Z",
     "source": "CWC via ASDMA Daily Flood Report"
   },
   {
@@ -18,7 +18,7 @@
     "value": "None",
     "unit": "CWC bulletin · 8 AM (via ASDMA)",
     "description": "No rivers flowing above highest flood level today.",
-    "validUntil": "2026-08-03T08:00:00Z",
+    "validUntil": "2026-08-04T08:00:00Z",
     "source": "CWC via ASDMA Daily Flood Report"
   },
   {
@@ -26,10 +26,10 @@
     "type": "impact",
     "title": "Flood Impact Snapshot",
     "level": "orange",
-    "value": "7 districts",
-    "unit": "128,071 people affected",
-    "description": "ASDMA report as on 03 Aug 2026: 38 relief camps housing 11,066 inmates.",
-    "validUntil": "2026-08-03T08:00:00Z",
+    "value": "10 districts",
+    "unit": "122,137 people affected",
+    "description": "ASDMA report as on 04 Aug 2026: 39 relief camps housing 12,382 inmates.",
+    "validUntil": "2026-08-04T08:00:00Z",
     "source": "ASDMA Daily Flood Report"
   }
 ]
