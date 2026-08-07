@@ -1,7 +1,7 @@
 {
-  "scrapedAt": "2026-08-07T15:44:48Z",
-  "period": "2026-08-06",
-  "reportDate": "2026-08-06",
+  "scrapedAt": "2026-08-07T21:44:33Z",
+  "period": "2026-08-07",
+  "reportDate": "2026-08-07",
   "floodDataOrigin": "asdma-daily-pdf",
   "pdfUrl": "https://sdrf.assam.gov.in/dfr/",
   "sources": [
@@ -17,8 +17,8 @@
     }
   ],
   "counts": {
-    "districts": 16,
-    "floodReports": 15,
+    "districts": 17,
+    "floodReports": 13,
     "reliefCamps": 5,
     "updates": 2
   }
