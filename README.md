@@ -15,6 +15,7 @@ Public web app that helps people in Assam quickly check **flood situations**, re
 ## Table of contents
 
 - [What it does](#what-it-does)
+- [Screenshots](#screenshots)
 - [Tech stack](#tech-stack)
 - [Getting started](#getting-started)
 - [Pages & features](#pages--features)
@@ -41,6 +42,48 @@ Official Assam flood reports are dense PDFs. FloodAssist turns them into:
 - Outbound donate links only (no payments on this site)
 
 **No backend.** The app ships static JSON under `src/data/` and is ready to swap services for live APIs later.
+
+---
+
+## Screenshots
+
+Captured from the live site. Images live in [`docs/screenshots/`](./docs/screenshots/).
+
+### Home — hero & latest report
+
+![Home hero with flood photo, CTAs, and ASDMA data banner](./docs/screenshots/01-home.png)
+
+### Home — severity ranking & situation guidance
+
+![Severity ranking of worst-hit districts and rule-based situation guidance](./docs/screenshots/02-home-intelligence.png)
+
+### Flood map
+
+![Interactive Assam flood map with severity shading, pins, and heat layer](./docs/screenshots/03-flood-map.png)
+
+### District status
+
+![District status cards with severity badges, villages, and people affected](./docs/screenshots/04-districts.png)
+
+### Relief camps
+
+![Relief camps page with district-level camp and inmate totals](./docs/screenshots/05-relief-camps.png)
+
+### Emergency contacts
+
+![Flood-first emergency helplines with one-tap call actions](./docs/screenshots/06-emergency.png)
+
+### Donate (outbound only)
+
+![Donate page with disclaimers and curated Assam flood campaign links](./docs/screenshots/07-donate.png)
+
+### Past reports
+
+![Past flood reports timeline with people, districts, camps, and river alerts](./docs/screenshots/08-past-reports.png)
+
+### River & impact alerts
+
+![River and impact alerts from CWC figures in the ASDMA daily report](./docs/screenshots/09-river-alerts.png)
 
 ---
 
@@ -248,6 +291,7 @@ scripts/
   requirements.txt
 .github/workflows/
   scrape-asdma.yml             # Manual dispatch only
+docs/screenshots/              # README feature screenshots
 vercel.json                    # SPA rewrites + security headers
 DATA_UPDATE.md                 # Daily data refresh runbook
 overview.md                    # Extended product notes
@@ -296,6 +340,7 @@ Emergency numbers are public helplines; confirm locally if unsure.
 | --- | --- |
 | [`DATA_UPDATE.md`](./DATA_UPDATE.md) | Daily ASDMA refresh + accuracy checklist |
 | [`overview.md`](./overview.md) | Longer product / architecture notes |
+| [`docs/screenshots/`](./docs/screenshots/) | README feature screenshots + regenerate notes |
 
 ---
 
