@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 import Layout from './components/layout/Layout'
 import ErrorBoundary from './components/ui/ErrorBoundary'
 import PageLoader from './components/ui/PageLoader'
@@ -37,6 +38,7 @@ export default function App() {
   return (
     <ErrorBoundary>
       <BrowserRouter>
+        <Analytics />
         <ScrollToTop />
         <Routes>
           <Route element={<Layout />}>
